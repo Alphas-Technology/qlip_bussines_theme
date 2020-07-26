@@ -19,3 +19,11 @@ input[type="checkbox"]:before {
     box-shadow: 0px 0px 10px 7px rgb(210, 222, 229);
     }
 /* END CHECKBOX */
+
+
+/* LINKS */
+a.link-content, a.dropdown-toggle{
+  color: #5D5D5D;
+}
+
+/* END LINKS */
