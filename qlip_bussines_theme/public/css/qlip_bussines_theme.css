@@ -27,3 +27,18 @@ a.link-content, a.dropdown-toggle{
 }
 
 /* END LINKS */
+
+/* BLUR */
+.modal-open .modal {
+  backdrop-filter: blur(9px);
+}
+.modal-backdrop {
+
+background-color: #1E6491;
+}
+.modal-open .modal-backdrop.in {
+
+opacity: 0.7;
+filter: brightness(0.5);
+}
+/* END BLUR */
