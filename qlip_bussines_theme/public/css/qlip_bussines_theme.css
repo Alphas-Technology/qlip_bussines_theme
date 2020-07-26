@@ -42,3 +42,67 @@ opacity: 0.7;
 filter: brightness(0.5);
 }
 /* END BLUR */
+
+
+/* BUTTON */
+.btn{
+  border-radius: 4px;
+ 
+}
+  .btn:focus, .btn:active:focus{
+    outline: none;
+	outline-offset: unset;
+  } 
+	
+  .btn-primary {
+  background: transparent linear-gradient(180deg, #10397D 0%, #0F3249 100%);
+  border-color: transparent;
+
+  }
+    .btn-primary:hover {
+    background: transparent linear-gradient(178deg, #1E6491 0%, #0F3249 100%) ;
+     border-color: transparent; 
+    }
+    
+      
+    .btn-primary:active, .btn-primary:focus{
+    background: transparent linear-gradient(178deg, #1E6491 0%, #296A95 100%);
+     border-color: transparent; 
+    }
+
+ .btn-secondary, .btn-default.btn-sm {
+  color: #fff;
+  background: transparent linear-gradient(180deg, #9EE1DA 0%, #65C8BD 100%);
+ 
+  }
+    .btn-secondary:hover, .btn-default.btn-sm:hover{
+    color: #fff;
+    background: transparent linear-gradient(182deg, #9EE1DA 0%, #39AA9E 100%);
+    border-color: transparent;
+    }
+    
+    
+    .btn-secondary:active,.btn-secondary:focus,.btn-default.btn-sm:active, .btn-default.btn-sm:focus{
+      color: #fff;
+      background: transparent linear-gradient(182deg, #3CB9AC 0%, #2D8B81 100%);
+      border-color: transparent;
+    }
+
+    .btn-primary.disabled, .btn-primary:disabled, .btn-secondary.disabled, .btn-secondary:disabled, .btn-default.btn-sm.disabled, .btn-default.btn-sm:disabled{
+      background: transparent linear-gradient(178deg, #E8E8E8 0%, #BBBBBB 100%); 
+      border-color: transparent;
+      
+      }
+
+    .btn-default.btn-sm.btn-paging.btn-info{
+     color: #fff;
+    background: #8d99a6;
+    border-color: #7f8c9b;
+    } 
+    .btn-default.btn-sm.btn-paging{
+      color: inherit;
+      background: #f0f4f7;
+      border-color: transparent;
+     } 
+    
+/* END BUTTON */
