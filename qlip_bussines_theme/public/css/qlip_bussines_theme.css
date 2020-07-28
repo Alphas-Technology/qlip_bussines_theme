@@ -198,3 +198,21 @@ a.dropdown-toggle {
 /* HEADER INPUT SEARCH */
 
 /* END HEADER */
+
+/* INPUT TEXT */
+input[type]:not([type='button']):not([type='checkbox']):not([type='range']):not([type='submit']).form-control {
+  border-radius: 10px;
+  border: 1px solid #707070;
+  
+}
+
+input[type]:not([type='button']):not([type='checkbox']):not([type='range']):not([type='submit']).form-control:hover,
+input[type]:not([type='button']):not([type='checkbox']):not([type='range']):not([type='submit']).form-control:focus {
+  border: 1px solid #1E6491;;
+}
+
+input[type]:not([type='button']):not([type='checkbox']):not([type='range']):not([type='submit']).form-control:disabled {
+  border: 1px solid #CFCFCF;
+}
+
+/* END INPUT TEXT */
