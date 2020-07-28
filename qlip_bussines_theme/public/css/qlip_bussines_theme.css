@@ -231,3 +231,15 @@ input[type]:not([type='button']):not([type='checkbox']):not([type='range']):not(
   border-color: transparent;
 }
 /* END MODAL */
+
+
+/* BULLET */
+.indicator.green::before, .indicator-right.green::after {
+  background: #00D215;
+}
+.indicator.blue::before, .indicator-right.blue::after {
+  background: #0B6DDC;
+}
+/* END BULLET */
+
+
