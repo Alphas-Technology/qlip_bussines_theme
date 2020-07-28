@@ -283,6 +283,13 @@ input[type]:not([type='button']):not([type='checkbox']):not([type='range']):not(
   border-radius: 3px;
 }
 
+.input-area input[type]:not([type='button']):not([type='checkbox']):not([type='range']):not([type='submit']).form-control,
+.input-area input[type]:not([type='button']):not([type='checkbox']):not([type='range']):not([type='submit']).form-control:hover,
+.input-area input[type]:not([type='button']):not([type='checkbox']):not([type='range']):not([type='submit']).form-control:focus{
+  border: 1px solid #CFCFCF;
+  border-radius: 3px;
+}
+
 /* END FILTROS */
 
 
