@@ -1,29 +1,29 @@
 /* CHECKBOX */
-input[type="checkbox"]:before {
-    font-size: 20px;
-    color: #707070
-    }
-    
-    input[type="checkbox"]:checked::before {
-      font-size: 20px;
-      color: #1E6491;
-    }
-    
-    input[type="checkbox"]:hover::before {
-    background-color: rgba(0,0,0,0.1);
-    box-shadow: 0px 0px 10px 7px rgb(227, 227, 227);
-    }
-    
-    input[type="checkbox"]:checked:hover::before {
-    color: #1E6491;
-    box-shadow: 0px 0px 10px 7px rgb(210, 222, 229);
-    }
+input[type='checkbox']:before {
+  font-size: 20px;
+  color: #707070;
+}
+
+input[type='checkbox']:checked::before {
+  font-size: 20px;
+  color: #1e6491;
+}
+
+input[type='checkbox']:hover::before {
+  background-color: rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 0px 10px 7px rgb(227, 227, 227);
+}
+
+input[type='checkbox']:checked:hover::before {
+  color: #1e6491;
+  box-shadow: 0px 0px 10px 7px rgb(210, 222, 229);
+}
 /* END CHECKBOX */
 
-
 /* LINKS */
-a.link-content, a.dropdown-toggle{
-  color: #5D5D5D;
+a.link-content,
+a.dropdown-toggle {
+  color: #5d5d5d;
 }
 
 /* END LINKS */
@@ -33,76 +33,168 @@ a.link-content, a.dropdown-toggle{
   backdrop-filter: blur(9px);
 }
 .modal-backdrop {
-
-background-color: #1E6491;
+  background-color: #1e6491;
 }
 .modal-open .modal-backdrop.in {
-
-opacity: 0.7;
-filter: brightness(0.5);
+  opacity: 0.7;
+  filter: brightness(0.5);
 }
 /* END BLUR */
 
-
 /* BUTTON */
-.btn{
+.btn {
   border-radius: 4px;
- 
 }
-  .btn:focus, .btn:active:focus{
-    outline: none;
-	outline-offset: unset;
-  } 
-	
-  .btn-primary {
-  background: transparent linear-gradient(180deg, #10397D 0%, #0F3249 100%);
+.btn:focus,
+.btn:active:focus {
+  outline: none;
+  outline-offset: unset;
+}
+
+.btn-primary {
+  background: transparent linear-gradient(180deg, #10397d 0%, #0f3249 100%);
   border-color: transparent;
+}
+.btn-primary:hover {
+  background: transparent linear-gradient(178deg, #1e6491 0%, #0f3249 100%);
+  border-color: transparent;
+}
 
-  }
-    .btn-primary:hover {
-    background: transparent linear-gradient(178deg, #1E6491 0%, #0F3249 100%) ;
-     border-color: transparent; 
-    }
-    
-      
-    .btn-primary:active, .btn-primary:focus{
-    background: transparent linear-gradient(178deg, #1E6491 0%, #296A95 100%);
-     border-color: transparent; 
-    }
+.btn-primary:active,
+.btn-primary:focus {
+  background: transparent linear-gradient(178deg, #1e6491 0%, #296a95 100%);
+  border-color: transparent;
+}
 
- .btn-secondary, .btn-default.btn-sm {
+.btn-secondary,
+.btn-default.btn-sm {
   color: #fff;
-  background: transparent linear-gradient(180deg, #9EE1DA 0%, #65C8BD 100%);
- 
-  }
-    .btn-secondary:hover, .btn-default.btn-sm:hover{
-    color: #fff;
-    background: transparent linear-gradient(182deg, #9EE1DA 0%, #39AA9E 100%);
-    border-color: transparent;
-    }
-    
-    
-    .btn-secondary:active,.btn-secondary:focus,.btn-default.btn-sm:active, .btn-default.btn-sm:focus{
-      color: #fff;
-      background: transparent linear-gradient(182deg, #3CB9AC 0%, #2D8B81 100%);
-      border-color: transparent;
-    }
+  background: transparent linear-gradient(180deg, #9ee1da 0%, #65c8bd 100%);
+}
+.btn-secondary:hover,
+.btn-default.btn-sm:hover {
+  color: #fff;
+  background: transparent linear-gradient(182deg, #9ee1da 0%, #39aa9e 100%);
+  border-color: transparent;
+}
 
-    .btn-primary.disabled, .btn-primary:disabled, .btn-secondary.disabled, .btn-secondary:disabled, .btn-default.btn-sm.disabled, .btn-default.btn-sm:disabled{
-      background: transparent linear-gradient(178deg, #E8E8E8 0%, #BBBBBB 100%); 
-      border-color: transparent;
-      
-      }
+.btn-secondary:active,
+.btn-secondary:focus,
+.btn-default.btn-sm:active,
+.btn-default.btn-sm:focus {
+  color: #fff;
+  background: transparent linear-gradient(182deg, #3cb9ac 0%, #2d8b81 100%);
+  border-color: transparent;
+}
 
-    .btn-default.btn-sm.btn-paging.btn-info{
-     color: #fff;
-    background: #8d99a6;
-    border-color: #7f8c9b;
-    } 
-    .btn-default.btn-sm.btn-paging{
-      color: inherit;
-      background: #f0f4f7;
-      border-color: transparent;
-     } 
-    
+.btn-primary.disabled,
+.btn-primary:disabled,
+.btn-secondary.disabled,
+.btn-secondary:disabled,
+.btn-default.btn-sm.disabled,
+.btn-default.btn-sm:disabled {
+  background: transparent linear-gradient(178deg, #e8e8e8 0%, #bbbbbb 100%);
+  border-color: transparent;
+}
+
+.btn-default.btn-sm.btn-paging.btn-info {
+  color: #fff;
+  background: #8d99a6;
+  border-color: #7f8c9b;
+}
+.btn-default.btn-sm.btn-paging {
+  color: inherit;
+  background: #f0f4f7;
+  border-color: transparent;
+}
+
 /* END BUTTON */
+
+/* HEADER */
+.navbar-default {
+  background: #ffffff;
+  box-shadow: 0px 7px 21px #00000029;
+  border-radius: 0px 0px 10px 10px;
+  opacity: 1;
+  border-color: transparent;
+}
+
+.navbar {
+  min-height: 78px;
+  display: flex;
+  align-items: center;
+}
+
+.page-head {
+  top: 81px;
+}
+
+.page-container {
+  margin-top: 80px;
+}
+
+#page-desktop {
+  margin-top: 2%;
+}
+.desk-container .desk-sidebar {
+  top: 80px;
+}
+
+#page-desktop {
+  margin-top: 2%;
+}
+
+.navbar .navbar-home img {
+  min-width: 180px;
+}
+
+.app-logo-empresa img {
+  margin-top: 3px;
+}
+
+@media (min-width: 768px) {
+  .navbar > .container .navbar-brand.app-logo-empresa {
+    margin-left: 7.091875rem;
+    margin-right: 4.9375rem;
+  }
+}
+
+.li-icon-user {
+  color: #dcdcdc;
+}
+
+.qlip-icon {
+  width: 26px;
+  height: 26px;
+}
+
+.configuration, .user, .chat, .notification {
+  margin-right: 3rem;
+}
+
+.chat, .user {
+  padding: 8px 10px;
+}
+
+/* HEADER INPUT SEARCH */
+#navbar-search {
+  font-size: 14px;
+  line-height: 16px;
+  padding-left: 40px;
+  /* max-width: 268px; */
+  min-height: 42px;
+  background: #F9F9F9 0% 0% no-repeat padding-box;
+  color: #AEAEAE;
+}
+
+.navbar .navbar-search-icon {
+  left: 12px;
+  z-index: 2;
+}
+#navbar-search.form-control {
+  border: 1px solid #E6E6E6;
+  border-radius: 5px;
+}
+/* HEADER INPUT SEARCH */
+
+/* END HEADER */
