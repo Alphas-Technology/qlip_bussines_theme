@@ -284,3 +284,40 @@ input[type]:not([type='button']):not([type='checkbox']):not([type='range']):not(
 }
 
 /* END FILTROS */
+
+
+/* TABLE */
+.list-subject .level-item {
+  margin-right: 35px !important;
+}
+
+.level-left, .list-header-subject {
+  color: #2F1335 !important;
+  font-size: 17px !important;
+  line-height: 19px !important;
+}
+span.level-item.ellipsis{
+  color:#484848;
+  font-size: 12px;
+}
+.indicator, .indicator-right {
+  font-weight: normal;
+  color:#484848;
+}
+.list-row-head {
+  background-color: #F2F6F8 !important;
+  border-bottom: 1px solid #DEDEDE !important;
+}
+
+.octicon-primitive-dot:before {
+  font: normal normal normal 30px/1 octicons;
+   color: #1E6491;
+}
+
+.layout-main-section {
+  border: 1px solid #DEDEDE;
+  border-left: 0;
+  border-right: 0;
+}
+
+/* END TABLE */
