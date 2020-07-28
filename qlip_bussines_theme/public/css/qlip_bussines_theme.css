@@ -216,3 +216,18 @@ input[type]:not([type='button']):not([type='checkbox']):not([type='range']):not(
 }
 
 /* END INPUT TEXT */
+
+
+/* MODAL */
+.modal-title{
+  
+  font-size: 24px;
+  line-height: 29px;
+  color: #1E6491;
+}
+.btn-modal-close, .btn-modal-close:hover, .btn-modal-close:active, .btn-modal-close:focus{
+  background: #FFFFFF !important;;
+  color: #0F3249 !important;
+  border-color: transparent;
+}
+/* END MODAL */
