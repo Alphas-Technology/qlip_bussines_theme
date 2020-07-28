@@ -359,3 +359,62 @@ span.level-item.ellipsis{
   background-color: #EEEEEE;
 }
 /* END TAGS */
+
+
+/* ARBOL DE TRAZABILIDAD */
+.timeline::before {
+  
+  border-left: 1px solid #1E6491 !important;
+}
+
+.timeline-item.notification-content::before {
+ 
+  width: 10px;
+  height: 10px;
+  background-color: #1E6491 !important;
+  left: 39px;
+ }
+
+.timeline-new-email::before, .timeline-email-import::before {
+  width: 10px;
+  height: 10px;
+  background-color: #1E6491 !important;
+  left: 39px;
+}
+
+.standard-image {
+ 
+  border: 1px solid #1E6491 !important;
+ 
+}
+
+.timeline-head {
+  border: 0;
+}
+
+.comment-input-header {
+  border: 1px solid #C5C5C5;
+  background: #FAFBFC;
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
+}
+
+.comment-input-container{
+  border: 1px solid #C5C5C5;
+  border-bottom-left-radius: 6px;
+  border-bottom-right-radius: 6px;
+}
+
+.ql-bubble .ql-editor {
+  border: 1px solid #C5C5C5;
+  border-radius: 8px;
+}
+
+.btn-comment {
+  background-color: #10397D;
+  color: #ffff;
+  font-size: 12px;
+  padding: revert;
+}
+
+/* END ARBOL DE TRAZABILIDAD */
