@@ -243,3 +243,44 @@ input[type]:not([type='button']):not([type='checkbox']):not([type='range']):not(
 /* END BULLET */
 
 
+/* FILTROS */
+.page-form{
+  background: #F2F6F8;
+  border: 1px solid #CFCFCF;
+  
+}
+.page-form input[type]:not([type='button']):not([type='checkbox']):not([type='range']):not([type='submit']).form-control,
+.page-form input[type]:not([type='button']):not([type='checkbox']):not([type='range']):not([type='submit']).form-control:hover,
+.page-form input[type]:not([type='button']):not([type='checkbox']):not([type='range']):not([type='submit']).form-control:focus{
+  border: 1px solid #CFCFCF;
+  border-radius: 3px;
+}
+
+.add-filter{
+   
+  background: transparent linear-gradient(180deg, #10397D 0%, #082453 100%);
+  border-radius: 2px;
+  color: #FFFFFF!important;
+  font-size: 8px;
+  line-height: 11px;
+  padding: 7px 21px;
+}
+
+.tooltip-inner {
+  background-color: #404040 !important;
+}
+.tooltip.top .tooltip-arrow {
+  border-width: inherit;
+}
+.tooltip {
+  font-size: 11px;
+}
+
+.awesomplete input[type]:not([type='button']):not([type='checkbox']):not([type='range']):not([type='submit']).form-control,
+.awesomplete input[type]:not([type='button']):not([type='checkbox']):not([type='range']):not([type='submit']).form-control:hover,
+.awesomplete input[type]:not([type='button']):not([type='checkbox']):not([type='range']):not([type='submit']).form-control:focus{
+  border: 1px solid #CFCFCF;
+  border-radius: 3px;
+}
+
+/* END FILTROS */
