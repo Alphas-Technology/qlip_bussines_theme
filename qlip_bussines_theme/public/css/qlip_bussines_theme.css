@@ -321,3 +321,34 @@ span.level-item.ellipsis{
 }
 
 /* END TABLE */
+
+
+/* TAGS */
+.toggle-tag {
+  background-color: #E1E4E8;
+  border-radius: 15px;
+  font-size: 14px;
+  color: #606060;
+  height: 30px;
+}
+
+.remove-tag {
+  background-color: #E1E4E8;
+  border-radius: 15px;
+  font-size: 14px;
+  height: 30px;
+}
+
+.remove-tag .fa-times-circle {
+  width: 14px;
+  height: 14px;
+}
+
+.remove-tag .text-muted {
+  color: #676767 !important;
+}
+
+.tags-list-item .btn-group:hover .btn-default{
+  background-color: #EEEEEE;
+}
+/* END TAGS */
