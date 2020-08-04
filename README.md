@@ -1,4 +1,4 @@
-## Qlip Bussines Theme
+## Mentum Qlip Bussines Theme
 
 Template theme for custom qlip bussines interfaz
 
