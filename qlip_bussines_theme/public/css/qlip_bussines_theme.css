@@ -399,8 +399,8 @@ a.dropdown-toggle {
 
 .level-left, .list-header-subject {
   color: #2F1335 !important;
-  font-size: 17px !important;
-  line-height: 19px !important;
+  font-size: 14px !important;/*cambio*/
+  line-height: 16px !important;/*cambio*/
 }
 span.level-item.ellipsis{
   color:#484848;
@@ -414,11 +414,11 @@ span.level-item.ellipsis{
   background-color: #F2F6F8 !important;
   border-bottom: 1px solid #DEDEDE !important;
 }
-
-.octicon-primitive-dot:before {
+/*Cambio*/
+/* .octicon-primitive-dot:before {
   font: normal normal normal 30px/1 octicons;
    color: #1E6491;
-}
+} */
 
 .layout-main-section {
   border: 1px solid #DEDEDE;
