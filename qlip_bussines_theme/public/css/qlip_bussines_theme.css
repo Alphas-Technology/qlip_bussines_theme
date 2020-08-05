@@ -200,7 +200,9 @@ a.dropdown-toggle {
 
 /* INPUT TEXT */
 
-.floating-label > .floating-input  {
+.floating-label > .floating-input,
+.floating-label > .awesomplete >.floating-input,
+.floating-label > .floating-select  {
   color: #9C9EA2 !important;
   font-weight: normal;
   font-size: 12px;
@@ -211,34 +213,46 @@ a.dropdown-toggle {
   
 }
 
- .floating-label > .floating-input::placeholder
+ .floating-label > .floating-input::placeholder, .floating-label > .awesomplete > .floating-input::placeholder
 {
   color: transparent; 
   
 }
 
-.floating-label > .floating-input:focus,.floating-label >.floating-input:hover {
+.floating-label > .floating-input:focus,
+.floating-label >.floating-input:hover,
+.floating-label > .awesomplete > .floating-input:focus,
+.floating-label > .awesomplete > .floating-input:hover,
+.floating-label > .floating-select:focus,
+.floating-label > .floating-select:hover
+{
   
   border: 1px solid #1E6491; 
 }
- .floating-label > .floating-input:focus::placeholder{
+ .floating-label > .floating-input:focus::placeholder,
+ .floating-label > .awesomplete > .floating-input:focus::placeholder{
 
   color: #b8c2cb;
 
 }
 
-.floating-label > .floating-input:disabled  {
+.floating-label > .floating-input:disabled,
+.floating-label > .awesomplete > .floating-input:disabled ,
+.floating-label > .floating-select:disabled  {
   
   border: 1px solid #CFCFCF;
 }
 
-.has-error  .floating-label > .floating-input  {
+.has-error  .floating-label > .floating-input,
+.has-error  .floating-label > .awesomplete > .floating-input  {
   
   border: 1px solid #FF5353 !important ;
 }
 
 
-.floating-input ~ label {
+.floating-input ~ label,
+.floating-select ~ label
+{
   color: #1E6491; 
   font-size: 12px;
   line-height: 34px;
@@ -252,13 +266,17 @@ a.dropdown-toggle {
   -webkit-transition:0.2s ease all;
 }
 
-.floating-label > .floating-input:focus ~ label, .floating-label > .floating-input:not(:placeholder-shown) ~ label {
+.floating-label > .floating-input:focus ~ label,
+.floating-label > .floating-input:not(:placeholder-shown) ~ label,
+.floating-label > .awesomplete > .floating-input:focus ~ label,
+.floating-label > .awesomplete > .floating-input:not(:placeholder-shown) ~ label,
+.floating-label > .floating-select:focus ~ label,
+.floating-label > .floating-select:not([value=""]):valid ~ label{ 
     top: -12px;
     left: 15px;
-    font-size: 8px;
+    font-size: 10px;/*cambio*/
     line-height: 20px;
     color: #1E6491; 
-    /* z-index: 2500; */
     background-color: #fff;
     padding: .2em;
     padding-left: 0.5em;
@@ -266,17 +284,28 @@ a.dropdown-toggle {
 
 } 
 
-.floating-input:disabled ~ label{
+
+.floating-input:disabled ~ label,
+.awesomplete > .floating-input:disabled ~ label,
+.floating-select:disabled ~ label 
+{
   color: #CFCFCF;
   
 } 
 
- .has-error .floating-label > .floating-input:focus ~ label, .has-error .floating-label > .floating-input:not(:placeholder-shown) ~ label {
+.has-error .floating-label > .floating-input:focus ~ label,
+.has-error .floating-label > .floating-input:not(:placeholder-shown) ~ label,
+.has-error .floating-label > .awesomplete > .floating-input:focus ~ label, 
+.has-error .floating-label > .awesomplete > .floating-input:not(:placeholder-shown) ~ label  {
   color: #FF5353;
 } 
 
 .frappe-control .help-box {
    color: #C4C0C0 !important;
+}
+/*nuevo*/
+.frappe-control[data-fieldtype="Select"] .control-input .octicon-chevron-down {
+  top: 12px;
 }
 
 .list-filters .floating-label .floating-input{
@@ -301,7 +330,7 @@ a.dropdown-toggle {
 .list-filters .floating-label > .floating-input:focus ~ label{
  
   padding: initial;
-}  
+}    
 
 /* END INPUT TEXT */
 
@@ -747,11 +776,43 @@ color: #7B7B7B;
 }
 
 .form-name-user-b{
-  margin-left: 20px;
+  /* margin-left: 20px; se quita*/
+  text-align: center;/*nuevo*/
   margin-top: 20px;
   color: #1E6491;
-  font-size: 31px;
+  font-size: 24px;/*cambio*/
   line-height: 37px;
+}
+/***end Perfil de foto de usuarios***/
+/***perfil de usuario***/
+.avatar-frame {
+ 
+  border-radius: 180px;
+}
+
+.form-name-user{
+  text-align: center;/*nuevo*/
+  margin-top: 30px;
+  color: #1E6491;
+  font-size: 24px;/*cambio*/
+  line-height: 37px;
+}
+.icon-foto{
+  margin-top: 10px;
+  background: #FFFFFF;
+  box-shadow: 0px 3px 6px #00000029;
+  border-radius: 5px;
+  padding: 5px 20px;
+  margin-left: 10%;
+  max-width: 153px;
+
+
+}
+.icon-foto > span {
+margin-left: 5px;
+font-size: 10px;
+line-height: 12px;
+color: #7B7B7B;
 }
 /* END PERFIL DE FOTO DE USUARIO */
 

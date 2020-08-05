@@ -64,12 +64,13 @@ frappe.ui.form.ControlData = frappe.ui.form.ControlData.extend({
 	}
 })
 
+// Control Link (textbox)
 frappe.ui.form.ControlLink = frappe.ui.form.ControlLink.extend({
 	make_input: function() {
 		var me = this;
 		// line-height: 1 is for Mozilla 51, shows extra padding otherwise
-		$('<div class="link-field ui-front" style="position: relative; line-height: 1;">\
-			<input type="text" class="input-with-feedback form-control mi-clase-de-prueba">\
+		$('<div class="link-field ui-front floating-label" style="position: relative; line-height: 1;">\
+			<input type="text" class="input-with-feedback form-control floating-input">\
 			<span class="link-btn">\
 				<a class="btn-open no-decoration" title="' + __("Open Link") + '">\
 					<i class="octicon octicon-arrow-right"></i></a>\
@@ -116,7 +117,7 @@ frappe.ui.form.ControlLink = frappe.ui.form.ControlLink.extend({
 			this.$wrapper = $('<div class="frappe-control">\
 				<div class="form-group">\
 					<div class="control-input-wrapper">\
-                        <div class="control-input floating-label ">\
+                        <div class="control-input">\
                         <label class="control-label" style="padding-right: 0px;"></label>\
                         </div>\
 						<div class="control-value like-disabled-input" style="display: none;"></div>\
@@ -143,3 +144,34 @@ frappe.ui.form.ControlLink = frappe.ui.form.ControlLink.extend({
 		}
 	}
 })
+
+
+frappe.ui.form.ControlSelect = frappe.ui.form.ControlSelect.extend({
+	make_wrapper: function() {
+		if(this.only_input) {
+			this.$wrapper = $('<div class="form-group frappe-control">').appendTo(this.parent);
+		} else {
+			this.$wrapper = $('<div class="frappe-control">\
+				<div class="form-group">\
+					<div class="control-input-wrapper">\
+                        <div class="control-input floating-label ">\
+                        <label class="control-label" style="padding-right: 0px;"></label>\
+                        </div>\
+						<div class="control-value like-disabled-input" style="display: none;"></div>\
+						<p class="help-box small text-muted hidden-xs"></p>\
+					</div>\
+				</div>\
+			</div>').appendTo(this.parent);
+		}
+	},
+
+	make_input: function() {
+		this._super();
+		this.$input.attr("onclick", "this.setAttribute('value', this.value);")
+			.attr("value", "")
+			.addClass("floating-select")
+	}
+
+})
+
+
