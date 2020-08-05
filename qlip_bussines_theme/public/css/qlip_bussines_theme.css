@@ -770,3 +770,52 @@ color: #7B7B7B;
   box-shadow: 0px 7px 13px #00000029;
 } 
 /* END DROPDOWN SEARCH */
+
+/*  ESTRUCTURA DE CARPETAS */
+.tree .tree-link .tree-label {
+  padding-left: 10px;
+}
+
+.tree .tree-link.active i {
+  color: #1E6491;
+}
+
+.tree .tree-link.active a {
+  color: #1E6491;
+  text-decoration: none;
+}
+
+.tree .tree-link i {
+  color: #9C9EA2;
+}
+
+.tree .tree-link a {
+  color: #9C9EA2;
+  text-decoration: none;
+}
+
+.tree .tree-link .node-leaf {
+  color: #9C9EA2;
+}
+
+.tree .fa-circle {
+  font-size: 5px;
+  vertical-align: 3px;
+}
+
+.tree .fa-folder:before {
+  font: normal normal normal 21px/1 FontAwesome;  
+}
+
+.tree .fa-folder-open {
+  font: normal normal normal 21px/1 FontAwesome;  
+}
+
+.tree.with-skeleton.opened::before{
+  top: 41px;
+}
+
+.tree.with-skeleton .tree-node.opened::before{
+  top: 20px;
+}
+/* END ESTRUCTURA DE CARPETAS */
