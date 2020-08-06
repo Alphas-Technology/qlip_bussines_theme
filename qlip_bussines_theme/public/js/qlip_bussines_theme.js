@@ -108,6 +108,8 @@ frappe.ui.form.ControlLink = frappe.ui.form.ControlLink.extend({
 		this.translate_values = true;
 		this.setup_buttons();
 		this.setup_awesomeplete();
+		this.$label = this.$input_area.find('label');
+		this.$input.after(this.$label);
 	},
 
 	make_wrapper: function() {
@@ -117,8 +119,8 @@ frappe.ui.form.ControlLink = frappe.ui.form.ControlLink.extend({
 			this.$wrapper = $('<div class="frappe-control">\
 				<div class="form-group">\
 					<div class="control-input-wrapper">\
-                        <div class="control-input">\
-                        <label class="control-label" style="padding-right: 0px;"></label>\
+						<div class="control-input">\
+						<label class="control-label" style="padding-right: 0px;"></label>\
                         </div>\
 						<div class="control-value like-disabled-input" style="display: none;"></div>\
 						<p class="help-box small text-muted hidden-xs"></p>\
