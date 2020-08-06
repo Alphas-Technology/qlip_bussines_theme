@@ -921,3 +921,46 @@ color: #7B7B7B;
 }
 
 /* END BREADCRUMS*/
+
+
+/* POPUP */
+.msgprint-dialog .modal-header-orange {
+  border-bottom: 1px solid #FFCE09;
+}
+
+.msgprint-dialog .modal-header-red {
+  border-bottom: 1px solid #FF5353;
+}
+
+.msgprint-dialog .modal-header-blue {
+  border-bottom: 1px solid #1E6491;
+}
+
+.msgprint-dialog .modal-header-orange .modal-title {
+  color: #FFCE09;
+}
+
+.msgprint-dialog .modal-header-red .modal-title {
+  color: #FF5353;
+}
+
+.msgprint-dialog .modal-header-blue .modal-title {
+  color: #1E6491;
+}
+
+.msgprint-dialog-icon {
+  background-image: url("/assets/frappe/icons/qlip-popup-icon.svg");
+  display: block;
+  width: 38px;
+  min-width: 38px;
+  max-width: 38px;
+  background-position: left;
+  background-repeat: no-repeat;
+  padding-right: 1rem;
+}
+
+.msgprint-dialog .modal-header {
+  padding-left: 0;
+}
+
+/* END POPUP */
