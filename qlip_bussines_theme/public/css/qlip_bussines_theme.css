@@ -206,8 +206,12 @@ a.dropdown-toggle {
 
 /* INPUT TEXT */
 
+.floating-label {
+  margin-bottom: 7%;
+}
+
 .floating-label > .floating-input,
-.floating-label > .awesomplete >.floating-input,
+.floating-label > .link-field > .awesomplete >.floating-input,
 .floating-label > .floating-select  {
   color: #9C9EA2 !important;
   font-weight: normal;
@@ -219,7 +223,8 @@ a.dropdown-toggle {
   
 }
 
- .floating-label > .floating-input::placeholder, .floating-label > .awesomplete > .floating-input::placeholder
+ .floating-label > .floating-input::placeholder,
+ .floating-label > .link-field > .awesomplete > .floating-input::placeholder
 {
   color: transparent; 
   
@@ -227,8 +232,8 @@ a.dropdown-toggle {
 
 .floating-label > .floating-input:focus,
 .floating-label >.floating-input:hover,
-.floating-label > .awesomplete > .floating-input:focus,
-.floating-label > .awesomplete > .floating-input:hover,
+.floating-label > .link-field > .awesomplete > .floating-input:focus,
+.floating-label > .link-field > .awesomplete > .floating-input:hover,
 .floating-label > .floating-select:focus,
 .floating-label > .floating-select:hover
 {
@@ -236,27 +241,27 @@ a.dropdown-toggle {
   border: 1px solid #1E6491; 
 }
  .floating-label > .floating-input:focus::placeholder,
- .floating-label > .awesomplete > .floating-input:focus::placeholder{
+ .floating-label > .link-field > .awesomplete > .floating-input:focus::placeholder{
 
   color: #b8c2cb;
 
 }
 
 .floating-label > .floating-input:disabled,
-.floating-label > .awesomplete > .floating-input:disabled ,
+.floating-label > .link-field > .awesomplete > .floating-input:disabled ,
 .floating-label > .floating-select:disabled  {
   
   border: 1px solid #CFCFCF;
 }
 
 .has-error  .floating-label > .floating-input,
-.has-error  .floating-label > .awesomplete > .floating-input  {
+.has-error  .floating-label > .link-field > .awesomplete > .floating-input  {
   
   border: 1px solid #FF5353 !important ;
 }
 
-
 .floating-input ~ label,
+.link-field > .awesomplete > .floating-input ~ label,
 .floating-select ~ label
 {
   color: #1E6491; 
@@ -274,13 +279,13 @@ a.dropdown-toggle {
 
 .floating-label > .floating-input:focus ~ label,
 .floating-label > .floating-input:not(:placeholder-shown) ~ label,
-.floating-label > .awesomplete > .floating-input:focus ~ label,
-.floating-label > .awesomplete > .floating-input:not(:placeholder-shown) ~ label,
+.floating-label > .link-field > .awesomplete > .floating-input:focus ~ label,
+.floating-label > .link-field > .awesomplete > .floating-input:not(:placeholder-shown) ~ label,
 .floating-label > .floating-select:focus ~ label,
 .floating-label > .floating-select:not([value=""]):valid ~ label{ 
     top: -12px;
     left: 15px;
-    font-size: 10px;/*cambio*/
+    font-size: 10px;
     line-height: 20px;
     color: #1E6491; 
     background-color: #fff;
@@ -291,9 +296,9 @@ a.dropdown-toggle {
 } 
 
 
-.floating-input:disabled ~ label,
-.awesomplete > .floating-input:disabled ~ label,
-.floating-select:disabled ~ label 
+.floating-label > .floating-input:disabled ~ label,
+.floating-label > .link-field > .awesomplete > .floating-input:disabled ~ label,
+.floating-label > .floating-select:disabled ~ label 
 {
   color: #CFCFCF;
   
@@ -301,15 +306,15 @@ a.dropdown-toggle {
 
 .has-error .floating-label > .floating-input:focus ~ label,
 .has-error .floating-label > .floating-input:not(:placeholder-shown) ~ label,
-.has-error .floating-label > .awesomplete > .floating-input:focus ~ label, 
-.has-error .floating-label > .awesomplete > .floating-input:not(:placeholder-shown) ~ label  {
+.has-error .floating-label > .link-field > .awesomplete > .floating-input:focus ~ label, 
+.has-error .floating-label > .link-field > .awesomplete > .floating-input:not(:placeholder-shown) ~ label  {
   color: #FF5353;
 } 
 
 .frappe-control .help-box {
    color: #C4C0C0 !important;
 }
-/*nuevo*/
+
 .frappe-control[data-fieldtype="Select"] .control-input .octicon-chevron-down {
   top: 12px;
 }
@@ -336,7 +341,7 @@ a.dropdown-toggle {
 .list-filters .floating-label > .floating-input:focus ~ label{
  
   padding: initial;
-}    
+}
 
 /* END INPUT TEXT */
 
@@ -1000,23 +1005,26 @@ color: #7B7B7B;
   height: 72px;
   min-height: 72px;
   max-height: 72px;
-  background-position: left;
+  background-position: center center;
   background-repeat: no-repeat;
-  padding-right: 2rem;
+  background-color: #F8F8F8;
+  margin-right: 1rem;
+  border-radius: 50%;
 }
 
 .alert-message-dialog-icon.green {
-  background-image: url("/assets/frappe/icons/qlip-popup-icon.svg");
+  background-image: url("/assets/frappe/icons/qlip-ok-icon.svg");
+  background-size: 42px;
 }
 
 .alert-message-dialog-icon.red {
-  background-image: url("/assets/frappe/icons/qlip-notification-icon.svg");
+  background-image: url("/assets/frappe/icons/qlip-x-icon.svg");
+  background-size: 32px;
 }
 
 .alert-message-dialog-icon.blue {
-  background-image: url("/assets/frappe/icons/qlip-configuration-icon.svg");
+  background-image: url("/assets/frappe/icons/qlip-exclamation-icon.svg");
+  background-size: 10px;
 }
-
-
 
 /* END TOASTER */
