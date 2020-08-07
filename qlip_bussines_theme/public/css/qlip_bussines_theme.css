@@ -964,3 +964,87 @@ color: #7B7B7B;
 }
 
 /* END POPUP */
+
+/* TOASTER */
+
+#alert-container .desk-alert .alert-message{
+  padding: 10px 40px 10px 21px
+
+}
+
+#alert-container .desk-alert .close {
+  position: absolute;
+  right: 45px;
+  color: #404040;
+  top: 40%;
+  font-size: 20px;
+}
+
+#alert-container .desk-alert {
+  box-shadow: 0px 3px 6px #00000029;
+  max-width: 500px;
+  min-width: 459px;
+  width: 459px;
+  max-height: 200px;
+  height: 90px;
+  background: #FFFFFF 0% 0% no-repeat padding-box;
+  border: none;
+  border-radius: 6px;
+  /*overflow-y: auto;
+  position: relative;
+  transform: translateX(calc(100% + 20px));
+  transition: transform 300ms ease;
+  padding: 0px;*/
+  overflow-y: hidden;
+}
+
+.alert-message .message {
+  position: absolute;
+  top: 30%;
+  font-size: 27px;
+  text-overflow: ellipsis;
+  width: 250px;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.alert-message.color-green {
+  color: #10397D;
+}
+
+.alert-message.color-red {
+  color: #FF5353;
+}
+
+.alert-message.color-blue {
+  color: #39AA9E;
+}
+
+.alert-message-dialog-icon {
+  display: inline-block;
+  width: 72px;
+  min-width: 72px;
+  max-width: 72px;
+  height: 72px;
+  min-height: 72px;
+  max-height: 72px;
+  background-position: left;
+  background-repeat: no-repeat;
+  padding-right: 2rem;
+}
+
+.alert-message-dialog-icon.green {
+  background-image: url("/assets/frappe/icons/qlip-popup-icon.svg");
+}
+
+.alert-message-dialog-icon.red {
+  background-image: url("/assets/frappe/icons/qlip-notification-icon.svg");
+}
+
+.alert-message-dialog-icon.blue {
+  background-image: url("/assets/frappe/icons/qlip-configuration-icon.svg");
+}
+
+
+
+/* END TOASTER */

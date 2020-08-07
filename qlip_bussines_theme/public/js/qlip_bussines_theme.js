@@ -344,3 +344,54 @@ frappe.msgprint = function(msg, title, is_minimizable) {
 }
 
 window.msgprint = frappe.msgprint;
+
+
+// Floating Message
+frappe.show_alert = function(message, seconds=7, actions={}) {
+	if(typeof message==='string') {
+		message = {
+			message: message
+		};
+	}
+	if(!$('#dialog-container').length) {
+		$('<div id="dialog-container"><div id="alert-container"></div></div>').appendTo('body');
+	}
+
+	let body_html;
+
+	if (message.body) {
+		body_html = message.body;
+	}
+
+	const div = $(`
+		<div class="alert desk-alert">
+			<div class="alert-message small"><a class="close">Cerrar</a></div>
+			<div class="alert-body" style="display: none"></div>
+		</div>`);
+
+	if(message.indicator) {
+		div.find('.alert-message').prepend(`<span class="alert-message-dialog-icon ${message.indicator}">&nbsp;</span><span class="message">${message.message}</span>`);
+		div.find('.alert-message').removeClass().addClass('alert-message color-' + message.indicator);
+	} else {
+		div.find('.alert-message').append(message.message);
+	}
+
+	if (body_html) {
+		div.find('.alert-body').show().html(body_html);
+	}
+
+	div.hide().appendTo("#alert-container").show()
+		.css('transform', 'translateX(0)');
+
+	div.find('.close, button').click(function() {
+		div.remove();
+		return false;
+	});
+
+	Object.keys(actions).map(key => {
+		div.find(`[data-action=${key}]`).on('click', actions[key]);
+	});
+
+	div.delay(seconds * 1000).fadeOut(300);
+	return div;
+}
