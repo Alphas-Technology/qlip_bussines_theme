@@ -365,7 +365,7 @@ frappe.show_alert = function(message, seconds=7, actions={}) {
 
 	const div = $(`
 		<div class="alert desk-alert">
-			<div class="alert-message small"><a class="close">Cerrar</a></div>
+			<div class="alert-message small"><a class="close">${__("Close")}</a></div>
 			<div class="alert-body" style="display: none"></div>
 		</div>`);
 
