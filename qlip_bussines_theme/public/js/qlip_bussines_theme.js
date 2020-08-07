@@ -69,7 +69,7 @@ frappe.ui.form.ControlLink = frappe.ui.form.ControlLink.extend({
 	make_input: function() {
 		var me = this;
 		// line-height: 1 is for Mozilla 51, shows extra padding otherwise
-		$('<div class="link-field ui-front floating-label" style="position: relative; line-height: 1;">\
+		$('<div class="link-field ui-front" style="position: relative; line-height: 1;">\
 			<input type="text" class="input-with-feedback form-control floating-input">\
 			<span class="link-btn">\
 				<a class="btn-open no-decoration" title="' + __("Open Link") + '">\
@@ -119,7 +119,7 @@ frappe.ui.form.ControlLink = frappe.ui.form.ControlLink.extend({
 			this.$wrapper = $('<div class="frappe-control">\
 				<div class="form-group">\
 					<div class="control-input-wrapper">\
-						<div class="control-input">\
+						<div class="control-input floating-label">\
 						<label class="control-label" style="padding-right: 0px;"></label>\
                         </div>\
 						<div class="control-value like-disabled-input" style="display: none;"></div>\
