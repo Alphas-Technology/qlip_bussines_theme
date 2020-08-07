@@ -712,23 +712,27 @@ body {
 
 /* END FONT */
 
-/* PREFIL DE USUARIO */
+/* PERFIL DE USUARIO */
 .avatar-frame {
- 
   border-radius: 180px;
 }
-.fa-camera-retro:before {
- 
-    font-size: smaller;
-    color: #8d99a6;
-}
-.form-name-user{
 
+.user-image-container .standard-image {
+  border-radius: 180px;
+}
+
+.fa-camera-retro:before {
+  font-size: smaller;
+  color: #8d99a6;
+}
+
+.form-name-user{
   margin-top: 30px;
   color: #1E6491;
   font-size: 31px;
   line-height: 37px;
 }
+
 .icon-foto{
   margin-top: 10px;
   background: #FFFFFF;
@@ -737,9 +741,8 @@ body {
   padding: 5px 20px;
   margin-left: 10%;
   max-width: 153px;
-
-
 }
+
 .icon-foto > span {
 margin-left: 5px;
 font-size: 10px;
@@ -752,17 +755,18 @@ color: #7B7B7B;
 /* PERFIL DE FOTO DE USUARIOS */
 .form-sidebar .sidebar-image-section .sidebar-image, 
 .form-sidebar .sidebar-image-section .sidebar-standard-image {
-
   border-radius: 180px;
 }
+
 .form-sidebar .sidebar-image-section .standard-image {
   border-radius: 180px;
 }
+
 .fa-camera-retro:before {
- 
     font-size: smaller;
     color: #8d99a6;
 }
+
 .icon-foto-b{
     margin-top: 10px;
     background: #FFFFFF;
@@ -771,9 +775,8 @@ color: #7B7B7B;
     padding: 5px 20px;
     margin-left: 1em;
     max-width: 153px;
+}
 
-  
-  }
 .icon-foto-b > span {
   margin-left: 5px;
   font-size: 10px;
@@ -789,38 +792,7 @@ color: #7B7B7B;
   font-size: 24px;/*cambio*/
   line-height: 37px;
 }
-/***end Perfil de foto de usuarios***/
-/***perfil de usuario***/
-.avatar-frame {
- 
-  border-radius: 180px;
-}
-
-.form-name-user{
-  text-align: center;/*nuevo*/
-  margin-top: 30px;
-  color: #1E6491;
-  font-size: 24px;/*cambio*/
-  line-height: 37px;
-}
-.icon-foto{
-  margin-top: 10px;
-  background: #FFFFFF;
-  box-shadow: 0px 3px 6px #00000029;
-  border-radius: 5px;
-  padding: 5px 20px;
-  margin-left: 10%;
-  max-width: 153px;
-
-
-}
-.icon-foto > span {
-margin-left: 5px;
-font-size: 10px;
-line-height: 12px;
-color: #7B7B7B;
-}
-/* END PERFIL DE FOTO DE USUARIO */
+/***END PERFIL DE FOTO DE USUARIOS***/
 
 /* DROPDOWN SEARCH */
 #navbar-search ~ ul > li > a > p > span{
