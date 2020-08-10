@@ -761,6 +761,7 @@ color: #7B7B7B;
 .form-sidebar .sidebar-image-section .sidebar-image, 
 .form-sidebar .sidebar-image-section .sidebar-standard-image {
   border-radius: 180px;
+  background-size: auto;
 }
 
 .form-sidebar .sidebar-image-section .standard-image {
