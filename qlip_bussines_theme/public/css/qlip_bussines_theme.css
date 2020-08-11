@@ -158,28 +158,109 @@ a.dropdown-toggle {
   margin-top: 3px;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 992px) {
   .navbar > .container .navbar-brand.app-logo-empresa {
     margin-left: 7.091875rem;
     margin-right: 4.9375rem;
   }
 }
 
+@media (max-width: 1199px) {
+  .navbar > .container .navbar-brand.app-logo-empresa {
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+ 
+
+@media (max-width: 767px) {
+  .qlip-icon {
+    width: 16px;
+    height: 16px;
+  }
+
+  .navbar > .container .navbar-brand {
+    padding: 0 !important;
+    height: 0 !important; 
+    /* width: 0 !important; */
+    margin-right: 12rem !important;
+    margin-top: 1rem !important;
+  }
+
+  .dropdown-mobile {
+    margin-right: 1.5rem !important;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .qlip-icon {
+    width: 16px;
+    height: 16px;
+  }
+
+  .navbar > .container .navbar-brand {
+    padding: 0 !important;
+    height: 0 !important; 
+    /* width: 0 !important; */
+    margin-right: 12rem !important;
+    margin-top: 1rem !important;
+  }
+
+  .dropdown-mobile {
+    margin-right: 1.5rem !important;
+  }
+}
+
+.qlip-icon-movil {
+  width: 16px;
+  height: 16px;
+}
+
 .li-icon-user {
   color: #dcdcdc;
 }
 
-.qlip-icon {
-  width: 26px;
-  height: 26px;
+@media (min-width: 992px) {
+  .qlip-icon {
+    width: 26px;
+    height: 26px;
+  }
 }
 
-.configuration, .user, .chat, .notification {
+.configuration, .notification {
   margin-right: 3rem;
 }
 
-.chat, .user {
+.configuration-movil,  .chat-movil, .notification-movil {
+  margin-right: 0.5rem;
+}
+
+/* .chat, .user {
   padding: 8px 10px;
+} */
+.chat {
+ padding: 2px 1px 2px 1px;
+ margin-right: 1.5rem;
+}
+
+.chat-movil {
+  padding: 0;
+ }
+
+.avatar-small .avatar-frame {
+  border-radius: 18px;
+  width: 28px;
+  height: 28px;
+ 
+}
+
+.avatar-small {
+  margin-right: 3rem;
+  margin-top: 0.5rem;
+}
+
+.frappe-chat-dropdown {
+  margin-top: 0.5rem;
 }
 
 /* HEADER INPUT SEARCH */
@@ -761,7 +842,7 @@ color: #7B7B7B;
 .form-sidebar .sidebar-image-section .sidebar-image, 
 .form-sidebar .sidebar-image-section .sidebar-standard-image {
   border-radius: 180px;
-  background-size: auto;
+  background-size: cover;
 }
 
 .form-sidebar .sidebar-image-section .standard-image {
