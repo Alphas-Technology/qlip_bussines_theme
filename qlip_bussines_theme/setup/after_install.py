@@ -22,9 +22,8 @@ def copy_files_after_install():
         if ftc["type"] == "dir":
             shutil.rmtree(ftc["dest_path"])
             shutil.copytree(ftc["origin_path"], ftc["dest_path"])
-            pass
         elif ftc["type"] == "file":
-            pass
+            shutil.copyfile(ftc["origin_path"], ftc["dest_path"])
 
 
 def backup_files_after_install():
@@ -40,4 +39,4 @@ def backup_files_after_install():
             except FileExistsError:
                 pass
         elif ftc["type"] == "file":
-            pass
+            shutil.copyfile(ftc["dest_path"], ftc["backup_path"])
