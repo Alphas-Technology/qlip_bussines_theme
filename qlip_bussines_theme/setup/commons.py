@@ -77,6 +77,13 @@ FILES = {
         "dest_path": DEST_SITE_PATH + "sites/assets/frappe/icons/qlip-x-icon.svg",
         "backup": False,
     },
+    "chat.js": {
+        "type": "file",
+        "origin_path": ORIGIN_PATH + "chat.js",
+        "backup_path": BACKUP_PATH + "chat.js",
+        "dest_path": DEST_SITE_PATH + "sites/assets/frappe/icons/chat.js",
+        "backup": True,
+    },
     "tags.js": {
         "type": "file",
         "origin_path": ORIGIN_PATH + "tags.js",
