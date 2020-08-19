@@ -105,6 +105,13 @@ FILES = {
         "dest_path": DEST_SITE_PATH + "sites/assets/frappe/js/frappe/list/list_view.js",
         "backup": True,
     },
+    "form_sidebar.html": {
+        "type": "file",
+        "origin_path": ORIGIN_PATH + "form_sidebar.html",
+        "backup_path": BACKUP_PATH + "form_sidebar.html",
+        "dest_path": DEST_SITE_PATH + "sites/assets/frappe/js/frappe/form/templates/form_sidebar.html",
+        "backup": True,
+    },
     "tags.js": {
         "type": "file",
         "origin_path": ORIGIN_PATH + "tags.js",
