@@ -98,6 +98,13 @@ FILES = {
         "dest_path": DEST_SITE_PATH + "sites/assets/frappe/js/frappe/ui/toolbar/navbar.html",
         "backup": True,
     },
+    "list_view.js": {
+        "type": "file",
+        "origin_path": ORIGIN_PATH + "list_view.js",
+        "backup_path": BACKUP_PATH + "list_view.js",
+        "dest_path": DEST_SITE_PATH + "sites/assets/frappe/js/frappe/list/list_view.js",
+        "backup": True,
+    },
     "tags.js": {
         "type": "file",
         "origin_path": ORIGIN_PATH + "tags.js",
