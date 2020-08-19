@@ -30,6 +30,10 @@ def backup_files_after_install():
     """
     Backup the files / dirs
     """
+    try:
+        os.mkdir(BACKUP_PATH)
+    except FileExistsError:
+        pass
 
     for ftc in FILES.values():
         if ftc["type"] == "dir":
