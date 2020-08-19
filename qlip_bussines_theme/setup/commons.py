@@ -81,7 +81,14 @@ FILES = {
         "type": "file",
         "origin_path": ORIGIN_PATH + "chat.js",
         "backup_path": BACKUP_PATH + "chat.js",
-        "dest_path": DEST_SITE_PATH + "sites/assets/frappe/icons/chat.js",
+        "dest_path": DEST_SITE_PATH + "sites/assets/frappe/js/frappe/chat.js",
+        "backup": True,
+    },
+    "common.js": {
+        "type": "file",
+        "origin_path": ORIGIN_PATH + "common.js",
+        "backup_path": BACKUP_PATH + "common.js",
+        "dest_path": DEST_SITE_PATH + "sites/assets/frappe/js/frappe/utils/common.js",
         "backup": True,
     },
     "tags.js": {
