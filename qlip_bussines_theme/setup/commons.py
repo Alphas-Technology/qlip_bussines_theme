@@ -27,5 +27,19 @@ FILES = {
         "backup_path": BACKUP_PATH + "tree.js",
         "dest_path": DEST_APPS_PATH + "frappe/frappe/public/js/frappe/ui/tree.js",
         "backup": True,
+    },
+    "user_profile.js": {
+        "type": "file",
+        "origin_path": ORIGIN_PATH + "user_profile.js",
+        "backup_path": BACKUP_PATH + "user_profile.js",
+        "dest_path": DEST_APPS_PATH + "frappe/frappe/desk/page/user_profile/user_profile.js",
+        "backup": True,
+    },
+    "user_profile_sidebar.html": {
+        "type": "file",
+        "origin_path": ORIGIN_PATH + "user_profile_sidebar.html",
+        "backup_path": BACKUP_PATH + "user_profile_sidebar.html",
+        "dest_path": DEST_APPS_PATH + "frappe/frappe/desk/page/user_profile/user_profile_sidebar.html",
+        "backup": True,
     }
 }
