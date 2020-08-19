@@ -4,8 +4,12 @@
 import shutil
 import os
 
+from .commons import *
 
 def after_install():
+    
+    # Backup the files / dirs before add ther new files / dirs 
+    backup_files_after_install()
     copy_files_after_install()
 
 
@@ -13,18 +17,27 @@ def copy_files_after_install():
     """
     Copy necessary files to frappe sites instance
     """
-    origin_path = os.path.dirname(os.path.abspath(__file__)) + "/copy/"
-    dest_path = os.path.dirname(os.path.abspath(__file__)) + "/../../../../"
-    files_to_copy = {
-        "gotham_rounded": {
-            "type": "dir",
-            "origin_path": origin_path + "gotham-rounded",
-            "dest_path": dest_path + "sites/assets/frappe/css/fonts/gotham-rounded"
-        }
-    }
-
-    for  ftc in files_to_copy.values():
-        if ftc["type"] == "dir": 
+    
+    for ftc in FILES.values():
+        if ftc["type"] == "dir":
+            shutil.rmtree(ftc["dest_path"])
             shutil.copytree(ftc["origin_path"], ftc["dest_path"])
-        elif ftc == "file":
+            pass
+        elif ftc["type"] == "file":
+            pass
+
+
+def backup_files_after_install():
+    """
+    Backup the files / dirs
+    """
+
+    for ftc in FILES.values():
+        if ftc["type"] == "dir":
+            try:
+                if ftc["backup"]:
+                    shutil.copytree(ftc["dest_path"], ftc["backup_path"])
+            except FileExistsError:
+                pass
+        elif ftc["type"] == "file":
             pass
