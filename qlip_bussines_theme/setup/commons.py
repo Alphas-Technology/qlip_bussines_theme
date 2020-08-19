@@ -112,6 +112,13 @@ FILES = {
         "dest_path": DEST_SITE_PATH + "sites/assets/frappe/js/frappe/form/templates/form_sidebar.html",
         "backup": True,
     },
+    "user_image.js": {
+        "type": "file",
+        "origin_path": ORIGIN_PATH + "user_image.js",
+        "backup_path": BACKUP_PATH + "user_image.js",
+        "dest_path": DEST_SITE_PATH + "sites/assets/frappe/js/frappe/form/sidebar/user_image.js",
+        "backup": True,
+    },
     "tags.js": {
         "type": "file",
         "origin_path": ORIGIN_PATH + "tags.js",
