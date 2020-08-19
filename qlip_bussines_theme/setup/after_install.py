@@ -33,10 +33,14 @@ def backup_files_after_install():
 
     for ftc in FILES.values():
         if ftc["type"] == "dir":
-            try:
-                if ftc["backup"]:
+            if ftc["backup"]:
+                try:
                     shutil.copytree(ftc["dest_path"], ftc["backup_path"])
-            except FileExistsError:
-                pass
+                except FileExistsError:
+                    pass
         elif ftc["type"] == "file":
-            shutil.copyfile(ftc["dest_path"], ftc["backup_path"])
+            if ftc["backup"]:
+                try:
+                    shutil.copyfile(ftc["dest_path"], ftc["backup_path"])
+                except FileExistsError:
+                    pass
