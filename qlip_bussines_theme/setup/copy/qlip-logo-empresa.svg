@@ -1,0 +1,12 @@
+<svg id="empresa" xmlns="http://www.w3.org/2000/svg" width="107" height="26" viewBox="0 0 107 26">
+  <text id="Fanalca" transform="translate(23 21)" fill="#1e6491" font-size="22" font-family="GothamRounded-Book, Gotham Rounded"><tspan x="0" y="0">Fanalca</tspan></text>
+  <g id="oficina" transform="translate(0 1)">
+    <g id="Grupo_430" data-name="Grupo 430">
+      <rect id="Rectángulo_156" data-name="Rectángulo 156" width="24" height="24" fill="none"/>
+      <rect id="Rectángulo_157" data-name="Rectángulo 157" width="24" height="24" fill="none"/>
+    </g>
+    <g id="Grupo_431" data-name="Grupo 431" transform="translate(3 3)">
+      <path id="Trazado_357" data-name="Trazado 357" d="M17,11V5a2.006,2.006,0,0,0-2-2H9A2.006,2.006,0,0,0,7,5V7H5A2.006,2.006,0,0,0,3,9V19a2.006,2.006,0,0,0,2,2h5a1,1,0,0,0,1-1V17h2v3a1,1,0,0,0,1,1h5a2.006,2.006,0,0,0,2-2V13a2.006,2.006,0,0,0-2-2ZM7,19H5V17H7Zm0-4H5V13H7Zm0-4H5V9H7Zm4,4H9V13h2Zm0-4H9V9h2Zm0-4H9V5h2Zm4,8H13V13h2Zm0-4H13V9h2Zm0-4H13V5h2Zm4,12H17V17h2Zm0-4H17V13h2Z" transform="translate(-3 -3)" fill="#1e6491"/>
+    </g>
+  </g>
+</svg>

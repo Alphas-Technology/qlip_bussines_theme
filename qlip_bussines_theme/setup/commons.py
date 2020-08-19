@@ -14,6 +14,20 @@ FILES = {
         "dest_path": DEST_SITE_PATH + "sites/assets/frappe/css/fonts/gotham-rounded",
         "backup": False,
     },
+    "qlip-logo.svg": {
+        "type": "file",
+        "origin_path": ORIGIN_PATH + "qlip-logo.svg",
+        "backup_path": BACKUP_PATH + "qlip-logo.svg",
+        "dest_path": DEST_SITE_PATH + "sites/assets/frappe/images/qlip-logo.svg",
+        "backup": False,
+    },
+    "qlip-logo-empresa.svg": {
+        "type": "file",
+        "origin_path": ORIGIN_PATH + "qlip-logo-empresa.svg",
+        "backup_path": BACKUP_PATH + "qlip-logo-empresa.svg",
+        "dest_path": DEST_SITE_PATH + "sites/assets/frappe/images/qlip-logo-empresa.svg",
+        "backup": False,
+    },
     "tags.js": {
         "type": "file",
         "origin_path": ORIGIN_PATH + "tags.js",
