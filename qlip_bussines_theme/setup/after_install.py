@@ -20,7 +20,11 @@ def copy_files_after_install():
     
     for ftc in FILES.values():
         if ftc["type"] == "dir":
-            shutil.rmtree(ftc["dest_path"])
+            # first cleared because copytree doesn't overwrite
+            try:
+                shutil.rmtree(ftc["dest_path"])
+            except FileNotFoundError:
+                pass
             shutil.copytree(ftc["origin_path"], ftc["dest_path"])
         elif ftc["type"] == "file":
             shutil.copyfile(ftc["origin_path"], ftc["dest_path"])
