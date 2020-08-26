@@ -13,6 +13,16 @@
           <span class="visible-xs visible-sm" style="font-size: 3.5rem; margin-left: 3rem; color: #39AA9E; font-weight: 300;">qlip</span>
         </a>
 
+        <!-- MENU -->
+        <div class="desk-container" id="navbar-page-switcher">
+          <div class="page-switcher" style="display: flex;">
+            <div class="current-title"></div>
+            <i class="fa fa-chevron-down text-muted"></i>
+          </div>
+          <div class="mobile-list"></div>
+        </div>
+        <!-- END MENU -->
+
         <a href="#Form/User/{%= encodeURIComponent(frappe.session.user) %}" class="navbar-brand app-logo-empresa hidden-xs hidden-sm">
           <img src="/assets/frappe/images/qlip-logo-empresa.svg" />
         </a>

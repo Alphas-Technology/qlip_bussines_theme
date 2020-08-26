@@ -1110,3 +1110,31 @@ color: #7B7B7B;
 }
 
 /* END TOASTER */
+
+/* MODULES MENU */
+.desk-container .desk-sidebar {
+  display: none;
+}
+
+.desk-container .desk-body {
+  padding-left: 0;
+}
+
+.desk-container .page-switcher {
+  display: flex;
+  /* position: fixed;
+  top: 20px;
+  z-index: 2500;
+  left: calc(50% - 380px); */
+}
+
+/* .desk-container .mobile-list {
+  width: 200px;
+  left: calc(50% - 380px);
+  z-index: 2500;
+  position: fixed;
+  background-color: white;
+  overflow-y: scroll;
+  height: 80vh;
+} */
+/* END MODULES MENU */
