@@ -1128,6 +1128,11 @@ color: #7B7B7B;
   left: calc(50% - 380px); */
 }
 
+#navbar-page-switcher .mobile-list {
+  position: fixed;
+  background-color: white;
+}
+
 /* .desk-container .mobile-list {
   width: 200px;
   left: calc(50% - 380px);
