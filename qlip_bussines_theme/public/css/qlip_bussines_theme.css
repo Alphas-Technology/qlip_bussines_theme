@@ -114,6 +114,7 @@ a.dropdown-toggle {
 
 .qlip-navbar {
   padding-top: 18px;
+  padding-bottom: 18px;
 }
 
 .qlip-navbar .desk-container {
@@ -143,11 +144,15 @@ a.dropdown-toggle {
 
 @media (min-width: 768px) {
   .qlip-navbar .navbar-header {
-    width: 450px;
+    width: 595px;
   }
 
   .qlip-navbar .navbar > .container .navbar-brand, .navbar > .container-fluid .navbar-brand {
     margin-left: 0;
+  }
+
+  .qlip-navbar .nav.navbar-nav.navbar-right {
+    margin-right: -60px;
   }
 }
 
@@ -176,6 +181,33 @@ a.dropdown-toggle {
 .qlip-navbar .qlip-handshake-icon {
   margin-right: 10.19px;
   width: 18px;
+}
+
+.qlip-navbar #navbar-search {
+  width: 268px;
+  min-width: 268px;
+  max-width: 268px;
+}
+
+.qlip-navbar .awesomplete {
+  width: 268px;
+  min-width: 268px;
+  max-width: 268px;
+}
+
+.qlip-navbar .navbar-form {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.qlip-navbar #navbar-page-switcher {
+  margin-right: 67px;
+}
+
+
+.qlip-navbar .app-logo-empresa img {
+  /* margin-top: 3px; */
+  vertical-align: baseline;
 }
 
 .navbar {
@@ -211,10 +243,6 @@ a.dropdown-toggle {
 
 .navbar .navbar-home img {
   min-width: 180px;
-}
-
-.app-logo-empresa img {
-  margin-top: 3px;
 }
 
 /* @media (min-width: 992px) {
