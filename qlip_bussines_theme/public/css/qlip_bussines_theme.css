@@ -137,6 +137,7 @@ a.dropdown-toggle {
   float: none;
   padding: 0;
   padding-left: 15px;
+  margin-right: 66.47px;
 }
 
 
@@ -153,6 +154,28 @@ a.dropdown-toggle {
 .qlip-navbar .page-switcher {
   width: 100px;
   margin-bottom: 0;
+  padding: 0;
+  border: 0;
+  background-color: white;
+}
+
+.qlip-navbar .page-switcher .current-title {
+  color: #505050;
+  margin-right: 10px;
+}
+
+.qlip-navbar .page-switcher .fa.fa-caret-down.text-muted {
+  color: #042172 !important;
+  font-size: 24px;
+}
+
+.qlip-navbar img {
+  vertical-align: bottom;
+}
+
+.qlip-navbar .qlip-handshake-icon {
+  margin-right: 10.19px;
+  width: 18px;
 }
 
 .navbar {
