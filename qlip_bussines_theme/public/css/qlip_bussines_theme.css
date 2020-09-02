@@ -312,6 +312,11 @@ a.dropdown-toggle {
     width: 26px;
     height: 26px;
   }
+
+  .app-icon-chat {
+    width: 27px;
+    height: 29px;
+  }
 }
 
 .configuration, .notification {
@@ -346,9 +351,9 @@ a.dropdown-toggle {
   margin-top: 0.5rem;
 }
 
-.frappe-chat-dropdown {
+/* .frappe-chat-dropdown {
   margin-top: 0.5rem;
-}
+} */
 
 /* HEADER INPUT SEARCH */
 #navbar-search {
