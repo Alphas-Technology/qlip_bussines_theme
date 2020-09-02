@@ -162,11 +162,17 @@ a.dropdown-toggle {
   padding: 0;
   border: 0;
   background-color: white;
+  cursor: pointer;
 }
 
 .qlip-navbar .page-switcher .current-title {
   color: #505050;
   margin-right: 10px;
+}
+
+.qlip-navbar .desk-container .mobile-list .sidebar-item {
+  color: #707070;
+  font-weight: normal;
 }
 
 .qlip-navbar .page-switcher .fa.fa-caret-down.text-muted {
@@ -342,8 +348,7 @@ a.dropdown-toggle {
 .avatar-small .avatar-frame {
   border-radius: 18px;
   width: 28px;
-  height: 28px;
- 
+  height: 28px; 
 }
 
 .avatar-small {
@@ -1218,6 +1223,15 @@ color: #7B7B7B;
   top: 20px;
   z-index: 2500;
   left: calc(50% - 380px); */
+}
+
+.qlip-navbar .desk-container .mobile-list {
+  left: calc(50% - 350px);
+  overflow-y: auto;
+  height: 84vh;
+  border-radius: 18px;
+  border: 0;
+  box-shadow: 0px 3px 6px #00000029;
 }
 
 #navbar-page-switcher .mobile-list {
