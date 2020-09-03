@@ -2674,11 +2674,8 @@ frappe.chat.render = (render = true, force = false) =>
 		if ( frappe.utils.is_empty($placeholder.has('.frappe-chat-toggle')) ) {
 			const $template = $(`
 				<a class="dropdown-toggle frappe-chat-toggle" data-toggle="dropdown">
-					<div class="hidden-xs hidden-sm">
-						<img class="qlip-icon app-icon-chat chat" src="/assets/frappe/icons/qlip-chat-icon.svg" />
-					</div>
-					<div class="visible-xs visible-sm">
-						<img class="qlip-icon-movil app-icon-chat chat-movil" src="/assets/frappe/icons/qlip-chat-icon.svg" />
+					<div>
+						<img class="qlip-icon app-icon-chat" src="/assets/frappe/icons/qlip-chat-icon.svg" />
 					</div>
 				</a>
 			`)
