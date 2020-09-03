@@ -117,10 +117,6 @@ a.dropdown-toggle {
   padding-bottom: 18px;
 }
 
-.qlip-navbar .desk-container {
-  display: inline;
-}
-
 .qlip-navbar .container {
   padding-left: 0;
   padding-right: 0;
@@ -266,10 +262,11 @@ a.dropdown-toggle {
 }
  
 
-@media (max-width: 767px) {
+/* xs, sm*/
+@media (max-width: 768px) {
   .qlip-icon {
-    width: 16px;
-    height: 16px;
+    width: 12px;
+    height: 12px;
   }
 
   .navbar > .container .navbar-brand {
@@ -280,10 +277,61 @@ a.dropdown-toggle {
     margin-top: 1rem !important;
   }
 
-  .dropdown-mobile {
-    margin-right: 1.5rem !important;
+  .app-icon-chat {
+    padding: 0;
+    width: 12px;
+    height: 12px;
+  }    
+
+  .qlip-navbar .desk-container .page-switcher .current-title, .qlip-navbar .desk-container .page-switcher .fa{
+    display: none;
+  }
+
+  .qlip-navbar .navbar-search-button .octicon {
+    font: normal normal normal 12px/1 octicons;
+  }
+
+  .configuration, .notification {
+    margin-right: 0;
+  }
+
+  .qlip-navbar img {
+    vertical-align: middle;
+  }
+
+  .qlip-navbar .dropdown-notifications .notifications-icon {
+    padding-top: 8px;
+  }
+
+  .qlip-navbar .desk-container {
+    display: block;
   }
 }
+/* End xs, sm*/
+
+/* Sobre sm */
+@media (min-width: 768px) {
+  .qlip-icon {
+    width: 26px;
+    height: 26px;
+  }
+
+  .app-icon-chat {
+    width: 27px;
+    height: 29px; 
+    padding: 2px 1px 2px 1px;
+    margin-right: 1.5rem;
+  }
+
+  .configuration, .notification {
+    margin-right: 3rem;
+  }
+
+  .qlip-navbar .desk-container {
+    display: inline;
+  }
+}
+/* End sobre sm*/
 
 @media (min-width: 768px) and (max-width: 991px) {
   .qlip-icon {
@@ -304,46 +352,17 @@ a.dropdown-toggle {
   }
 }
 
-.qlip-icon-movil {
-  width: 16px;
-  height: 16px;
-}
-
 .li-icon-user {
   color: #dcdcdc;
 }
 
-@media (min-width: 992px) {
-  .qlip-icon {
-    width: 26px;
-    height: 26px;
-  }
-
-  .app-icon-chat {
-    width: 27px;
-    height: 29px;
-  }
-}
-
-.configuration, .notification {
-  margin-right: 3rem;
-}
-
-.configuration-movil,  .chat-movil, .notification-movil {
+.configuration-movil, .notification-movil {
   margin-right: 0.5rem;
 }
 
 /* .chat, .user {
   padding: 8px 10px;
 } */
-.chat {
- padding: 2px 1px 2px 1px;
- margin-right: 1.5rem;
-}
-
-.chat-movil {
-  padding: 0;
- }
 
 .avatar-small .avatar-frame {
   border-radius: 18px;
