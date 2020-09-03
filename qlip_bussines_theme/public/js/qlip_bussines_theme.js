@@ -606,7 +606,7 @@ frappe.ui.toolbar.Toolbar = frappe.ui.toolbar.Toolbar.extend({
 		this.current_page = page;
 		console.log("Debería esconder mobile_list");
 		this.mobile_list.hide();
-		this.current_title.empty().append(this.current_page);
+		this.current_title.empty().append(__(this.current_page));
 		localStorage.current_desk_page = page;
 		this.pages[page] ? this.pages[page].show() : this.make_page(page);
 	},
