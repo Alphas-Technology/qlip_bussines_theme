@@ -206,7 +206,6 @@ a.dropdown-toggle {
 }
 
 .navbar {
-  min-height: 81px;
   display: flex;
   align-items: center;
 }
@@ -284,7 +283,7 @@ a.dropdown-toggle {
   .qlip-navbar .desk-container .mobile-list {
     left: 5%;
     width: 90%;
-    top: 100px;
+    top: 80px;
 }
 
   .app-icon-chat {
@@ -328,6 +327,23 @@ a.dropdown-toggle {
     margin-right: 0;
     width: 16px;
   }
+
+  .navbar {
+    min-height: 62px;
+  }
+
+  .qlip-navbar {
+    padding-top: 0px;
+    padding-bottom: 0px;
+  }
+
+  .modal .modal-dialog {
+    width: 80%;
+  }
+
+  .dropdown-mobile.open .dropdown-menu {
+    left: -320px;
+  }
 }
 /* End xs, sm*/
 
@@ -365,6 +381,10 @@ a.dropdown-toggle {
 
   .qlip-navbar .desk-container .mobile-list {
     left: calc(50% - 350px);
+  }
+
+  .navbar {
+    min-height: 81px;
   }
 }
 /* End sobre sm*/
@@ -1291,6 +1311,10 @@ color: #7B7B7B;
 .navbar-page-switcher .mobile-list {
   position: fixed;
   background-color: white;
+}
+
+.desk-container .desk-body .page-switcher {
+  display: none;
 }
 
 /* .desk-container .mobile-list {
