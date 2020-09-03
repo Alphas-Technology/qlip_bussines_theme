@@ -153,9 +153,7 @@ a.dropdown-toggle {
 }
 
 .qlip-navbar .page-switcher {
-  width: 100px;
   margin-bottom: 0;
-  padding: 0;
   border: 0;
   background-color: white;
   cursor: pointer;
@@ -180,11 +178,6 @@ a.dropdown-toggle {
   vertical-align: bottom;
 }
 
-.qlip-navbar .qlip-handshake-icon {
-  margin-right: 10.19px;
-  width: 18px;
-}
-
 .qlip-navbar #navbar-search {
   width: 268px;
   min-width: 268px;
@@ -202,7 +195,7 @@ a.dropdown-toggle {
   margin-bottom: 0;
 }
 
-.qlip-navbar #navbar-page-switcher {
+.qlip-navbar .navbar-page-switcher {
   margin-right: 67px;
 }
 
@@ -305,6 +298,22 @@ a.dropdown-toggle {
 
   .qlip-navbar .desk-container {
     display: block;
+    margin-top: 0;
+  }
+
+  .qlip-navbar .navbar-page-switcher {
+    margin-right: 0;
+  }
+
+  .qlip-navbar .page-switcher {
+    width: auto;
+    padding: 8px 10px;
+    padding-top: 12px;
+  }
+
+  .qlip-navbar .qlip-handshake-icon {
+    margin-right: 0;
+    width: 16px;
   }
 }
 /* End xs, sm*/
@@ -329,6 +338,16 @@ a.dropdown-toggle {
 
   .qlip-navbar .desk-container {
     display: inline;
+  }
+
+  .qlip-navbar .page-switcher {
+    width: 100px;
+    padding: 0;
+  }
+
+  .qlip-navbar .qlip-handshake-icon {
+    margin-right: 10.19px;
+    width: 18px;
   }
 }
 /* End sobre sm*/
@@ -1253,7 +1272,7 @@ color: #7B7B7B;
   box-shadow: 0px 3px 6px #00000029;
 }
 
-#navbar-page-switcher .mobile-list {
+.navbar-page-switcher .mobile-list {
   position: fixed;
   background-color: white;
 }

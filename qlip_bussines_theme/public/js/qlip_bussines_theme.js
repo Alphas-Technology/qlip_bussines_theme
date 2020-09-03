@@ -418,9 +418,9 @@ frappe.ui.toolbar.Toolbar = frappe.ui.toolbar.Toolbar.extend({
 	make: function() {
 		this._super();
 
-		this.page_switcher = $('#navbar-page-switcher').find('.page-switcher'); 
-		this.mobile_list = $('#navbar-page-switcher').find('.mobile-list');
-		this.current_title = $('#navbar-page-switcher').find(".current-title");
+		this.page_switcher = $('.navbar-page-switcher').find('.page-switcher'); 
+		this.mobile_list = $('.navbar-page-switcher').find('.mobile-list');
+		this.current_title = $('.navbar-page-switcher').find(".current-title");
 
 
 		// $('.page-switcher').click(() => {
@@ -511,8 +511,8 @@ frappe.ui.toolbar.Toolbar = frappe.ui.toolbar.Toolbar.extend({
 			}
 		});
 
-		this.sidebar_item = $('#navbar-page-switcher').find(".sidebar-item");
-		this.sidebar_group_title = $('#navbar-page-switcher').find(".sidebar-group-title");
+		this.sidebar_item = $('.navbar-page-switcher').find(".sidebar-item");
+		this.sidebar_group_title = $('.navbar-page-switcher').find(".sidebar-group-title");
 		this.sidebar_item.on('click', () => {
 			this.fetch_desktop_settings().then(() => {
 				console.log("Ingresó al OnClick");
@@ -572,8 +572,8 @@ frappe.ui.toolbar.Toolbar = frappe.ui.toolbar.Toolbar.extend({
 				});
 			}
 		});
-		this.sidebar_item = $('#navbar-page-switcher').find(".sidebar-item");
-		this.sidebar_group_title = $('#navbar-page-switcher').find(".sidebar-group-title");
+		this.sidebar_item = $('.navbar-page-switcher').find(".sidebar-item");
+		this.sidebar_group_title = $('.navbar-page-switcher').find(".sidebar-group-title");
 		this.sidebar_item.on('click', () => {
 			this.fetch_desktop_settings().then(() => {
 				console.log("Ingresó al OnClick");
