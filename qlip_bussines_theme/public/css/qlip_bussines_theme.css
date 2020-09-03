@@ -281,6 +281,12 @@ a.dropdown-toggle {
     margin-top: 0;
   }
 
+  .qlip-navbar .desk-container .mobile-list {
+    left: 5%;
+    width: 90%;
+    top: 100px;
+}
+
   .app-icon-chat {
     padding: 0;
     width: 12px;
@@ -355,6 +361,10 @@ a.dropdown-toggle {
   .qlip-navbar .qlip-handshake-icon {
     margin-right: 10.19px;
     width: 18px;
+  }
+
+  .qlip-navbar .desk-container .mobile-list {
+    left: calc(50% - 350px);
   }
 }
 /* End sobre sm*/
@@ -1271,7 +1281,6 @@ color: #7B7B7B;
 }
 
 .qlip-navbar .desk-container .mobile-list {
-  left: calc(50% - 350px);
   overflow-y: auto;
   height: 84vh;
   border-radius: 18px;
