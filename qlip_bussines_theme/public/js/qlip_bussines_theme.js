@@ -148,8 +148,10 @@ frappe.ui.form.ControlLink = frappe.ui.form.ControlLink.extend({
 		}
 	}
 })
+// End Control Link (textbox)
 
 
+// Control Select
 frappe.ui.form.ControlSelect = frappe.ui.form.ControlSelect.extend({
 	make_wrapper: function() {
 		if(this.only_input) {
@@ -172,12 +174,12 @@ frappe.ui.form.ControlSelect = frappe.ui.form.ControlSelect.extend({
 	make_input: function() {
 		this._super();
 		this.$input.attr("onclick", "this.setAttribute('value', this.value);")
-			.attr("value", "")
+			.attr("value", this.value)
 			.addClass("floating-select")
 	}
 
 })
-
+// End Control Select
 
 // Control Popup
 frappe.msgprint = function(msg, title, is_minimizable) {
@@ -900,3 +902,5 @@ class DesktopPage {
 		</div>`).insertAfter(cards.body);
 	}
 }
+
+// End Toolbar, Header
