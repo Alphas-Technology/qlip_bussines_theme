@@ -1048,6 +1048,9 @@ color: #7B7B7B;
     padding: 5px 20px;
     margin-left: 1em;
     max-width: 153px;
+    text-align: center;
+    max-height: 35px;
+    overflow: hidden;
 }
 
 .icon-foto-b > span {
@@ -1058,12 +1061,15 @@ color: #7B7B7B;
 }
 
 .form-name-user-b{
-  /* margin-left: 20px; se quita*/
-  text-align: center;/*nuevo*/
+  text-align: center;
   margin-top: 20px;
   color: #1E6491;
-  font-size: 24px;/*cambio*/
+  font-size: 24px;
   line-height: 37px;
+  overflow: hidden;
+  max-width: 150px;
+  margin-left: auto;
+  margin-right: auto;
 }
 /***END PERFIL DE FOTO DE USUARIOS***/
 
