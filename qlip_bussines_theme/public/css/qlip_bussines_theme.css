@@ -999,10 +999,14 @@ body {
 }
 
 .form-name-user{
-  margin-top: 30px;
+  margin-top: 20px;
   color: #1E6491;
-  font-size: 31px;
+  font-size: 24px;
   line-height: 37px;
+  overflow: hidden;
+  max-width: 150px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .icon-foto{
@@ -1011,15 +1015,18 @@ body {
   box-shadow: 0px 3px 6px #00000029;
   border-radius: 5px;
   padding: 5px 20px;
-  margin-left: 10%;
   max-width: 153px;
+  text-align: center;
+  max-height: 35px;
+  overflow: hidden;
+  margin-right: auto;
+  margin-left: auto;
 }
 
 .icon-foto > span {
-margin-left: 5px;
-font-size: 10px;
-line-height: 12px;
-color: #7B7B7B;
+  font-size: 12px;
+  line-height: 12px;
+  color: #7B7B7B;
 }
 /* END PERFIL DE USUARIO */
 
@@ -1046,16 +1053,16 @@ color: #7B7B7B;
     box-shadow: 0px 3px 6px #00000029;
     border-radius: 5px;
     padding: 5px 20px;
-    margin-left: 1em;
     max-width: 153px;
     text-align: center;
     max-height: 35px;
     overflow: hidden;
+    margin-right: auto;
+    margin-left: auto;
 }
 
 .icon-foto-b > span {
-  margin-left: 5px;
-  font-size: 10px;
+  font-size: 12px;
   line-height: 12px;
   color: #7B7B7B;
 }
@@ -1070,6 +1077,15 @@ color: #7B7B7B;
   max-width: 150px;
   margin-left: auto;
   margin-right: auto;
+}
+
+.form-sidebar .sidebar-image-section .sidebar-image-wrapper:hover .sidebar-image,
+.form-sidebar .sidebar-image-section .sidebar-image-wrapper:hover .sidebar-standard-image {
+  opacity: 1
+}
+
+.form-sidebar .sidebar-image-section {
+  cursor: unset;
 }
 /***END PERFIL DE FOTO DE USUARIOS***/
 
