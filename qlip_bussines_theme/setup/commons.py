@@ -167,5 +167,12 @@ FILES = {
         "backup_path": BACKUP_PATH + "user_profile_sidebar.html",
         "dest_path": DEST_APPS_PATH + "frappe/frappe/desk/page/user_profile/user_profile_sidebar.html",
         "backup": True,
-    }
+    },
+    "desk.html": {
+        "type": "file",
+        "origin_path": ORIGIN_PATH + "desk.html",
+        "backup_path": BACKUP_PATH + "desk.html",
+        "dest_path": DEST_APPS_PATH + "/frappe/frappe/www/desk.html",
+        "backup": True,
+    },
 }
