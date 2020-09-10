@@ -148,8 +148,10 @@ frappe.ui.form.ControlLink = frappe.ui.form.ControlLink.extend({
 		}
 	}
 })
+// End Control Link (textbox)
 
 
+// Control Select
 frappe.ui.form.ControlSelect = frappe.ui.form.ControlSelect.extend({
 	make_wrapper: function() {
 		if(this.only_input) {
@@ -172,12 +174,12 @@ frappe.ui.form.ControlSelect = frappe.ui.form.ControlSelect.extend({
 	make_input: function() {
 		this._super();
 		this.$input.attr("onclick", "this.setAttribute('value', this.value);")
-			.attr("value", "")
+			.attr("value", this.value)
 			.addClass("floating-select")
 	}
 
 })
-
+// End Control Select
 
 // Control Popup
 frappe.msgprint = function(msg, title, is_minimizable) {
@@ -606,7 +608,7 @@ frappe.ui.toolbar.Toolbar = frappe.ui.toolbar.Toolbar.extend({
 		this.current_page = page;
 		console.log("Debería esconder mobile_list");
 		this.mobile_list.hide();
-		this.current_title.empty().append(this.current_page);
+		this.current_title.empty().append(__(this.current_page));
 		localStorage.current_desk_page = page;
 		this.pages[page] ? this.pages[page].show() : this.make_page(page);
 	},
@@ -900,3 +902,5 @@ class DesktopPage {
 		</div>`).insertAfter(cards.body);
 	}
 }
+
+// End Toolbar, Header

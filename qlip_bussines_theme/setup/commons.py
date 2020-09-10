@@ -84,6 +84,20 @@ FILES = {
         "dest_path": DEST_SITE_PATH + "sites/assets/frappe/icons/qlip-handshake-icon.svg",
         "backup": False,
     },
+    "favicon.png": {
+        "type": "file",
+        "origin_path": ORIGIN_PATH + "favicon.png",
+        "backup_path": BACKUP_PATH + "favicon.png",
+        "dest_path": DEST_SITE_PATH + "sites/assets/erpnext/images/favicon.png",
+        "backup": True,
+    },
+    "erp-icon.svg": {
+        "type": "file",
+        "origin_path": ORIGIN_PATH + "erp-icon.svg",
+        "backup_path": BACKUP_PATH + "erp-icon.svg",
+        "dest_path": DEST_SITE_PATH + "sites/assets/erpnext/images/erp-icon.svg",
+        "backup": True,
+    },
     "chat.js": {
         "type": "file",
         "origin_path": ORIGIN_PATH + "chat.js",
@@ -153,5 +167,12 @@ FILES = {
         "backup_path": BACKUP_PATH + "user_profile_sidebar.html",
         "dest_path": DEST_APPS_PATH + "frappe/frappe/desk/page/user_profile/user_profile_sidebar.html",
         "backup": True,
-    }
+    },
+    "desk.html": {
+        "type": "file",
+        "origin_path": ORIGIN_PATH + "desk.html",
+        "backup_path": BACKUP_PATH + "desk.html",
+        "dest_path": DEST_APPS_PATH + "/frappe/frappe/www/desk.html",
+        "backup": True,
+    },
 }
