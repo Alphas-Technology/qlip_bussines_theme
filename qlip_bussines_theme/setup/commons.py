@@ -84,12 +84,19 @@ FILES = {
         "dest_path": DEST_SITE_PATH + "sites/assets/frappe/icons/qlip-handshake-icon.svg",
         "backup": False,
     },
-    "qlip-logo.svg": {
+    "favicon.png": {
         "type": "file",
         "origin_path": ORIGIN_PATH + "favicon.png",
         "backup_path": BACKUP_PATH + "favicon.png",
         "dest_path": DEST_SITE_PATH + "sites/assets/erpnext/images/favicon.png",
-        "backup": False,
+        "backup": True,
+    },
+    "erp-icon.svg": {
+        "type": "file",
+        "origin_path": ORIGIN_PATH + "erp-icon.svg",
+        "backup_path": BACKUP_PATH + "erp-icon.svg",
+        "dest_path": DEST_SITE_PATH + "sites/assets/erpnext/images/erp-icon.svg",
+        "backup": True,
     },
     "chat.js": {
         "type": "file",
