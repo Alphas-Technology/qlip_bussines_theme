@@ -252,6 +252,20 @@ a.dropdown-toggle {
     margin-right: 0;
   }
 }
+
+.qlip-company {
+  display: inline-block;
+    max-width: 146px;
+    overflow: hidden;
+    max-height: 22px;
+}
+
+.qlip-company a.navbar-brand {
+    font-size: 22px;
+    font-weight: normal;
+    vertical-align: super;
+    color: #1E6491;
+}
  
 
 /* xs, sm*/
