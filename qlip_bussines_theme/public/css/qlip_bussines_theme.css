@@ -1156,9 +1156,25 @@ color: #7B7B7B;
 }
 
 .breadcrumbs-navbar{
-  position: relative;
+  position: fixed;
   z-index: 150;
   top: 110px;
+}
+
+@media (min-width: 1200px) {
+  .breadcrumbs-navbar{
+    width: 1170px;
+    margin-right: -585px;
+    right: 50%;
+  }
+}
+
+@media (min-width: 1199px){
+  body.full-width .breadcrumbs-navbar{
+    width: 90%;
+    margin-right: -45%;
+    right: 50%;
+  }
 }
 
 .page-content {
