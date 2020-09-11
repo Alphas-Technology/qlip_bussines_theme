@@ -572,20 +572,23 @@ a.dropdown-toggle {
 }
 /* End Especifico para Control Int, Read Only*/
 
-/* Específico para Control Float, Currency*/
+/* Específico para Control Float, Currency, Date*/
 .floating-input[data-fieldtype="Float"] ~ label,
-.floating-input[data-fieldtype="Currency"] ~ label {
+.floating-input[data-fieldtype="Currency"] ~ label,
+.floating-input[data-fieldtype="Date"] ~ label {
   top: auto;
   left: 3.5em;
   margin-top: -3em;
 }
 .floating-label > .floating-input:focus[data-fieldtype="Float"] ~ label,
-.floating-label > .floating-input:focus[data-fieldtype="Currency"] ~ label {
+.floating-label > .floating-input:focus[data-fieldtype="Currency"] ~ label,
+.floating-label > .floating-input:focus[data-fieldtype="Date"] ~ label,
+.floating-label > .floating-input:not(:placeholder-shown)[data-fieldtype="Date"] ~ label {
   top: auto;
   left: 30px;
   margin-top: -4.8em;
 }
-/* End Especifico para Control Float, Currency*/
+/* End Especifico para Control Float, Currency, Date*/
 
 
 .floating-label > .floating-input:disabled ~ label,
