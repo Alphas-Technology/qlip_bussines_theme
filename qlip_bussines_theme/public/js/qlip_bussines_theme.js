@@ -279,11 +279,12 @@ frappe.ui.form.ControlCurrency = frappe.ui.form.ControlFloat.extend({
 
 // Control Read Only
 frappe.ui.form.ControlReadOnly = frappe.ui.form.ControlData.extend({
-	set_input_attributes: function() {
-		this._super();
-		this.$input
-			.attr("readonly", true);
-	}
+	get_status: function(explain) {
+		var status = this._super(explain);
+		if(status==="Write")
+			status = "Read";
+		return;
+	},
 })
 // End Control Read Only
 
