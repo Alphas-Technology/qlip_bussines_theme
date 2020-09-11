@@ -424,39 +424,9 @@ frappe.ui.toolbar.Toolbar = frappe.ui.toolbar.Toolbar.extend({
 		this.mobile_list = $('.navbar-page-switcher').find('.mobile-list');
 		this.current_title = $('.navbar-page-switcher').find(".current-title");
 
-
-		// $('.page-switcher').click(() => {
-		// 	console.log("HOLA MUNDO");
-		// 	// $('.mobile-list').toggle();
-		// 	this.mobile_list.toggle();
-		// });
-		// this.page_switcher.on('click', () => {
-		// 	console.log("HOLA MUNDO");
-		// 	this.mobile_list.toggle();
-		// });
-		console.log("POR AQUI PASo");
 		this.fetch_desktop_settings().then(() => {
 			this.route();
 			this.make_sidebar();
-			// this.sidebar_item.on('click', () => {
-			// 	// this.mobile_list.hide();
-			// 	// this.mobile_list.detach();
-			// 	console.log("Ingresó al OnClick");
-			// 	this.sidebar_group_title.detach();
-			// 	this.sidebar_item.detach();
-			// 	// $('<div class="mobile-list"></div>').appendTo('#navbar-page-switcher');
-			// 	this.route();
-			// 	this.remake_sidebar();
-			// 	// console.log("SIDEBAR_ITEM");
-			// 	// this.fetch_desktop_settings().then(() => {
-			// 	// 	// this.mobile_list.detach();
-			// 	// 	this.sidebar_item.detach();
-			// 	// 	// $('<div class="mobile-list"></div>').appendTo('#navbar-page-switcher');
-			// 	// 	console.log("this.mobile_list.detach(): %o", this.mobile_list);
-			// 	// 	this.route();
-			// 	// 	this.remake_sidebar();
-			// 	// });
-			// });
 		});
 	},
 
@@ -466,7 +436,6 @@ frappe.ui.toolbar.Toolbar = frappe.ui.toolbar.Toolbar.extend({
 	},
 
 	remake_sidebar: function() {
-		console.log("REMAKE_SIDEBAR");
 		const get_sidebar_item = function(item) {
 			return $(`<a href="${"desk#workspace/" +
 				item.name}" class="sidebar-item ${
@@ -517,7 +486,6 @@ frappe.ui.toolbar.Toolbar = frappe.ui.toolbar.Toolbar.extend({
 		this.sidebar_group_title = $('.navbar-page-switcher').find(".sidebar-group-title");
 		this.sidebar_item.on('click', () => {
 			this.fetch_desktop_settings().then(() => {
-				console.log("Ingresó al OnClick");
 				this.sidebar_group_title.detach();
 				this.sidebar_item.detach();
 				this.route();
@@ -527,7 +495,6 @@ frappe.ui.toolbar.Toolbar = frappe.ui.toolbar.Toolbar.extend({
 	},
 
 	make_sidebar: function() {
-		console.log("MAKE_SIDEBAR");
 		const get_sidebar_item = function(item) {
 			return $(`<a href="${"desk#workspace/" +
 				item.name}" class="sidebar-item ${
@@ -545,14 +512,7 @@ frappe.ui.toolbar.Toolbar = frappe.ui.toolbar.Toolbar.extend({
 			let $item = get_sidebar_item(item);
 			let $mobile_item = $item.clone();
 
-			// Se comenta porque no se quiere crear el sidebar
-			// solo se quiere crear mobile_list que nos servirá para
-			// el desktop
-			// $item.appendTo(this.sidebar);
-			// this.sidebar_items[item.name] = $item;
-
 			$mobile_item.appendTo(this.mobile_list);
-			// console.log("Mobile List desde make: %o", this.mobile_list.html());
 			this.mobile_sidebar_items[item.name] = $mobile_item;
 		};
 
@@ -578,7 +538,6 @@ frappe.ui.toolbar.Toolbar = frappe.ui.toolbar.Toolbar.extend({
 		this.sidebar_group_title = $('.navbar-page-switcher').find(".sidebar-group-title");
 		this.sidebar_item.on('click', () => {
 			this.fetch_desktop_settings().then(() => {
-				console.log("Ingresó al OnClick");
 				this.sidebar_group_title.detach();
 				this.sidebar_item.detach();
 				this.route();
@@ -606,7 +565,6 @@ frappe.ui.toolbar.Toolbar = frappe.ui.toolbar.Toolbar.extend({
 			this.mobile_sidebar_items[page].addClass("selected");
 		}
 		this.current_page = page;
-		console.log("Debería esconder mobile_list");
 		this.mobile_list.hide();
 		this.current_title.empty().append(__(this.current_page));
 		localStorage.current_desk_page = page;
