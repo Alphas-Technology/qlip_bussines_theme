@@ -561,14 +561,16 @@ a.dropdown-toggle {
     padding-right: 3em !important;
 }
 
-/* Específico para Control Int*/
-.floating-input[data-fieldtype="Int"] ~ label {
+/* Específico para Control Int, Read Only*/
+.floating-input[data-fieldtype="Int"] ~ label,
+.floating-input[data-fieldtype="Read Only"] ~ label {
   left: 3em;
 }
-.floating-label > .floating-input:focus[data-fieldtype="Int"] ~ label {
+.floating-label > .floating-input:focus[data-fieldtype="Int"] ~ label,
+.floating-label > .floating-input:focus[data-fieldtype="Read Only"] ~ label {
   left: 30px;
 }
-/* End Especifico para Control Int*/
+/* End Especifico para Control Int, Read Only*/
 
 /* Específico para Control Float, Currency*/
 .floating-input[data-fieldtype="Float"] ~ label,

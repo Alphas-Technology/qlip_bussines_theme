@@ -193,6 +193,16 @@ frappe.ui.form.ControlFloat = frappe.ui.form.ControlInt.extend({})
 frappe.ui.form.ControlCurrency = frappe.ui.form.ControlFloat.extend({})
 // End Control Currency
 
+// Control Read Only
+frappe.ui.form.ControlReadOnly = frappe.ui.form.ControlData.extend({
+	set_input_attributes: function() {
+		this._super();
+		this.$input
+			.attr("readonly", true);
+	}
+})
+// End Control Read Only
+
 // Control Popup
 frappe.msgprint = function(msg, title, is_minimizable) {
 	if(!msg) return;
