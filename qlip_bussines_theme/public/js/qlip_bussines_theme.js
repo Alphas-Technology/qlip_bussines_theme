@@ -189,6 +189,10 @@ frappe.ui.form.ControlInt = frappe.ui.form.ControlData.extend({})
 frappe.ui.form.ControlFloat = frappe.ui.form.ControlInt.extend({})
 // End Control Float
 
+// Control Currency
+frappe.ui.form.ControlCurrency = frappe.ui.form.ControlFloat.extend({})
+// End Control Currency
+
 // Control Popup
 frappe.msgprint = function(msg, title, is_minimizable) {
 	if(!msg) return;
