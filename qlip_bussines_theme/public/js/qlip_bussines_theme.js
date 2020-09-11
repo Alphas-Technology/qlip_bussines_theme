@@ -181,6 +181,267 @@ frappe.ui.form.ControlSelect = frappe.ui.form.ControlSelect.extend({
 })
 // End Control Select
 
+// Control Int
+frappe.ui.form.ControlInt = frappe.ui.form.ControlData.extend({
+	make: function() {
+		this._super();
+		// $(this.label_area).addClass('pull-right');
+		// $(this.disp_area).addClass('text-right');
+	},
+	make_input: function() {
+		var me = this;
+		this._super();
+		this.$input
+			// .addClass("text-right")
+			.on("focus", function() {
+				setTimeout(function() {
+					if(!document.activeElement) return;
+					document.activeElement.value
+						= me.validate(document.activeElement.value);
+					document.activeElement.select();
+				}, 100);
+				return false;
+			});
+	},
+	eval_expression: function(value) {
+		if (typeof value === 'string') {
+			if (value.match(/^[0-9+\-/* ]+$/)) {
+				// If it is a string containing operators
+				try {
+					return eval(value);
+				} catch (e) {
+					// bad expression
+					return value;
+				}
+			}
+		}
+		return value;
+	},
+	parse: function(value) {
+		return cint(this.eval_expression(value), null);
+	}
+});
+// End Control Int
+
+// Control Float
+frappe.ui.form.ControlFloat = frappe.ui.form.ControlInt.extend({
+	parse: function(value) {
+		value = this.eval_expression(value);
+		return isNaN(parseFloat(value)) ? null : flt(value, this.get_precision());
+	},
+
+	format_for_input: function(value) {
+		var number_format;
+		if (this.df.fieldtype==="Float" && this.df.options && this.df.options.trim()) {
+			number_format = this.get_number_format();
+		}
+		var formatted_value = format_number(value, number_format, this.get_precision());
+		return isNaN(parseFloat(value)) ? "" : formatted_value;
+	},
+
+	get_number_format: function() {
+		var currency = frappe.meta.get_field_currency(this.df, this.get_doc());
+		return get_number_format(currency);
+	},
+
+	get_precision: function() {
+		// round based on field precision or float precision, else don't round
+		return this.df.precision || cint(frappe.boot.sysdefaults.float_precision, null);
+	}
+});
+
+frappe.ui.form.ControlPercent = frappe.ui.form.ControlFloat;
+
+// End Control Float
+
+// Control Currency
+frappe.ui.form.ControlCurrency = frappe.ui.form.ControlFloat.extend({
+	format_for_input: function(value) {
+		var formatted_value = format_number(value, this.get_number_format(), this.get_precision());
+		return isNaN(parseFloat(value)) ? "" : formatted_value;
+	},
+
+	get_precision: function() {
+		// always round based on field precision or currency's precision
+		// this method is also called in this.parse()
+		if (!this.df.precision) {
+			if(frappe.boot.sysdefaults.currency_precision) {
+				this.df.precision = frappe.boot.sysdefaults.currency_precision;
+			} else {
+				this.df.precision = get_number_format_info(this.get_number_format()).precision;
+			}
+		}
+
+		return this.df.precision;
+	}
+});
+// End Control Currency
+
+// Control Read Only
+frappe.ui.form.ControlReadOnly = frappe.ui.form.ControlData.extend({
+	get_status: function(explain) {
+		var status = this._super(explain);
+		if(status==="Write")
+			status = "Read";
+		return;
+	},
+})
+// End Control Read Only
+
+// Control Date
+frappe.ui.form.ControlDate = frappe.ui.form.ControlData.extend({
+	make_input: function() {
+		this._super();
+		this.make_picker();
+	},
+	make_picker: function() {
+		this.set_date_options();
+		this.set_datepicker();
+		this.set_t_for_today();
+	},
+	set_formatted_input: function(value) {
+		this._super(value);
+		if (this.timepicker_only) return;
+		if (!this.datepicker) return;
+		if(!value) {
+			this.datepicker.clear();
+			return;
+		}
+
+		let should_refresh = this.last_value && this.last_value !== value;
+
+		if (!should_refresh) {
+			if(this.datepicker.selectedDates.length > 0) {
+				// if date is selected but different from value, refresh
+				const selected_date =
+					moment(this.datepicker.selectedDates[0])
+						.format(this.date_format);
+
+				should_refresh = selected_date !== value;
+			} else {
+				// if datepicker has no selected date, refresh
+				should_refresh = true;
+			}
+		}
+
+		if(should_refresh) {
+			this.datepicker.selectDate(frappe.datetime.str_to_obj(value));
+		}
+	},
+	set_date_options: function() {
+		// webformTODO:
+		let sysdefaults = frappe.boot.sysdefaults;
+
+		let lang = 'en';
+		frappe.boot.user && (lang = frappe.boot.user.language);
+		if(!$.fn.datepicker.language[lang]) {
+			lang = 'en';
+		}
+
+		let date_format = sysdefaults && sysdefaults.date_format
+			? sysdefaults.date_format : 'yyyy-mm-dd';
+
+		let now_date = new Date();
+
+		this.today_text = __("Today");
+		this.date_format = frappe.defaultDateFormat;
+		this.datepicker_options = {
+			language: lang,
+			autoClose: true,
+			todayButton: true,
+			dateFormat: date_format,
+			startDate: now_date,
+			keyboardNav: false,
+			onSelect: () => {
+				this.$input.trigger('change');
+			},
+			onShow: () => {
+				this.datepicker.$datepicker
+					.find('.datepicker--button:visible')
+					.text(this.today_text);
+
+				this.update_datepicker_position();
+			}
+		};
+	},
+	set_datepicker: function() {
+		this.$input.datepicker(this.datepicker_options);
+		this.datepicker = this.$input.data('datepicker');
+
+		// today button didn't work as expected,
+		// so explicitly bind the event
+		this.datepicker.$datepicker
+			.find('[data-action="today"]')
+			.click(() => {
+				this.datepicker.selectDate(this.get_now_date());
+			});
+	},
+	update_datepicker_position: function() {
+		if(!this.frm) return;
+		// show datepicker above or below the input
+		// based on scroll position
+		// We have to bodge around the timepicker getting its position
+		// wrong by 42px when opening upwards.
+		const $header = $('.page-head');
+		const header_bottom = $header.position().top + $header.outerHeight();
+		const picker_height = this.datepicker.$datepicker.outerHeight() + 12;
+		const picker_top = this.$input.offset().top - $(window).scrollTop() - picker_height;
+
+		var position = 'top left';
+		// 12 is the default datepicker.opts[offset]
+		if (picker_top <= header_bottom) {
+			position = 'bottom left';
+			if (this.timepicker_only) this.datepicker.opts['offset'] = 12;
+		} else {
+			// To account for 42px incorrect positioning
+			if (this.timepicker_only) this.datepicker.opts['offset'] = -30;
+		}
+
+		this.datepicker.update('position', position);
+	},
+	get_now_date: function() {
+		return frappe.datetime.now_date(true);
+	},
+	set_t_for_today: function() {
+		var me = this;
+		this.$input.on("keydown", function(e) {
+			if(e.which===84) { // 84 === t
+				if(me.df.fieldtype=='Date') {
+					me.set_value(frappe.datetime.nowdate());
+				} if(me.df.fieldtype=='Datetime') {
+					me.set_value(frappe.datetime.now_datetime());
+				} if(me.df.fieldtype=='Time') {
+					me.set_value(frappe.datetime.now_time());
+				}
+				return false;
+			}
+		});
+	},
+	parse: function(value) {
+		if(value) {
+			return frappe.datetime.user_to_str(value);
+		}
+	},
+	format_for_input: function(value) {
+		if(value) {
+			return frappe.datetime.str_to_user(value);
+		}
+		return "";
+	},
+	validate: function(value) {
+		if(value && !frappe.datetime.validate(value)) {
+			let sysdefaults = frappe.sys_defaults;
+			let date_format = sysdefaults && sysdefaults.date_format
+				? sysdefaults.date_format : 'yyyy-mm-dd';
+			frappe.msgprint(__("Date {0} must be in format: {1}", [value, date_format]));
+			return '';
+		}
+		return value;
+	}
+});
+
+// End Control Date
+
 // Control Popup
 frappe.msgprint = function(msg, title, is_minimizable) {
 	if(!msg) return;
@@ -424,39 +685,9 @@ frappe.ui.toolbar.Toolbar = frappe.ui.toolbar.Toolbar.extend({
 		this.mobile_list = $('.navbar-page-switcher').find('.mobile-list');
 		this.current_title = $('.navbar-page-switcher').find(".current-title");
 
-
-		// $('.page-switcher').click(() => {
-		// 	console.log("HOLA MUNDO");
-		// 	// $('.mobile-list').toggle();
-		// 	this.mobile_list.toggle();
-		// });
-		// this.page_switcher.on('click', () => {
-		// 	console.log("HOLA MUNDO");
-		// 	this.mobile_list.toggle();
-		// });
-		console.log("POR AQUI PASo");
 		this.fetch_desktop_settings().then(() => {
 			this.route();
 			this.make_sidebar();
-			// this.sidebar_item.on('click', () => {
-			// 	// this.mobile_list.hide();
-			// 	// this.mobile_list.detach();
-			// 	console.log("Ingresó al OnClick");
-			// 	this.sidebar_group_title.detach();
-			// 	this.sidebar_item.detach();
-			// 	// $('<div class="mobile-list"></div>').appendTo('#navbar-page-switcher');
-			// 	this.route();
-			// 	this.remake_sidebar();
-			// 	// console.log("SIDEBAR_ITEM");
-			// 	// this.fetch_desktop_settings().then(() => {
-			// 	// 	// this.mobile_list.detach();
-			// 	// 	this.sidebar_item.detach();
-			// 	// 	// $('<div class="mobile-list"></div>').appendTo('#navbar-page-switcher');
-			// 	// 	console.log("this.mobile_list.detach(): %o", this.mobile_list);
-			// 	// 	this.route();
-			// 	// 	this.remake_sidebar();
-			// 	// });
-			// });
 		});
 	},
 
@@ -466,7 +697,6 @@ frappe.ui.toolbar.Toolbar = frappe.ui.toolbar.Toolbar.extend({
 	},
 
 	remake_sidebar: function() {
-		console.log("REMAKE_SIDEBAR");
 		const get_sidebar_item = function(item) {
 			return $(`<a href="${"desk#workspace/" +
 				item.name}" class="sidebar-item ${
@@ -517,7 +747,6 @@ frappe.ui.toolbar.Toolbar = frappe.ui.toolbar.Toolbar.extend({
 		this.sidebar_group_title = $('.navbar-page-switcher').find(".sidebar-group-title");
 		this.sidebar_item.on('click', () => {
 			this.fetch_desktop_settings().then(() => {
-				console.log("Ingresó al OnClick");
 				this.sidebar_group_title.detach();
 				this.sidebar_item.detach();
 				this.route();
@@ -527,7 +756,6 @@ frappe.ui.toolbar.Toolbar = frappe.ui.toolbar.Toolbar.extend({
 	},
 
 	make_sidebar: function() {
-		console.log("MAKE_SIDEBAR");
 		const get_sidebar_item = function(item) {
 			return $(`<a href="${"desk#workspace/" +
 				item.name}" class="sidebar-item ${
@@ -545,14 +773,7 @@ frappe.ui.toolbar.Toolbar = frappe.ui.toolbar.Toolbar.extend({
 			let $item = get_sidebar_item(item);
 			let $mobile_item = $item.clone();
 
-			// Se comenta porque no se quiere crear el sidebar
-			// solo se quiere crear mobile_list que nos servirá para
-			// el desktop
-			// $item.appendTo(this.sidebar);
-			// this.sidebar_items[item.name] = $item;
-
 			$mobile_item.appendTo(this.mobile_list);
-			// console.log("Mobile List desde make: %o", this.mobile_list.html());
 			this.mobile_sidebar_items[item.name] = $mobile_item;
 		};
 
@@ -578,7 +799,6 @@ frappe.ui.toolbar.Toolbar = frappe.ui.toolbar.Toolbar.extend({
 		this.sidebar_group_title = $('.navbar-page-switcher').find(".sidebar-group-title");
 		this.sidebar_item.on('click', () => {
 			this.fetch_desktop_settings().then(() => {
-				console.log("Ingresó al OnClick");
 				this.sidebar_group_title.detach();
 				this.sidebar_item.detach();
 				this.route();
@@ -606,7 +826,6 @@ frappe.ui.toolbar.Toolbar = frappe.ui.toolbar.Toolbar.extend({
 			this.mobile_sidebar_items[page].addClass("selected");
 		}
 		this.current_page = page;
-		console.log("Debería esconder mobile_list");
 		this.mobile_list.hide();
 		this.current_title.empty().append(__(this.current_page));
 		localStorage.current_desk_page = page;
