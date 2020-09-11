@@ -559,8 +559,16 @@ a.dropdown-toggle {
     padding: .2em;
     padding-left: 0.5em;
     padding-right: 3em !important;
+}
 
-} 
+/* Específico para Control Int*/
+.floating-input[data-fieldtype="Int"] ~ label {
+  left: 3em;
+}
+.floating-label > .floating-input:focus[data-fieldtype="Int"] ~ label {
+  left: 30px;
+}
+/* End Especifico para Control Int*/
 
 
 .floating-label > .floating-input:disabled ~ label,
