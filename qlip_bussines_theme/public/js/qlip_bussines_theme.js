@@ -185,6 +185,10 @@ frappe.ui.form.ControlSelect = frappe.ui.form.ControlSelect.extend({
 frappe.ui.form.ControlInt = frappe.ui.form.ControlData.extend({})
 // End Control Int
 
+// Control Float
+frappe.ui.form.ControlFloat = frappe.ui.form.ControlInt.extend({})
+// End Control Float
+
 // Control Popup
 frappe.msgprint = function(msg, title, is_minimizable) {
 	if(!msg) return;

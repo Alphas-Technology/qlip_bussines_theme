@@ -570,6 +570,19 @@ a.dropdown-toggle {
 }
 /* End Especifico para Control Int*/
 
+/* Específico para Control Float*/
+.floating-input[data-fieldtype="Float"] ~ label {
+  top: auto;
+  left: 3em;
+  margin-top: -3em;
+}
+.floating-label > .floating-input:focus[data-fieldtype="Float"] ~ label {
+  top: auto;
+  left: 30px;
+  margin-top: -4.8em;
+}
+/* End Especifico para Control Float*/
+
 
 .floating-label > .floating-input:disabled ~ label,
 .floating-label > .link-field > .awesomplete > .floating-input:disabled ~ label,
