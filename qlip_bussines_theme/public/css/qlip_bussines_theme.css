@@ -567,7 +567,9 @@ a.dropdown-toggle {
   left: 3em;
 }
 .floating-label > .floating-input:focus[data-fieldtype="Int"] ~ label,
-.floating-label > .floating-input:focus[data-fieldtype="Read Only"] ~ label {
+.floating-label > .floating-input:not(:placeholder-shown)[data-fieldtype="Int"] ~ label,
+.floating-label > .floating-input:focus[data-fieldtype="Read Only"] ~ label,
+.floating-label > .floating-input:not(:placeholder-shown)[data-fieldtype="Read Only"] ~ label {
   left: 30px;
 }
 /* End Especifico para Control Int, Read Only*/
@@ -581,7 +583,9 @@ a.dropdown-toggle {
   margin-top: -3em;
 }
 .floating-label > .floating-input:focus[data-fieldtype="Float"] ~ label,
+.floating-label > .floating-input:not(:placeholder-shown)[data-fieldtype="Float"] ~ label,
 .floating-label > .floating-input:focus[data-fieldtype="Currency"] ~ label,
+.floating-label > .floating-input:not(:placeholder-shown)[data-fieldtype="Currency"] ~ label,
 .floating-label > .floating-input:focus[data-fieldtype="Date"] ~ label,
 .floating-label > .floating-input:not(:placeholder-shown)[data-fieldtype="Date"] ~ label {
   top: auto;
