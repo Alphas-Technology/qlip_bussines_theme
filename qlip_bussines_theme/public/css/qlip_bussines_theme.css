@@ -591,6 +591,14 @@ a.dropdown-toggle {
 }
 /* End Especifico para Control Float, Currency, Date*/
 
+/* Justificar a la derecha Int, Float, Currency */
+.floating-input[data-fieldtype="Float"],
+.floating-input[data-fieldtype="Currency"],
+.floating-input[data-fieldtype="Int"] {
+  text-align: right;
+}
+/* End Justificar a la derecha Int, Float, Currency */
+
 /* Específico para Control Read Only */
 .like-disabled-input {
   border-radius: 10px;
