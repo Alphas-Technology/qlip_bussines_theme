@@ -57,7 +57,7 @@ frappe.ui.form.set_user_image = function(frm) {
 			.removeClass('hide')
 			.find('.standard-image')
 			.css({'background-color': frappe.get_palette(title)})
-			.html(frappe.get_abbr(title))
+			.html('<img src="/assets/qlip_bussines_theme/images/company_default_logo.jpg">')
 		
 		image_section
 			.find('.icon-foto-b')

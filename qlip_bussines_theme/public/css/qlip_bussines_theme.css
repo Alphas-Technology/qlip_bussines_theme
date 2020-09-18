@@ -1075,6 +1075,12 @@ body {
 
 .form-sidebar .sidebar-image-section .standard-image {
   border-radius: 180px;
+  overflow: hidden;
+}
+
+.form-sidebar .sidebar-image-section .standard-image img {
+  margin-top: -9rem;
+  margin-right: -1.5rem;
 }
 
 .fa-camera-retro:before {
