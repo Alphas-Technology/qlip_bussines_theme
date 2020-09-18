@@ -814,6 +814,19 @@ frappe.ui.toolbar.Toolbar = frappe.ui.toolbar.Toolbar.extend({
 	},
 
 	show_page: function(page) {
+		// Se agrega workaround para evitar mensaje de documento extraviado
+		const default_page = this.desktop_settings
+			? this.desktop_settings["Modules"][0].name
+			: frappe.boot.allowed_workspaces[0].name;
+
+		route_page = this.desktop_settings && this.desktop_settings["Modules"].find((page) => {page.name === frappe.get_route()[1] ? page.name : false });
+		page = this.mobile_sidebar_items[page] ? page : false || this.mobile_sidebar_items[frappe.get_route()[1]] || localStorage.current_desk_page || default_page;
+
+		if (this.current_page && this.pages[this.current_page]) {
+			this.pages[this.current_page].hide();
+		}
+		// end
+
 		if (this.current_page && this.pages[this.current_page]) {
 			this.pages[this.current_page].hide();
 		}
