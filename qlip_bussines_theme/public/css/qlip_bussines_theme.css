@@ -143,12 +143,22 @@ a.dropdown-toggle {
   }
 
   .qlip-company {
-    max-height: 32px;
+    max-height: inherit;
+    max-width: 135px;  
+    width: 135px;
+    min-width: 135px;
+  }
+
+  .qlip-company a.navbar-brand {
+    max-width: 150px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
   }
 }
-/* End Ajustes para resoluciones entre 768px - 1199px */
+/* End Ajustes para resoluciones entre 992px - 1199px */
 
-/* Ajustes para resoluciones superiores a 1199px */
+/* Ajustes para resoluciones superiores a 1200px */
 @media (min-width: 1200px) {
   .qlip-navbar #navbar-search {
     width: 268px;
@@ -182,11 +192,14 @@ a.dropdown-toggle {
   }
 
   .qlip-navbar .navbar-page-switcher {
-    margin-right: 67px;
+    margin-right: 50px;
   }
 
   .qlip-company {
-    max-height: 22px;
+    max-height: 30px;
+    max-width: 160px;  
+    width: 160px;
+    min-width: 160px;
   }
 }
 /* End Ajustes para resoluciones superiores a 1199px */
@@ -213,20 +226,6 @@ body.no-breadcrumbs .navbar .navbar-home:before {
   opacity: 1;
   border-color: transparent;
 }
-
-/* @media (min-width: 768px) {
-  .qlip-navbar .navbar-header {
-    width: 595px;
-  }
-
-  .qlip-navbar .navbar > .container .navbar-brand, .navbar > .container-fluid .navbar-brand {
-    margin-left: 0;
-  }
-
-  .qlip-navbar .nav.navbar-nav.navbar-right {
-    margin-right: -60px;
-  }
-} */
 
 .qlip-navbar .page-switcher {
   margin-bottom: 0;
@@ -260,8 +259,10 @@ body.no-breadcrumbs .navbar .navbar-home:before {
 }
 
 .qlip-navbar .app-logo-empresa img {
-  /* margin-top: 3px; */
-  vertical-align: baseline;
+  margin-top: 3px;
+  vertical-align: middle;
+  width: 32px;
+  margin-right: 3px;
 }
 
 .navbar {
@@ -298,13 +299,6 @@ body.no-breadcrumbs .navbar .navbar-home:before {
   min-width: 180px;
 }
 
-/* @media (min-width: 992px) {
-  .navbar > .container .navbar-brand.app-logo-empresa {
-    margin-left: 7.091875rem;
-    margin-right: 4.9375rem;
-  }
-} */
-
 @media (max-width: 1199px) {
   .navbar > .container .navbar-brand.app-logo-empresa {
     margin-left: 0;
@@ -314,7 +308,9 @@ body.no-breadcrumbs .navbar .navbar-home:before {
 
 .qlip-company {
   display: inline-block;
-    overflow: hidden;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .qlip-company a.navbar-brand {
@@ -322,12 +318,8 @@ body.no-breadcrumbs .navbar .navbar-home:before {
     font-weight: normal;
     vertical-align: super;
     color: #1E6491;
-    max-width: 146px;
-    width: 146px;
-    min-width: 146px;
-    overflow: hidden;
-    white-space: nowrap;
-    text-overflow: ellipsis;
+    padding-left: 0;
+    margin-left: 0px !important;
 }
  
 /* xs, sm*/
@@ -420,6 +412,11 @@ body.no-breadcrumbs .navbar .navbar-home:before {
   .dropdown-mobile.open .dropdown-menu {
     left: -320px;
   }
+
+  .qlip-navbar .container {
+    margin-left: 2.5rem;
+    margin-right: 2.5rem;
+  }
 }
 /* End xs, sm*/
 
@@ -476,7 +473,7 @@ body.no-breadcrumbs .navbar .navbar-home:before {
     height: 0 !important; 
     /* width: 0 !important; */
     margin-right: 12rem !important;
-    margin-top: 1rem !important;
+    /* margin-top: 1rem !important; */
   }
 
   .dropdown-mobile {
@@ -1145,6 +1142,12 @@ body {
 
 .form-sidebar .sidebar-image-section .standard-image {
   border-radius: 180px;
+  overflow: hidden;
+}
+
+.form-sidebar .sidebar-image-section .standard-image img {
+  margin-top: -9rem;
+  margin-right: -1.5rem;
 }
 
 .fa-camera-retro:before {
