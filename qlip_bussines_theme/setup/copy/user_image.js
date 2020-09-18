@@ -30,7 +30,7 @@ frappe.ui.form.set_user_image = function(frm) {
 		
 		image_section
 			.find('.icon-foto-b')
-			.html('<i class="fa fa-camera-retro fa-2x" aria-hidden="true"></i>  <span>Cambiar imagen</span>');
+			.html('<i class="fa fa-camera-retro fa-2x" aria-hidden="true"></i>  <span class="sidebar-image-change"><a>Cambiar imagen</a></span>');
 
 		image_section
 			.find('.form-name-user-b')
@@ -61,7 +61,7 @@ frappe.ui.form.set_user_image = function(frm) {
 		
 		image_section
 			.find('.icon-foto-b')
-			.html('<i class="fa fa-camera-retro fa-2x" aria-hidden="true"></i>  <span>Cambiar imagen</span>');
+			.html('<i class="fa fa-camera-retro fa-2x" aria-hidden="true"></i>  <span class="sidebar-image-change"><a>Cambiar imagen</a></span>');
 
 		image_section
 			.find('.form-name-user-b')
@@ -97,7 +97,7 @@ frappe.ui.form.setup_user_image_event = function(frm) {
 	});
 
 	// bind click on image_wrapper
-	frm.sidebar.image_wrapper.on('click', '.sidebar-image-change, .sidebar-image-remove', function(e) {
+	frm.sidebar.image_section.on('click', '.sidebar-image-change, .sidebar-image-remove', function(e) {
 		let $target = $(e.currentTarget);
 		var field = frm.get_field(frm.meta.image_field);
 		if ($target.is('.sidebar-image-change')) {
