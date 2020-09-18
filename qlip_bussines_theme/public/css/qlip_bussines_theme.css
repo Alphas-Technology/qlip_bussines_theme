@@ -412,6 +412,11 @@ body.no-breadcrumbs .navbar .navbar-home:before {
   .dropdown-mobile.open .dropdown-menu {
     left: -320px;
   }
+
+  .qlip-navbar .container {
+    margin-left: 2.5rem;
+    margin-right: 2.5rem;
+  }
 }
 /* End xs, sm*/
 
@@ -468,7 +473,7 @@ body.no-breadcrumbs .navbar .navbar-home:before {
     height: 0 !important; 
     /* width: 0 !important; */
     margin-right: 12rem !important;
-    margin-top: 1rem !important;
+    /* margin-top: 1rem !important; */
   }
 
   .dropdown-mobile {
