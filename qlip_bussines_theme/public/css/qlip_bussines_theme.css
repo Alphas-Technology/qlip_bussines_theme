@@ -112,6 +112,90 @@ a.dropdown-toggle {
 
 /* HEADER */
 
+/* Ajustes para resoluciones entre 992px - 1199px */
+@media (min-width: 992px) and (max-width: 1199px){
+  .navbar .navbar-home img {
+    margin-top: -8px;
+  }
+
+  .qlip-navbar .navbar-header {
+    width: 490px;
+  }
+
+  .qlip-navbar .navbar-brand {
+    margin-right: 22.5px;
+  }
+
+  .qlip-navbar .navbar-page-switcher {
+    margin-right: 22.5px;
+  }
+
+  .qlip-navbar .awesomplete {
+    width: 210px;
+    min-width: 210px; 
+    max-width: 210px;
+  }
+
+  .qlip-navbar #navbar-search {
+    width: 210px;
+    min-width: 210px; 
+    max-width: 210px;
+  }
+
+  .qlip-company {
+    max-height: 32px;
+  }
+}
+/* End Ajustes para resoluciones entre 768px - 1199px */
+
+/* Ajustes para resoluciones superiores a 1199px */
+@media (min-width: 1200px) {
+  .qlip-navbar #navbar-search {
+    width: 268px;
+    min-width: 268px;
+    max-width: 268px;
+  }
+  
+  .qlip-navbar .awesomplete {
+    width: 268px;
+    min-width: 268px;
+    max-width: 268px;
+  }
+
+  .qlip-navbar .navbar-header {
+    width: 615px;
+  }
+
+  .qlip-navbar .navbar > .container .navbar-brand, .navbar > .container-fluid .navbar-brand {
+    margin-left: 0;
+  }
+
+  .qlip-navbar .nav.navbar-nav.navbar-right {
+    margin-right: -60px;
+  }
+
+  .qlip-navbar .navbar-brand {
+    float: none;
+    padding: 0;
+    padding-left: 15px;
+    margin-right: 66.47px;
+  }
+
+  .qlip-navbar .navbar-page-switcher {
+    margin-right: 67px;
+  }
+
+  .qlip-company {
+    max-height: 22px;
+  }
+}
+/* End Ajustes para resoluciones superiores a 1199px */
+
+
+body.no-breadcrumbs .navbar .navbar-home:before {
+  display: none;
+}
+
 .qlip-navbar {
   padding-top: 18px;
   padding-bottom: 18px;
@@ -130,15 +214,7 @@ a.dropdown-toggle {
   border-color: transparent;
 }
 
-.qlip-navbar .navbar-brand {
-  float: none;
-  padding: 0;
-  padding-left: 15px;
-  margin-right: 66.47px;
-}
-
-
-@media (min-width: 768px) {
+/* @media (min-width: 768px) {
   .qlip-navbar .navbar-header {
     width: 595px;
   }
@@ -150,7 +226,7 @@ a.dropdown-toggle {
   .qlip-navbar .nav.navbar-nav.navbar-right {
     margin-right: -60px;
   }
-}
+} */
 
 .qlip-navbar .page-switcher {
   margin-bottom: 0;
@@ -178,27 +254,10 @@ a.dropdown-toggle {
   vertical-align: bottom;
 }
 
-.qlip-navbar #navbar-search {
-  width: 268px;
-  min-width: 268px;
-  max-width: 268px;
-}
-
-.qlip-navbar .awesomplete {
-  width: 268px;
-  min-width: 268px;
-  max-width: 268px;
-}
-
 .qlip-navbar .navbar-form {
   margin-top: 0;
   margin-bottom: 0;
 }
-
-.qlip-navbar .navbar-page-switcher {
-  margin-right: 67px;
-}
-
 
 .qlip-navbar .app-logo-empresa img {
   /* margin-top: 3px; */
@@ -255,21 +314,24 @@ a.dropdown-toggle {
 
 .qlip-company {
   display: inline-block;
-    max-width: 146px;
     overflow: hidden;
-    max-height: 22px;
 }
 
 .qlip-company a.navbar-brand {
-    font-size: 22px;
+    font-size: 16pt;
     font-weight: normal;
     vertical-align: super;
     color: #1E6491;
+    max-width: 146px;
+    width: 146px;
+    min-width: 146px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
 }
  
-
 /* xs, sm*/
-@media (max-width: 768px) {
+@media (max-width: 991px) {
   .qlip-icon {
     width: 12px;
     height: 12px;
@@ -361,8 +423,8 @@ a.dropdown-toggle {
 }
 /* End xs, sm*/
 
-/* Sobre sm */
-@media (min-width: 768px) {
+/* Sobre lg */
+@media (min-width: 992px) {
   .qlip-icon {
     width: 26px;
     height: 26px;
@@ -401,7 +463,7 @@ a.dropdown-toggle {
     min-height: 81px;
   }
 }
-/* End sobre sm*/
+/* End sobre lg */
 
 @media (min-width: 768px) and (max-width: 991px) {
   .qlip-icon {
