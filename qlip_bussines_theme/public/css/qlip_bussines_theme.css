@@ -196,13 +196,15 @@ a.dropdown-toggle {
 }
 
 .qlip-navbar .navbar-page-switcher {
-  margin-right: 67px;
+  margin-right: 50px;
 }
 
 
 .qlip-navbar .app-logo-empresa img {
-  /* margin-top: 3px; */
-  vertical-align: baseline;
+  margin-top: 3px;
+  vertical-align: middle;
+  width: 32px;
+  margin-right: 3px;
 }
 
 .navbar {
@@ -255,16 +257,18 @@ a.dropdown-toggle {
 
 .qlip-company {
   display: inline-block;
-    max-width: 146px;
+    max-width: 160px;
     overflow: hidden;
-    max-height: 22px;
+    max-height: 30px;
 }
 
 .qlip-company a.navbar-brand {
-    font-size: 22px;
+    font-size: 16pt;
     font-weight: normal;
     vertical-align: super;
     color: #1E6491;
+    padding-left: 0;
+    margin-left: 0px !important;
 }
  
 
