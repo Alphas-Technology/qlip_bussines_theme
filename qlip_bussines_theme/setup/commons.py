@@ -7,13 +7,13 @@ BACKUP_PATH = os.path.dirname(os.path.abspath(__file__)) + "/backup/"
 DEST_SITE_PATH = os.path.dirname(os.path.abspath(__file__)) + "/../../../../"
 DEST_APPS_PATH = os.path.dirname(os.path.abspath(__file__)) + "/../../../"
 FILES = {
-    "gotham_rounded": {
-        "type": "dir",
-        "origin_path": ORIGIN_PATH + "gotham-rounded",
-        "backup_path": BACKUP_PATH + "gotham-rounded",
-        "dest_path": DEST_SITE_PATH + "sites/assets/frappe/css/fonts/gotham-rounded",
-        "backup": False,
-    },
+    # "gotham_rounded": {
+    #     "type": "dir",
+    #     "origin_path": ORIGIN_PATH + "gotham-rounded",
+    #     "backup_path": BACKUP_PATH + "gotham-rounded",
+    #     "dest_path": DEST_SITE_PATH + "sites/assets/frappe/css/fonts/gotham-rounded",
+    #     "backup": False,
+    # },
     "qlip-logo.svg": {
         "type": "file",
         "origin_path": ORIGIN_PATH + "qlip-logo.svg",

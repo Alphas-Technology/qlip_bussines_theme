@@ -978,12 +978,25 @@ span.level-item.ellipsis{
 
 @font-face {
   font-family: 'Gotham Rounded Book';
-  src: url('/assets/frappe/css/font/gotham-rounded/GothamRounded-BookItalic.eot');
-  src: url('/assets/frappe/css/font/gotham-rounded/GothamRounded-BookItalic.eot?#iefix') format('embedded-opentype'),
-      url('/assets/frappe/css/font/gotham-rounded/GothamRounded-BookItalic.woff2') format('woff2'),
-      url('/assets/frappe/css/font/gotham-rounded/GothamRounded-BookItalic.woff') format('woff'),
-      url('/assets/frappe/css/font/gotham-rounded/GothamRounded-BookItalic.ttf') format('truetype'),
-      url('/assets/frappe/css/font/gotham-rounded/GothamRounded-BookItalic.svg#GothamRounded-BookItalic') format('svg');
+  src: url('/assets/qlip_bussines_theme/css/fonts/gotham-rounded/GothamRounded-Book.eot');
+  src: url('/assets/qlip_bussines_theme/css/fonts/gotham-rounded/GothamRounded-Book.eot?#iefix') format('embedded-opentype'),
+      url('/assets/qlip_bussines_theme/css/fonts/gotham-rounded/GothamRounded-Book.woff2') format('woff2'),
+      url('/assets/qlip_bussines_theme/css/fonts/gotham-rounded/GothamRounded-Book.woff') format('woff'),
+      url('/assets/qlip_bussines_theme/css/fonts/gotham-rounded/GothamRounded-Book.ttf') format('truetype'),
+      url('/assets/qlip_bussines_theme/css/fonts/gotham-rounded/GothamRounded-Book.svg#GothamRounded-Book') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Gotham Rounded Book';
+  src: url('/assets/qlip_bussines_theme/css/fonts/gotham-rounded/GothamRounded-BookItalic.eot');
+  src: url('/assets/qlip_bussines_theme/css/fonts/gotham-rounded/GothamRounded-BookItalic.eot?#iefix') format('embedded-opentype'),
+      url('/assets/qlip_bussines_theme/css/fonts/gotham-rounded/GothamRounded-BookItalic.woff2') format('woff2'),
+      url('/assets/qlip_bussines_theme/css/fonts/gotham-rounded/GothamRounded-BookItalic.woff') format('woff'),
+      url('/assets/qlip_bussines_theme/css/fonts/gotham-rounded/GothamRounded-BookItalic.ttf') format('truetype'),
+      url('/assets/qlip_bussines_theme/css/fonts/gotham-rounded/GothamRounded-BookItalic.svg#GothamRounded-BookItalic') format('svg');
   font-weight: normal;
   font-style: italic;
   font-display: swap;
@@ -991,12 +1004,12 @@ span.level-item.ellipsis{
 
 @font-face {
   font-family: 'Gotham Rounded';
-  src: url('/assets/frappe/css/font/gotham-rounded/GothamRounded-Medium.eot');
-  src: url('/assets/frappe/css/font/gotham-rounded/GothamRounded-Medium.eot?#iefix') format('embedded-opentype'),
-      url('/assets/frappe/css/font/gotham-rounded/GothamRounded-Medium.woff2') format('woff2'),
-      url('/assets/frappe/css/font/gotham-rounded/GothamRounded-Medium.woff') format('woff'),
-      url('/assets/frappe/css/font/gotham-rounded/GothamRounded-Medium.ttf') format('truetype'),
-      url('/assets/frappe/css/font/gotham-rounded/GothamRounded-Medium.svg#GothamRounded-Medium') format('svg');
+  src: url('/assets/qlip_bussines_theme/css/fonts/gotham-rounded/GothamRounded-Medium.eot');
+  src: url('/assets/qlip_bussines_theme/css/fonts/gotham-rounded/GothamRounded-Medium.eot?#iefix') format('embedded-opentype'),
+      url('/assets/qlip_bussines_theme/css/fonts/gotham-rounded/GothamRounded-Medium.woff2') format('woff2'),
+      url('/assets/qlip_bussines_theme/css/fonts/gotham-rounded/GothamRounded-Medium.woff') format('woff'),
+      url('/assets/qlip_bussines_theme/css/fonts/gotham-rounded/GothamRounded-Medium.ttf') format('truetype'),
+      url('/assets/qlip_bussines_theme/css/fonts/gotham-rounded/GothamRounded-Medium.svg#GothamRounded-Medium') format('svg');
   font-weight: 500;
   font-style: normal;
   font-display: swap;
@@ -1004,12 +1017,12 @@ span.level-item.ellipsis{
 
 @font-face {
   font-family: 'Gotham Rounded';
-  src: url('/assets/frappe/css/font/gotham-rounded/GothamRounded-Bold.eot');
-  src: url('/assets/frappe/css/font/gotham-rounded/GothamRounded-Bold.eot?#iefix') format('embedded-opentype'),
-      url('/assets/frappe/css/font/gotham-rounded/GothamRounded-Bold.woff2') format('woff2'),
-      url('/assets/frappe/css/font/gotham-rounded/GothamRounded-Bold.woff') format('woff'),
-      url('/assets/frappe/css/font/gotham-rounded/GothamRounded-Bold.ttf') format('truetype'),
-      url('/assets/frappe/css/font/gotham-rounded/GothamRounded-Bold.svg#GothamRounded-Bold') format('svg');
+  src: url('/assets/qlip_bussines_theme/css/fonts/gotham-rounded/GothamRounded-Bold.eot');
+  src: url('/assets/qlip_bussines_theme/css/fonts/gotham-rounded/GothamRounded-Bold.eot?#iefix') format('embedded-opentype'),
+      url('/assets/qlip_bussines_theme/css/fonts/gotham-rounded/GothamRounded-Bold.woff2') format('woff2'),
+      url('/assets/qlip_bussines_theme/css/fonts/gotham-rounded/GothamRounded-Bold.woff') format('woff'),
+      url('/assets/qlip_bussines_theme/css/fonts/gotham-rounded/GothamRounded-Bold.ttf') format('truetype'),
+      url('/assets/qlip_bussines_theme/css/fonts/gotham-rounded/GothamRounded-Bold.svg#GothamRounded-Bold') format('svg');
   font-weight: bold;
   font-style: normal;
   font-display: swap;
@@ -1017,12 +1030,12 @@ span.level-item.ellipsis{
 
 @font-face {
   font-family: 'Gotham Rounded';
-  src: url('/assets/frappe/css/font/gotham-rounded/GothamRounded-BoldItalic.eot');
-  src: url('/assets/frappe/css/font/gotham-rounded/GothamRounded-BoldItalic.eot?#iefix') format('embedded-opentype'),
-      url('/assets/frappe/css/font/gotham-rounded/GothamRounded-BoldItalic.woff2') format('woff2'),
-      url('/assets/frappe/css/font/gotham-rounded/GothamRounded-BoldItalic.woff') format('woff'),
-      url('/assets/frappe/css/font/gotham-rounded/GothamRounded-BoldItalic.ttf') format('truetype'),
-      url('/assets/frappe/css/font/gotham-rounded/GothamRounded-BoldItalic.svg#GothamRounded-BoldItalic') format('svg');
+  src: url('/assets/qlip_bussines_theme/css/fonts/gotham-rounded/GothamRounded-BoldItalic.eot');
+  src: url('/assets/qlip_bussines_theme/css/fonts/gotham-rounded/GothamRounded-BoldItalic.eot?#iefix') format('embedded-opentype'),
+      url('/assets/qlip_bussines_theme/css/fonts/gotham-rounded/GothamRounded-BoldItalic.woff2') format('woff2'),
+      url('/assets/qlip_bussines_theme/css/fonts/gotham-rounded/GothamRounded-BoldItalic.woff') format('woff'),
+      url('/assets/qlip_bussines_theme/css/fonts/gotham-rounded/GothamRounded-BoldItalic.ttf') format('truetype'),
+      url('/assets/qlip_bussines_theme/css/fonts/gotham-rounded/GothamRounded-BoldItalic.svg#GothamRounded-BoldItalic') format('svg');
   font-weight: bold;
   font-style: italic;
   font-display: swap;
@@ -1030,38 +1043,25 @@ span.level-item.ellipsis{
 
 @font-face {
   font-family: 'Gotham Rounded';
-  src: url('/assets/frappe/css/font/gotham-rounded/GothamRounded-LightItalic.eot');
-  src: url('/assets/frappe/css/font/gotham-rounded/GothamRounded-LightItalic.eot?#iefix') format('embedded-opentype'),
-      url('/assets/frappe/css/font/gotham-rounded/GothamRounded-LightItalic.woff2') format('woff2'),
-      url('/assets/frappe/css/font/gotham-rounded/GothamRounded-LightItalic.woff') format('woff'),
-      url('/assets/frappe/css/font/gotham-rounded/GothamRounded-LightItalic.ttf') format('truetype'),
-      url('/assets/frappe/css/font/gotham-rounded/GothamRounded-LightItalic.svg#GothamRounded-LightItalic') format('svg');
+  src: url('/assets/qlip_bussines_theme/css/fonts/gotham-rounded/GothamRounded-LightItalic.eot');
+  src: url('/assets/qlip_bussines_theme/css/fonts/gotham-rounded/GothamRounded-LightItalic.eot?#iefix') format('embedded-opentype'),
+      url('/assets/qlip_bussines_theme/css/fonts/gotham-rounded/GothamRounded-LightItalic.woff2') format('woff2'),
+      url('/assets/qlip_bussines_theme/css/fonts/gotham-rounded/GothamRounded-LightItalic.woff') format('woff'),
+      url('/assets/qlip_bussines_theme/css/fonts/gotham-rounded/GothamRounded-LightItalic.ttf') format('truetype'),
+      url('/assets/qlip_bussines_theme/css/fonts/gotham-rounded/GothamRounded-LightItalic.svg#GothamRounded-LightItalic') format('svg');
   font-weight: 300;
   font-style: italic;
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'Gotham Rounded Book';
-  src: url('/assets/frappe/css/font/gotham-rounded/GothamRounded-Book.eot');
-  src: url('/assets/frappe/css/font/gotham-rounded/GothamRounded-Book.eot?#iefix') format('embedded-opentype'),
-      url('/assets/frappe/css/font/gotham-rounded/GothamRounded-Book.woff2') format('woff2'),
-      url('/assets/frappe/css/font/gotham-rounded/GothamRounded-Book.woff') format('woff'),
-      url('/assets/frappe/css/font/gotham-rounded/GothamRounded-Book.ttf') format('truetype'),
-      url('/assets/frappe/css/font/gotham-rounded/GothamRounded-Book.svg#GothamRounded-Book') format('svg');
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
   font-family: 'Gotham Rounded';
-  src: url('/assets/frappe/css/font/gotham-rounded/GothamRounded-Light.eot');
-  src: url('/assets/frappe/css/font/gotham-rounded/GothamRounded-Light.eot?#iefix') format('embedded-opentype'),
-      url('/assets/frappe/css/font/gotham-rounded/GothamRounded-Light.woff2') format('woff2'),
-      url('/assets/frappe/css/font/gotham-rounded/GothamRounded-Light.woff') format('woff'),
-      url('/assets/frappe/css/font/gotham-rounded/GothamRounded-Light.ttf') format('truetype'),
-      url('/assets/frappe/css/font/gotham-rounded/GothamRounded-Light.svg#GothamRounded-Light') format('svg');
+  src: url('/assets/qlip_bussines_theme/css/fonts/gotham-rounded/GothamRounded-Light.eot');
+  src: url('/assets/qlip_bussines_theme/css/fonts/gotham-rounded/GothamRounded-Light.eot?#iefix') format('embedded-opentype'),
+      url('/assets/qlip_bussines_theme/css/fonts/gotham-rounded/GothamRounded-Light.woff2') format('woff2'),
+      url('/assets/qlip_bussines_theme/css/fonts/gotham-rounded/GothamRounded-Light.woff') format('woff'),
+      url('/assets/qlip_bussines_theme/css/fonts/gotham-rounded/GothamRounded-Light.ttf') format('truetype'),
+      url('/assets/qlip_bussines_theme/css/fonts/gotham-rounded/GothamRounded-Light.svg#GothamRounded-Light') format('svg');
   font-weight: 300;
   font-style: normal;
   font-display: swap;
@@ -1069,12 +1069,12 @@ span.level-item.ellipsis{
 
 @font-face {
   font-family: 'Gotham Rounded';
-  src: url('/assets/frappe/css/font/gotham-rounded/GothamRounded-MediumItalic.eot');
-  src: url('/assets/frappe/css/font/gotham-rounded/GothamRounded-MediumItalic.eot?#iefix') format('embedded-opentype'),
-      url('/assets/frappe/css/font/gotham-rounded/GothamRounded-MediumItalic.woff2') format('woff2'),
-      url('/assets/frappe/css/font/gotham-rounded/GothamRounded-MediumItalic.woff') format('woff'),
-      url('/assets/frappe/css/font/gotham-rounded/GothamRounded-MediumItalic.ttf') format('truetype'),
-      url('/assets/frappe/css/font/gotham-rounded/GothamRounded-MediumItalic.svg#GothamRounded-MediumItalic') format('svg');
+  src: url('/assets/qlip_bussines_theme/css/fonts/gotham-rounded/GothamRounded-MediumItalic.eot');
+  src: url('/assets/qlip_bussines_theme/css/fonts/gotham-rounded/GothamRounded-MediumItalic.eot?#iefix') format('embedded-opentype'),
+      url('/assets/qlip_bussines_theme/css/fonts/gotham-rounded/GothamRounded-MediumItalic.woff2') format('woff2'),
+      url('/assets/qlip_bussines_theme/css/fonts/gotham-rounded/GothamRounded-MediumItalic.woff') format('woff'),
+      url('/assets/qlip_bussines_theme/css/fonts/gotham-rounded/GothamRounded-MediumItalic.ttf') format('truetype'),
+      url('/assets/qlip_bussines_theme/css/fonts/gotham-rounded/GothamRounded-MediumItalic.svg#GothamRounded-MediumItalic') format('svg');
   font-weight: 500;
   font-style: italic;
   font-display: swap;
