@@ -259,8 +259,8 @@ body.no-breadcrumbs .navbar .navbar-home:before {
 }
 
 .qlip-navbar .app-logo-empresa img {
-  margin-top: 3px;
-  vertical-align: middle;
+  margin-top: 5px;
+  vertical-align: bottom;
   width: 32px;
   margin-right: 3px;
 }
