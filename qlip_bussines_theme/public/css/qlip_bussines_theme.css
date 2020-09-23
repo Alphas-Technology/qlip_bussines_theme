@@ -32,10 +32,21 @@ a.dropdown-toggle {
 .modal-open .modal {
   backdrop-filter: blur(9px);
 }
+
+.modal {
+  backdrop-filter: blur(9px);
+}
+
 .modal-backdrop {
   background-color: #1e6491;
 }
+
 .modal-open .modal-backdrop.in {
+  opacity: 0.7;
+  filter: brightness(0.5);
+}
+
+.modal .modal-backdrop.in {
   opacity: 0.7;
   filter: brightness(0.5);
 }
