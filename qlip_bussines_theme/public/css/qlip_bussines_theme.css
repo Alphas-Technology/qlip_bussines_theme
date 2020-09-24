@@ -125,6 +125,15 @@ a.dropdown-toggle {
 
 /* Ajustes para resoluciones entre 992px - 1199px */
 @media (min-width: 992px) and (max-width: 1199px){
+  .qlip-company a.navbar-brand {
+    padding-top: 0;
+  }
+
+  .qlip-navbar .page-switcher {
+    width: 100px;
+    padding: 0;
+  }
+
   .navbar .navbar-home img {
     margin-top: -8px;
   }
@@ -199,11 +208,11 @@ a.dropdown-toggle {
     float: none;
     padding: 0;
     padding-left: 15px;
-    margin-right: 66.47px;
+    margin-right: 50px;
   }
 
   .qlip-navbar .navbar-page-switcher {
-    margin-right: 50px;
+    margin-right: 35px;
   }
 
   .qlip-company {
@@ -211,6 +220,11 @@ a.dropdown-toggle {
     max-width: 160px;  
     width: 160px;
     min-width: 160px;
+  }
+
+  .qlip-navbar .page-switcher {
+    width: 160px;
+    padding: 0;
   }
 }
 /* End Ajustes para resoluciones superiores a 1199px */
@@ -248,6 +262,12 @@ body.no-breadcrumbs .navbar .navbar-home:before {
 .qlip-navbar .page-switcher .current-title {
   color: #505050;
   margin-right: 10px;
+  max-width: 160px;
+  width: 160px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  text-align: center;
 }
 
 .qlip-navbar .desk-container .mobile-list .sidebar-item {
@@ -451,11 +471,6 @@ body.no-breadcrumbs .navbar .navbar-home:before {
 
   .qlip-navbar .desk-container {
     display: inline;
-  }
-
-  .qlip-navbar .page-switcher {
-    width: 100px;
-    padding: 0;
   }
 
   .qlip-navbar .qlip-handshake-icon {
