@@ -4,7 +4,7 @@
         <a class="navbar-brand toggle-sidebar visible-xs visible-sm">
           <i class="octicon octicon-three-bars"></i>
         </a>
-        <a class="navbar-brand navbar-home" href="#">
+        <a class="navbar-brand navbar-home" href="desk#workspace/Home">
           <!-- <img class="app-logo" src="{{ frappe.app.logo_url }}"> -->
           <img
             class="app-logo-qlip hidden-xs hidden-sm"
@@ -27,8 +27,8 @@
         </div>
         <!-- END MENU -->
 
-        <div class="qlip-company"><a href="" onclick="return frappe.ui.toolbar.setup_session_defaults();" class="navbar-brand app-logo-empresa hidden-xs hidden-sm">
-          <img src="/assets/qlip_bussines_theme/images/company_default_logo.jpg" />
+        <div class="qlip-company"><a onclick="return frappe.ui.toolbar.setup_session_defaults();" class="navbar-brand app-logo-empresa hidden-xs hidden-sm">
+          <img src="/assets/qlip_bussines_theme/images/company-navbar-logo.svg" />
           {{ frappe.defaults.get_user_default("Company") }}
         </a></div>
         <!-- <ul class="nav navbar-nav" id="navbar-breadcrumbs">
