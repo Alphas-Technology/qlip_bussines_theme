@@ -670,7 +670,6 @@ body.no-breadcrumbs .navbar .navbar-home:before {
   left: 30px;
   margin-top: -4.8em;
 }
-/* End Especifico para Control Int, Float, Currency, Date, Time*/
 
 /* Justificar a la derecha Int, Float, Currency */
 .floating-input[data-fieldtype="Float"],
@@ -678,13 +677,24 @@ body.no-breadcrumbs .navbar .navbar-home:before {
 .floating-input[data-fieldtype="Int"] {
   text-align: right;
 }
+
+.frappe-control[data-fieldtype="Float"] .control-value.like-disabled-input,
+.frappe-control[data-fieldtype="Currency"] .control-value.like-disabled-input,
+.frappe-control[data-fieldtype="Int"] .control-value.like-disabled-input{
+  text-align: right;
+}
 /* End Justificar a la derecha Int, Float, Currency */
+
+
+/* End Especifico para Control Int, Float, Currency, Date, Time*/
 
 /* Específico para Control Read Only */
 .control-value.like-disabled-input {
   border-radius: 10px;
   border: 1px solid #707070;
   min-height: 36px;
+  padding-top: 8px;
+  padding-bottom: 2px;
 }
 
 .control-value.like-disabled-input ~ label {
