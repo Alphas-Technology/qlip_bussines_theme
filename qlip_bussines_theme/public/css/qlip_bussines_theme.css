@@ -646,20 +646,11 @@ body.no-breadcrumbs .navbar .navbar-home:before {
     padding-right: 3em !important;
 }
 
-/* Específico para Control Int*/
-.floating-input[data-fieldtype="Int"] ~ label {
-  left: 3em;
-}
-.floating-label > .floating-input:focus[data-fieldtype="Int"] ~ label,
-.floating-label > .floating-input:not(:placeholder-shown)[data-fieldtype="Int"] ~ label {
-  left: 30px;
-}
-/* End Especifico para Control Int, Read Only*/
-
-/* Específico para Control Float, Currency, Date*/
+/* Específico para Control Int, Float, Currency, Date*/
 .floating-input[data-fieldtype="Float"] ~ label,
 .floating-input[data-fieldtype="Currency"] ~ label,
-.floating-input[data-fieldtype="Date"] ~ label {
+.floating-input[data-fieldtype="Date"] ~ label,
+.floating-input[data-fieldtype="Int"] ~ label{
   top: auto;
   left: 3.5em;
   margin-top: -3em;
@@ -669,12 +660,14 @@ body.no-breadcrumbs .navbar .navbar-home:before {
 .floating-label > .floating-input:focus[data-fieldtype="Currency"] ~ label,
 .floating-label > .floating-input:not(:placeholder-shown)[data-fieldtype="Currency"] ~ label,
 .floating-label > .floating-input:focus[data-fieldtype="Date"] ~ label,
-.floating-label > .floating-input:not(:placeholder-shown)[data-fieldtype="Date"] ~ label {
+.floating-label > .floating-input:not(:placeholder-shown)[data-fieldtype="Date"] ~ label,
+.floating-label > .floating-input:focus[data-fieldtype="Int"] ~ label,
+.floating-label > .floating-input:not(:placeholder-shown)[data-fieldtype="Int"] ~ label {
   top: auto;
   left: 30px;
   margin-top: -4.8em;
 }
-/* End Especifico para Control Float, Currency, Date*/
+/* End Especifico para Control Int, Float, Currency, Date*/
 
 /* Justificar a la derecha Int, Float, Currency */
 .floating-input[data-fieldtype="Float"],
