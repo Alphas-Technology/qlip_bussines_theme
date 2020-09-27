@@ -681,10 +681,42 @@ body.no-breadcrumbs .navbar .navbar-home:before {
 /* End Justificar a la derecha Int, Float, Currency */
 
 /* Específico para Control Read Only */
-.like-disabled-input {
+.control-value.like-disabled-input {
   border-radius: 10px;
   border: 1px solid #707070;
   min-height: 36px;
+}
+
+.control-value.like-disabled-input ~ label {
+  color: #1E6491;
+  font-size: 12px;
+  line-height: 34px;
+  font-weight:normal;
+  position:absolute;
+  pointer-events:none;
+  transition:0.2s ease all; 
+  -moz-transition:0.2s ease all; 
+  -webkit-transition:0.2s ease all;
+  padding: .2em;
+  padding-left: 0.5em;
+  padding-right: 3em !important;
+  background-color: #fff;
+}
+
+.control-value.like-disabled-input:empty ~ label {
+  top: auto;
+  left: 3em;
+  margin-top: -3.5em;
+  background-color: transparent;
+}
+
+.control-value.like-disabled-input:not(:empty) ~ label{
+  top: auto;
+  left: 30px;
+  margin-top: -4.5em;
+  font-size: 10px;
+  line-height: 0;
+   
 }
 /* End Específico para Control Read Only*/
 .floating-label > .floating-input:disabled ~ label,

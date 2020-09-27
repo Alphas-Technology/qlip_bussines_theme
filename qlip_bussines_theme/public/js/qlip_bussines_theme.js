@@ -285,6 +285,24 @@ frappe.ui.form.ControlReadOnly = frappe.ui.form.ControlData.extend({
 			status = "Read";
 		return;
 	},
+
+	make_wrapper: function() {
+		if(this.only_input) {
+			this.$wrapper = $('<div class="form-group frappe-control">').appendTo(this.parent);
+		} else {
+			this.$wrapper = $('<div class="frappe-control">\
+				<div class="form-group">\
+					<div class="control-input-wrapper">\
+                        <div class="control-input floating-label ">\
+                        </div>\
+						<div class="control-value like-disabled-input" style="display: none;"></div>\
+						<label class="control-label" style="padding-right: 0px;"></label>\
+						<p class="help-box small text-muted hidden-xs"></p>\
+					</div>\
+				</div>\
+			</div>').appendTo(this.parent);
+		}
+	},
 })
 // End Control Read Only
 
