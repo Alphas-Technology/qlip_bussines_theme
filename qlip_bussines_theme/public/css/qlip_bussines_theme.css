@@ -965,6 +965,15 @@ span.level-item.ellipsis{
   color: #707070;
   margin-top: 0.5em;
   margin-left: 1.5em;
+  margin-right: 1.5em;
+}
+
+.widget-title div{
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 100%;
+  vertical-align: middle;
 }
 
 .links-widget-box {
