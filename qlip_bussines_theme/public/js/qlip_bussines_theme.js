@@ -63,6 +63,13 @@ frappe.ui.form.ControlData = frappe.ui.form.ControlData.extend({
 		if(this.df.input_class) {
 			this.$input.addClass(this.df.input_class);
 		}
+	},
+
+	refresh_input: function() {
+		this._super();
+		if (!this.can_write() && !this.only_input && this.disp_area) {
+			$(this.label_span).insertAfter(this.disp_area);
+		}
 	}
 })
 
