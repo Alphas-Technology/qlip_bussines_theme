@@ -1132,6 +1132,8 @@ body {
   max-width: 150px;
   margin-left: auto;
   margin-right: auto;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .icon-foto{
@@ -1208,6 +1210,8 @@ body {
   max-width: 150px;
   margin-left: auto;
   margin-right: auto;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .form-sidebar .sidebar-image-section .sidebar-image-wrapper:hover .sidebar-image,
