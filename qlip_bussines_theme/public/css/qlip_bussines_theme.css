@@ -558,7 +558,7 @@ body.no-breadcrumbs .navbar .navbar-home:before {
 
 /* INPUT TEXT */
 
-.floating-label {
+.frappe-control {
   margin-bottom: 7%;
 }
 
@@ -646,20 +646,12 @@ body.no-breadcrumbs .navbar .navbar-home:before {
     padding-right: 3em !important;
 }
 
-/* Específico para Control Int*/
-.floating-input[data-fieldtype="Int"] ~ label {
-  left: 3em;
-}
-.floating-label > .floating-input:focus[data-fieldtype="Int"] ~ label,
-.floating-label > .floating-input:not(:placeholder-shown)[data-fieldtype="Int"] ~ label {
-  left: 30px;
-}
-/* End Especifico para Control Int, Read Only*/
-
-/* Específico para Control Float, Currency, Date*/
+/* Específico para Control Int, Float, Currency, Date, Time*/
 .floating-input[data-fieldtype="Float"] ~ label,
 .floating-input[data-fieldtype="Currency"] ~ label,
-.floating-input[data-fieldtype="Date"] ~ label {
+.floating-input[data-fieldtype="Date"] ~ label,
+.floating-input[data-fieldtype="Int"] ~ label,
+.floating-input[data-fieldtype="Time"] ~ label{
   top: auto;
   left: 3.5em;
   margin-top: -3em;
@@ -669,12 +661,15 @@ body.no-breadcrumbs .navbar .navbar-home:before {
 .floating-label > .floating-input:focus[data-fieldtype="Currency"] ~ label,
 .floating-label > .floating-input:not(:placeholder-shown)[data-fieldtype="Currency"] ~ label,
 .floating-label > .floating-input:focus[data-fieldtype="Date"] ~ label,
-.floating-label > .floating-input:not(:placeholder-shown)[data-fieldtype="Date"] ~ label {
+.floating-label > .floating-input:not(:placeholder-shown)[data-fieldtype="Date"] ~ label,
+.floating-label > .floating-input:focus[data-fieldtype="Int"] ~ label,
+.floating-label > .floating-input:not(:placeholder-shown)[data-fieldtype="Int"] ~ label,
+.floating-label > .floating-input:focus[data-fieldtype="Time"] ~ label,
+.floating-label > .floating-input:not(:placeholder-shown)[data-fieldtype="Time"] ~ label {
   top: auto;
   left: 30px;
   margin-top: -4.8em;
 }
-/* End Especifico para Control Float, Currency, Date*/
 
 /* Justificar a la derecha Int, Float, Currency */
 .floating-input[data-fieldtype="Float"],
@@ -682,13 +677,56 @@ body.no-breadcrumbs .navbar .navbar-home:before {
 .floating-input[data-fieldtype="Int"] {
   text-align: right;
 }
+
+.frappe-control[data-fieldtype="Float"] .control-value.like-disabled-input,
+.frappe-control[data-fieldtype="Currency"] .control-value.like-disabled-input,
+.frappe-control[data-fieldtype="Int"] .control-value.like-disabled-input{
+  text-align: right;
+}
 /* End Justificar a la derecha Int, Float, Currency */
 
+
+/* End Especifico para Control Int, Float, Currency, Date, Time*/
+
 /* Específico para Control Read Only */
-.like-disabled-input {
+.control-value.like-disabled-input {
   border-radius: 10px;
   border: 1px solid #707070;
   min-height: 36px;
+  padding-top: 8px;
+  padding-bottom: 2px;
+}
+
+.control-value.like-disabled-input ~ label {
+  color: #1E6491;
+  font-size: 12px;
+  line-height: 34px;
+  font-weight:normal;
+  position:absolute;
+  pointer-events:none;
+  transition:0.2s ease all; 
+  -moz-transition:0.2s ease all; 
+  -webkit-transition:0.2s ease all;
+  padding: .2em;
+  padding-left: 0.5em;
+  padding-right: 3em !important;
+  background-color: #fff;
+}
+
+.control-value.like-disabled-input:empty ~ label {
+  top: auto;
+  left: 3em;
+  margin-top: -3.5em;
+  background-color: transparent;
+}
+
+.control-value.like-disabled-input:not(:empty) ~ label{
+  top: auto;
+  left: 30px;
+  margin-top: -4.5em;
+  font-size: 10px;
+  line-height: 0;
+   
 }
 /* End Específico para Control Read Only*/
 .floating-label > .floating-input:disabled ~ label,
@@ -972,6 +1010,15 @@ span.level-item.ellipsis{
   color: #707070;
   margin-top: 0.5em;
   margin-left: 1.5em;
+  margin-right: 1.5em;
+}
+
+.widget-title div{
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 100%;
+  vertical-align: middle;
 }
 
 .links-widget-box {
@@ -1139,6 +1186,8 @@ body {
   max-width: 150px;
   margin-left: auto;
   margin-right: auto;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .icon-foto{
@@ -1215,6 +1264,8 @@ body {
   max-width: 150px;
   margin-left: auto;
   margin-right: auto;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .form-sidebar .sidebar-image-section .sidebar-image-wrapper:hover .sidebar-image,
