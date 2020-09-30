@@ -2675,7 +2675,7 @@ frappe.chat.render = (render = true, force = false) =>
 			const $template = $(`
 				<a class="dropdown-toggle frappe-chat-toggle" data-toggle="dropdown">
 					<div>
-						<img class="qlip-icon app-icon-chat" src="/assets/frappe/icons/qlip-chat-icon.svg" />
+						<img class="qlip-icon app-icon-chat" src="/assets/qlip_bussines_theme/icons/qlip-chat-icon.svg" />
 					</div>
 				</a>
 			`)

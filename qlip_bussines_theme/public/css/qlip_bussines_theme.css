@@ -1421,7 +1421,7 @@ body {
 }
 
 .msgprint-dialog-icon {
-  background-image: url("/assets/frappe/icons/qlip-popup-icon.svg");
+  background-image: url("/assets/qlip_bussines_theme/icons/qlip-popup-icon.svg");
   display: block;
   width: 38px;
   min-width: 38px;
@@ -1508,17 +1508,17 @@ body {
 }
 
 .alert-message-dialog-icon.green {
-  background-image: url("/assets/frappe/icons/qlip-ok-icon.svg");
+  background-image: url("/assets/qlip_bussines_theme/icons/qlip-ok-icon.svg");
   background-size: 42px;
 }
 
 .alert-message-dialog-icon.red {
-  background-image: url("/assets/frappe/icons/qlip-x-icon.svg");
+  background-image: url("/assets/qlip_bussines_theme/icons/qlip-x-icon.svg");
   background-size: 32px;
 }
 
 .alert-message-dialog-icon.blue {
-  background-image: url("/assets/frappe/icons/qlip-exclamation-icon.svg");
+  background-image: url("/assets/qlip_bussines_theme/icons/qlip-exclamation-icon.svg");
   background-size: 10px;
 }
 
