@@ -59,7 +59,7 @@ app_include_js = "/assets/qlip_bussines_theme/js/qlip_bussines_theme.js"
 # ------------
 
 # before_install = "qlip_bussines_theme.install.before_install"
-after_install = "qlip_bussines_theme.setup.after_install.after_install"
+# after_install = "qlip_bussines_theme.setup.after_install.after_install"
 
 # Desk Notifications
 # ------------------
