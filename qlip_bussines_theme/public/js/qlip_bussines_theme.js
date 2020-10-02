@@ -1268,3 +1268,26 @@ class DesktopPage {
 }
 
 // End Toolbar, Header
+
+
+frappe.help.show_video = function(youtube_id, title) {
+	if (frappe.utils.is_url(youtube_id)) {
+		const expression = '(?:youtube.com/(?:[^/]+/.+/|(?:v|e(?:mbed)?)/|.*[?&]v=)|youtu.be/)([^\"&?/s]{11})';
+		youtube_id = youtube_id.match(expression)[1];
+	}
+
+	if($("body").width() > 768) {
+		var size = [605, 377];
+	} else {
+		var size = [495, 315];
+	}
+	var dialog = frappe.msgprint({
+		message: `<iframe width="${size[0]}" height="${size[1]}"
+			src="https://www.youtube.com/embed/${youtube_id}"
+			frameborder="0" allowfullscreen></iframe>` + (frappe.help_feedback_link || ""),
+		title: title || __("Help"),
+		wide: true
+	});
+
+	dialog.$wrapper.addClass("video-modal");
+}
