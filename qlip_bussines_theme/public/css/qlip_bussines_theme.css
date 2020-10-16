@@ -1571,3 +1571,9 @@ body {
   height: 80vh;
 } */
 /* END MODULES MENU */
+
+/* Títulos de docstypes */
+.page-title .title-text {
+  max-width: 100%;
+}
+/* End títulos de doctypes*/
