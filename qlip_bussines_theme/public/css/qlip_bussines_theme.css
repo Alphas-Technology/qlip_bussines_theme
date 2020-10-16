@@ -345,7 +345,7 @@ body.no-breadcrumbs .navbar .navbar-home:before {
 }
 
 .qlip-company a.navbar-brand {
-    font-size: 16pt;
+    font-size: 10pt;
     font-weight: normal;
     vertical-align: super;
     color: #1E6491;
@@ -646,12 +646,13 @@ body.no-breadcrumbs .navbar .navbar-home:before {
     padding-right: 3em !important;
 }
 
-/* Específico para Control Int, Float, Currency, Date, Time*/
+/* Específico para Control Int, Float, Currency, Date, Time, Percent*/
 .floating-input[data-fieldtype="Float"] ~ label,
 .floating-input[data-fieldtype="Currency"] ~ label,
 .floating-input[data-fieldtype="Date"] ~ label,
 .floating-input[data-fieldtype="Int"] ~ label,
-.floating-input[data-fieldtype="Time"] ~ label{
+.floating-input[data-fieldtype="Time"] ~ label,
+.floating-input[data-fieldtype="Percent"] ~ label {
   top: auto;
   left: 3.5em;
   margin-top: -3em;
@@ -665,7 +666,9 @@ body.no-breadcrumbs .navbar .navbar-home:before {
 .floating-label > .floating-input:focus[data-fieldtype="Int"] ~ label,
 .floating-label > .floating-input:not(:placeholder-shown)[data-fieldtype="Int"] ~ label,
 .floating-label > .floating-input:focus[data-fieldtype="Time"] ~ label,
-.floating-label > .floating-input:not(:placeholder-shown)[data-fieldtype="Time"] ~ label {
+.floating-label > .floating-input:not(:placeholder-shown)[data-fieldtype="Time"] ~ label,
+.floating-label > .floating-input:focus[data-fieldtype="Percent"] ~ label,
+.floating-label > .floating-input:not(:placeholder-shown)[data-fieldtype="Percent"] ~ label {
   top: auto;
   left: 30px;
   margin-top: -4.8em;
@@ -1195,7 +1198,7 @@ body {
   background: #FFFFFF;
   box-shadow: 0px 3px 6px #00000029;
   border-radius: 5px;
-  padding: 5px 20px;
+  padding: 5px 15px;
   max-width: 153px;
   text-align: center;
   max-height: 35px;
@@ -1239,7 +1242,7 @@ body {
     background: #FFFFFF;
     box-shadow: 0px 3px 6px #00000029;
     border-radius: 5px;
-    padding: 5px 20px;
+    padding: 5px 15px;
     max-width: 153px;
     text-align: center;
     max-height: 35px;
@@ -1568,3 +1571,9 @@ body {
   height: 80vh;
 } */
 /* END MODULES MENU */
+
+/* Títulos de docstypes */
+.page-title .title-text {
+  max-width: 100%;
+}
+/* End títulos de doctypes*/
