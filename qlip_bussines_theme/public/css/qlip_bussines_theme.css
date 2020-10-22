@@ -652,7 +652,8 @@ body.no-breadcrumbs .navbar .navbar-home:before {
 .floating-input[data-fieldtype="Date"] ~ label,
 .floating-input[data-fieldtype="Int"] ~ label,
 .floating-input[data-fieldtype="Time"] ~ label,
-.floating-input[data-fieldtype="Percent"] ~ label {
+.floating-input[data-fieldtype="Percent"] ~ label,
+.floating-input[data-fieldtype="Datetime"] ~ label {
   top: auto;
   left: 3.5em;
   margin-top: -3em;
@@ -668,7 +669,9 @@ body.no-breadcrumbs .navbar .navbar-home:before {
 .floating-label > .floating-input:focus[data-fieldtype="Time"] ~ label,
 .floating-label > .floating-input:not(:placeholder-shown)[data-fieldtype="Time"] ~ label,
 .floating-label > .floating-input:focus[data-fieldtype="Percent"] ~ label,
-.floating-label > .floating-input:not(:placeholder-shown)[data-fieldtype="Percent"] ~ label {
+.floating-label > .floating-input:not(:placeholder-shown)[data-fieldtype="Percent"] ~ label,
+.floating-label > .floating-input:focus[data-fieldtype="Datetime"] ~ label,
+.floating-label > .floating-input:not(:placeholder-shown)[data-fieldtype="Datetime"] ~ label {
   top: auto;
   left: 30px;
   margin-top: -4.8em;
