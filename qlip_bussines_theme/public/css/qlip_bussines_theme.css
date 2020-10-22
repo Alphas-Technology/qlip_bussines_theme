@@ -1423,6 +1423,18 @@ body {
   color: #1E6491;
 }
 
+.msgprint-dialog .modal-header-orange .msgprint-dialog-icon {
+  background-image: url("/assets/qlip_bussines_theme/icons/qlip-warning-icon.svg");
+}
+
+.msgprint-dialog .modal-header-red .msgprint-dialog-icon {
+  background-image: url("/assets/qlip_bussines_theme/icons/qlip-alert-icon.svg");
+}
+
+.msgprint-dialog .modal-header-blue .msgprint-dialog-icon {
+  background-image: url("/assets/qlip_bussines_theme/icons/qlip-information-icon.svg");
+}
+
 .msgprint-dialog-icon {
   background-image: url("/assets/qlip_bussines_theme/icons/qlip-popup-icon.svg");
   display: block;

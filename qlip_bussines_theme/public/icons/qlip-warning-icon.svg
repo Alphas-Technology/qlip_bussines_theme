@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="25" height="21.253" viewBox="0 0 25 21.253">
+  <g id="Grupo_540" data-name="Grupo 540" transform="translate(1702 -12913)">
+    <rect id="Rectángulo_234" data-name="Rectángulo 234" width="25" height="21" transform="translate(-1702 12913)" fill="#fff"/>
+    <g id="Grupo_539" data-name="Grupo 539">
+      <g id="Grupo_537" data-name="Grupo 537">
+        <g id="danger" transform="translate(-1702 12874.635)">
+          <g id="Grupo_536" data-name="Grupo 536" transform="translate(0 38.365)">
+            <path id="Trazado_400" data-name="Trazado 400" d="M24.78,57.3,13.812,39.106a1.532,1.532,0,0,0-2.624,0L.22,57.3a1.532,1.532,0,0,0,1.312,2.323H23.468A1.532,1.532,0,0,0,24.78,57.3ZM12.508,44.657a1.038,1.038,0,0,1,1.163.985c0,1.922-.226,4.684-.226,6.606,0,.5-.549.711-.937.711-.517,0-.953-.21-.953-.711,0-1.922-.226-4.684-.226-6.606C11.329,45.012,11.846,44.657,12.508,44.657Zm.016,11.9a1.244,1.244,0,1,1,1.228-1.244A1.262,1.262,0,0,1,12.524,56.561Z" transform="translate(0 -38.365)" fill="#ffce09"/>
+          </g>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

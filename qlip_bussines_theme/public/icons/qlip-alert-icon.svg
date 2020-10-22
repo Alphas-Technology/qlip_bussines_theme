@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20">
+  <g id="Grupo_543" data-name="Grupo 543" transform="translate(1192 -13272)">
+    <rect id="Rectángulo_237" data-name="Rectángulo 237" width="20" height="20" transform="translate(-1192 13272)" fill="#fff"/>
+    <path id="close" d="M13.3,10l6.187-6.187a1.749,1.749,0,0,0,0-2.475L18.663.514a1.749,1.749,0,0,0-2.475,0L10,6.7,3.814.513a1.749,1.749,0,0,0-2.475,0l-.826.825a1.749,1.749,0,0,0,0,2.475L6.7,10,.514,16.188a1.749,1.749,0,0,0,0,2.475l.825.825a1.749,1.749,0,0,0,2.475,0L10,13.3l6.187,6.187a1.749,1.749,0,0,0,2.475,0l.825-.825a1.749,1.749,0,0,0,0-2.475Zm0,0" transform="translate(-1192 13272)" fill="#ff5353"/>
+  </g>
+</svg>
