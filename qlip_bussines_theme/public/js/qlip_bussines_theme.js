@@ -157,6 +157,43 @@ frappe.ui.form.ControlLink = frappe.ui.form.ControlLink.extend({
 })
 // End Control Link (textbox)
 
+// Control Dynamic Link
+frappe.ui.form.ControlDynamicLink = frappe.ui.form.ControlLink.extend({
+	get_options: function() {
+		let options = '';
+		if(this.df.get_options) {
+			options = this.df.get_options();
+		}
+		else if (this.docname==null && cur_dialog) {
+			//for dialog box
+			options = cur_dialog.get_value(this.df.options);
+		}
+		else if (!cur_frm) {
+			const selector = `input[data-fieldname="${this.df.options}"]`;
+			let input = null;
+			if (cur_list) {
+				// for list page
+				input = cur_list.filter_area.standard_filters_wrapper.find(selector);
+			}
+			if (cur_page) {
+				input = $(cur_page.page).find(selector);
+			}
+			if (input) {
+				options = input.val();
+			}
+		}
+		else {
+			options = frappe.model.get_value(this.df.parent, this.docname, this.df.options);
+		}
+
+		if (frappe.model.is_single(options)) {
+			frappe.throw(__(`${options.bold()} is not a valid DocType for Dynamic Link`));
+		}
+
+		return options;
+	},
+});
+// End Control Dynamic Link
 
 // Control Select
 frappe.ui.form.ControlSelect = frappe.ui.form.ControlSelect.extend({
@@ -256,10 +293,11 @@ frappe.ui.form.ControlFloat = frappe.ui.form.ControlInt.extend({
 		return this.df.precision || cint(frappe.boot.sysdefaults.float_precision, null);
 	}
 });
-
-frappe.ui.form.ControlPercent = frappe.ui.form.ControlFloat;
-
 // End Control Float
+
+// Control Percent
+frappe.ui.form.ControlPercent = frappe.ui.form.ControlFloat;
+// End Control Percent
 
 // Control Currency
 frappe.ui.form.ControlCurrency = frappe.ui.form.ControlFloat.extend({
@@ -464,7 +502,6 @@ frappe.ui.form.ControlDate = frappe.ui.form.ControlData.extend({
 		return value;
 	}
 });
-
 // End Control Date
 
 // Control Time
@@ -573,6 +610,48 @@ frappe.ui.form.ControlTime = frappe.ui.form.ControlDate.extend({
 	}
 });
 //End Control Time
+
+// Control Datetime
+frappe.ui.form.ControlDatetime = frappe.ui.form.ControlDate.extend({
+	set_date_options: function() {
+		this._super();
+		this.today_text = __("Now");
+		let sysdefaults = frappe.boot.sysdefaults;
+		this.date_format = frappe.defaultDatetimeFormat;
+		let time_format = sysdefaults && sysdefaults.time_format
+			? sysdefaults.time_format : 'HH:mm:ss';
+		$.extend(this.datepicker_options, {
+			timepicker: true,
+			timeFormat: time_format.toLowerCase().replace("mm", "ii")
+		});
+	},
+	get_now_date: function() {
+		return frappe.datetime.now_datetime(true);
+	},
+	set_description: function() {
+		const { description } = this.df;
+		const { time_zone } = frappe.sys_defaults;
+		if (!this.df.hide_timezone && !frappe.datetime.is_timezone_same()) {
+			if (!description) {
+				this.df.description = time_zone;
+			} else if (!description.includes(time_zone)) {
+				this.df.description += '<br>' + time_zone;
+			}
+		}
+		this._super();
+	},
+	set_datepicker: function() {
+		this._super();
+		if (this.datepicker.opts.timeFormat.indexOf('s') == -1) {
+			// No seconds in time format
+			const $tp = this.datepicker.timepicker;
+			$tp.$seconds.parent().css('display', 'none');
+			$tp.$secondsText.css('display', 'none');
+			$tp.$secondsText.prev().css('display', 'none');
+		}
+	}
+});
+// End Control Datetime
 
 // Control Popup
 frappe.msgprint = function(msg, title, is_minimizable) {
@@ -741,7 +820,94 @@ frappe.msgprint = function(msg, title, is_minimizable) {
 }
 
 window.msgprint = frappe.msgprint;
+// End Control Popup
 
+// Control Color
+frappe.ui.form.ControlColor = frappe.ui.form.ControlData.extend({
+	make_input: function () {
+		this._super();
+		this.colors = [
+			"#ffc4c4", "#ff8989", "#ff4d4d", "#a83333",
+			"#ffe8cd", "#ffd19c", "#ffb868", "#a87945",
+			"#ffd2c2", "#ffa685", "#ff7846", "#a85b5b",
+			"#ffd7d7", "#ffb1b1", "#ff8989", "#a84f2e",
+			"#fffacd", "#fff168", "#fff69c", "#a89f45",
+			"#ebf8cc", "#d9f399", "#c5ec63", "#7b933d",
+			"#cef6d1", "#9deca2", "#6be273", "#428b46",
+			"#d2f8ed", "#a4f3dd", "#77ecca", "#49937e",
+			"#d2f1ff", "#a6e4ff", "#78d6ff", "#4f8ea8",
+			"#d2d2ff", "#a3a3ff", "#7575ff", "#4d4da8",
+			"#dac7ff", "#b592ff", "#8e58ff", "#5e3aa8",
+			"#f8d4f8", "#f3aaf0", "#ec7dea", "#934f92"
+		];
+		this.make_color_input();
+	},
+	make_color_input: function () {
+		this.$wrapper
+			.append(`<div class="color-picker">
+				<div class="color-picker-pallete"></div>
+			</div>`);
+		this.$color_pallete = this.$wrapper.find('.color-picker-pallete');
+
+		var color_html = this.colors.map(this.get_color_box).join("");
+		this.$color_pallete.append(color_html);
+		this.$color_pallete.hide();
+		this.bind_events();
+	},
+	get_color_box: function (hex) {
+		return `<div class="color-box" data-color="${hex}" style="background-color: ${hex}"></div>`;
+	},
+	set_formatted_input: function(value) {
+		this._super(value);
+
+		if (!value) value = '#FFFFFF';
+		const contrast    = frappe.ui.color.get_contrast_color(value);
+
+		this.$input.css({
+			"background-color": value, "color": contrast
+		});
+	},
+	bind_events: function () {
+		var mousedown_happened = false;
+		this.$wrapper.on("click", ".color-box", (e) => {
+			mousedown_happened = false;
+
+			var color_val = $(e.target).data("color");
+			this.set_value(color_val);
+			// set focus so that we can blur it later
+			this.set_focus();
+		});
+
+		this.$wrapper.find(".color-box").mousedown(() => {
+			mousedown_happened = true;
+		});
+
+		this.$input.on("focus", () => {
+			this.$color_pallete.show();
+		});
+		this.$input.on("blur", () => {
+			if (mousedown_happened) {
+				// cancel the blur event
+				mousedown_happened = false;
+			} else {
+				// blur event is okay
+				$(this.$color_pallete).hide();
+			}
+		});
+	},
+	validate: function (value) {
+		if(value === '') {
+			return '';
+		}
+		var is_valid = /^#[0-9A-F]{6}$/i.test(value);
+		if(is_valid) {
+			return value;
+		}
+		return null;
+	}
+});
+
+// End Control Color
 
 // Floating Message
 frappe.show_alert = function(message, seconds=7, actions={}) {
