@@ -448,6 +448,17 @@ body.no-breadcrumbs .navbar .navbar-home:before {
     margin-left: 2.5rem;
     margin-right: 2.5rem;
   }
+
+  .app-logo-qlip-mobile {
+    width: 26px;
+    height: 26px;
+    margin-left: 2.5rem;
+  }
+  
+  .navbar .navbar-home img {
+    min-width: 0;
+  }
+
 }
 /* End xs, sm*/
 
