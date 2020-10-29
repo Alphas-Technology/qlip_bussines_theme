@@ -475,6 +475,17 @@ body.no-breadcrumbs .navbar .navbar-home:before {
     top: 90px;
   }
 
+  body[data-route^="Form"] .app-logo-qlip-mobile {
+    display: none !important;
+  }
+
+  body[data-route^="List"] .app-logo-qlip-mobile {
+    display: none !important;
+  }
+
+  .qlip-navbar > .container .navbar-brand.toggle-sidebar .octicon.octicon-three-bars {
+    margin-left: 2.5rem;
+  }
 }
 /* End xs, sm*/
 
