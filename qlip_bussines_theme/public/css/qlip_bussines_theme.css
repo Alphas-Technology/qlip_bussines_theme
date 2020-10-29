@@ -463,11 +463,27 @@ body.no-breadcrumbs .navbar .navbar-home:before {
     width: 100%;
   }
 
+  .form-section .section-body {
+    margin-top: 0;
+  }
+
+  .page-head {
+    top: 61px;
+  }
+
+  .breadcrumbs-navbar {
+    top: 90px;
+  }
+
 }
 /* End xs, sm*/
 
 /* Sobre lg */
 @media (min-width: 992px) {
+  .breadcrumbs-navbar {
+    top: 110px;
+  }
+
   .qlip-icon {
     width: 26px;
     height: 26px;
@@ -1377,7 +1393,6 @@ body {
 .breadcrumbs-navbar{
   position: fixed;
   z-index: 150;
-  top: 110px;
 }
 
 @media (min-width: 1200px) {
