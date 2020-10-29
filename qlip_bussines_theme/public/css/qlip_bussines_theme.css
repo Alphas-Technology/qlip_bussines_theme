@@ -454,9 +454,13 @@ body.no-breadcrumbs .navbar .navbar-home:before {
     height: 26px;
     margin-left: 2.5rem;
   }
-  
+
   .navbar .navbar-home img {
     min-width: 0;
+  }
+
+  body[data-route^="Form"] .page-title .title-text {
+    width: 100%;
   }
 
 }
