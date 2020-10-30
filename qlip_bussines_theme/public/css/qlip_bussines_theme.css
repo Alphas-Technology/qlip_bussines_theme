@@ -444,6 +444,10 @@ body.no-breadcrumbs .navbar .navbar-home:before {
     left: -320px;
   }
 
+  .dropdown-mobile.open.configuration .dropdown-menu {
+    left: auto;
+  }
+
   .qlip-navbar .container {
     margin-left: 2.5rem;
     margin-right: 2.5rem;
