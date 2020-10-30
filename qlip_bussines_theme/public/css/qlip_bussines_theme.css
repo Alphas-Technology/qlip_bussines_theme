@@ -448,11 +448,53 @@ body.no-breadcrumbs .navbar .navbar-home:before {
     margin-left: 2.5rem;
     margin-right: 2.5rem;
   }
+
+  .app-logo-qlip-mobile {
+    width: 26px;
+    height: 26px;
+    margin-left: 2.5rem;
+  }
+
+  .navbar .navbar-home img {
+    min-width: 0;
+  }
+
+  body[data-route^="Form"] .page-title .title-text {
+    width: 100%;
+  }
+
+  .form-section .section-body {
+    margin-top: 0;
+  }
+
+  .page-head {
+    top: 61px;
+  }
+
+  .breadcrumbs-navbar {
+    top: 90px;
+  }
+
+  body[data-route^="Form"] .app-logo-qlip-mobile {
+    display: none !important;
+  }
+
+  body[data-route^="List"] .app-logo-qlip-mobile {
+    display: none !important;
+  }
+
+  .qlip-navbar > .container .navbar-brand.toggle-sidebar .octicon.octicon-three-bars {
+    margin-left: 2.5rem;
+  }
 }
 /* End xs, sm*/
 
 /* Sobre lg */
 @media (min-width: 992px) {
+  .breadcrumbs-navbar {
+    top: 110px;
+  }
+
   .qlip-icon {
     width: 26px;
     height: 26px;
@@ -646,7 +688,7 @@ body.no-breadcrumbs .navbar .navbar-home:before {
     padding-right: 3em !important;
 }
 
-/* Específico para Control Int, Float, Currency, Date, Time, Percent*/
+/* Específico para Control Int, Float, Currency, Date, Time, Percent, Datetime, Color, Password*/
 .floating-input[data-fieldtype="Float"] ~ label,
 .floating-input[data-fieldtype="Currency"] ~ label,
 .floating-input[data-fieldtype="Date"] ~ label,
@@ -654,7 +696,8 @@ body.no-breadcrumbs .navbar .navbar-home:before {
 .floating-input[data-fieldtype="Time"] ~ label,
 .floating-input[data-fieldtype="Percent"] ~ label,
 .floating-input[data-fieldtype="Datetime"] ~ label,
-.floating-input[data-fieldtype="Color"] ~ label {
+.floating-input[data-fieldtype="Color"] ~ label,
+.floating-input[data-fieldtype="Password"] ~ label {
   top: auto;
   left: 3.5em;
   margin-top: -3em;
@@ -674,7 +717,9 @@ body.no-breadcrumbs .navbar .navbar-home:before {
 .floating-label > .floating-input:focus[data-fieldtype="Datetime"] ~ label,
 .floating-label > .floating-input:not(:placeholder-shown)[data-fieldtype="Datetime"] ~ label,
 .floating-label > .floating-input:focus[data-fieldtype="Color"] ~ label,
-.floating-label > .floating-input:not(:placeholder-shown)[data-fieldtype="Color"] ~ label {
+.floating-label > .floating-input:not(:placeholder-shown)[data-fieldtype="Color"] ~ label,
+.floating-label > .floating-input:focus[data-fieldtype="Password"] ~ label,
+.floating-label > .floating-input:not(:placeholder-shown)[data-fieldtype="Password"] ~ label {
   top: auto;
   left: 30px;
   margin-top: -4.8em;
@@ -827,13 +872,6 @@ body.no-breadcrumbs .navbar .navbar-home:before {
   border: 1px solid #CFCFCF;
   
 }
-/*
-.page-form input[type]:not([type='button']):not([type='checkbox']):not([type='range']):not([type='submit']).form-control,
-.page-form input[type]:not([type='button']):not([type='checkbox']):not([type='range']):not([type='submit']).form-control:hover,
-.page-form input[type]:not([type='button']):not([type='checkbox']):not([type='range']):not([type='submit']).form-control:focus{
-  border: 1px solid #CFCFCF;
-  border-radius: 3px;
-}*/
 
 .add-filter{
    
@@ -855,21 +893,9 @@ body.no-breadcrumbs .navbar .navbar-home:before {
   font-size: 11px;
 }
 
-/*
-.awesomplete input[type]:not([type='button']):not([type='checkbox']):not([type='range']):not([type='submit']).form-control,
-.awesomplete input[type]:not([type='button']):not([type='checkbox']):not([type='range']):not([type='submit']).form-control:hover,
-.awesomplete input[type]:not([type='button']):not([type='checkbox']):not([type='range']):not([type='submit']).form-control:focus{
-  border: 1px solid #CFCFCF;
-  border-radius: 3px;
-}*/
-
-/*
-.input-area input[type]:not([type='button']):not([type='checkbox']):not([type='range']):not([type='submit']).form-control,
-.input-area input[type]:not([type='button']):not([type='checkbox']):not([type='range']):not([type='submit']).form-control:hover,
-.input-area input[type]:not([type='button']):not([type='checkbox']):not([type='range']):not([type='submit']).form-control:focus{
-  border: 1px solid #CFCFCF;
-  border-radius: 3px;
-}*/
+.layout-main-section-wrapper .layout-main-section .frappe-list .tag-groupby-area {
+  position: relative;
+}
 
 /* END FILTROS */
 
@@ -1006,6 +1032,10 @@ span.level-item.ellipsis{
 
 
 /* CARD MODULES */
+.widget.shortcut-widget-box {
+  justify-content: center;
+}
+
 .shortcut-widget-box {
   box-shadow: 0px 0px 10px #00000029;/*cambio*/
   border-radius: 10px;
@@ -1017,7 +1047,6 @@ span.level-item.ellipsis{
   font-weight: bold;
   line-height: 1em;
   color: #707070;
-  margin-top: 0.5em;
   margin-left: 1.5em;
   margin-right: 1.5em;
 }
@@ -1378,7 +1407,6 @@ body {
 .breadcrumbs-navbar{
   position: fixed;
   z-index: 150;
-  top: 110px;
 }
 
 @media (min-width: 1200px) {
