@@ -787,6 +787,32 @@ body.no-breadcrumbs .navbar .navbar-home:before {
    
 }
 /* End Específico para Control Read Only*/
+
+
+@media (max-width: 767px) {
+  /* Específico para Control Int, Float, Currency, Date, Time, Percent, Datetime, Color, Password*/
+.floating-input[data-fieldtype="Float"] ~ label,
+.floating-input[data-fieldtype="Currency"] ~ label,
+.floating-input[data-fieldtype="Date"] ~ label,
+.floating-input[data-fieldtype="Int"] ~ label,
+.floating-input[data-fieldtype="Time"] ~ label,
+.floating-input[data-fieldtype="Percent"] ~ label,
+.floating-input[data-fieldtype="Datetime"] ~ label,
+.floating-input[data-fieldtype="Color"] ~ label,
+.floating-input[data-fieldtype="Password"] ~ label {
+    margin-top: -3.8em;
+  }
+
+  .floating-input ~ label, .link-field > .awesomplete > .floating-input ~ label, .floating-select ~ label {
+    top: 0.5em;
+    width: 80%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}
+
+
 .floating-label > .floating-input:disabled ~ label,
 .floating-label > .link-field > .awesomplete > .floating-input:disabled ~ label,
 .floating-label > .floating-select:disabled ~ label 

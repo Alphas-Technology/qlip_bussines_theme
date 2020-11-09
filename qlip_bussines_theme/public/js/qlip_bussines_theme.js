@@ -153,6 +153,13 @@ frappe.ui.form.ControlLink = frappe.ui.form.ControlLink.extend({
 		if(this.df.input_class) {
 			this.$input.addClass(this.df.input_class);
 		}
+	},
+
+	refresh_input: function() {
+		this._super();
+		if (!this.can_write() && !this.only_input && this.disp_area) {
+			$(this.label_span).insertAfter(this.disp_area);
+		}
 	}
 })
 // End Control Link (textbox)
@@ -220,6 +227,13 @@ frappe.ui.form.ControlSelect = frappe.ui.form.ControlSelect.extend({
 		this.$input.attr("onclick", "this.setAttribute('value', this.value);")
 			.attr("value", this.value)
 			.addClass("floating-select")
+	},
+
+	refresh_input: function() {
+		this._super();
+		if (!this.can_write() && !this.only_input && this.disp_area) {
+			$(this.label_span).insertAfter(this.disp_area);
+		}
 	}
 
 })
