@@ -800,11 +800,15 @@ body.no-breadcrumbs .navbar .navbar-home:before {
 .floating-input[data-fieldtype="Datetime"] ~ label,
 .floating-input[data-fieldtype="Color"] ~ label,
 .floating-input[data-fieldtype="Password"] ~ label {
-    margin-top: -4em;
+    margin-top: -3.8em;
   }
 
   .floating-input ~ label, .link-field > .awesomplete > .floating-input ~ label, .floating-select ~ label {
     top: 0.5em;
+    width: 80%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
 }
 
