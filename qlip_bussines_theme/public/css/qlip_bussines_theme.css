@@ -737,13 +737,13 @@ body.no-breadcrumbs .navbar .navbar-home:before {
 .floating-input[data-fieldtype="Float"],
 .floating-input[data-fieldtype="Currency"],
 .floating-input[data-fieldtype="Int"] {
-  text-align: right;
+  text-align: right !important;
 }
 
 .frappe-control[data-fieldtype="Float"] .control-value.like-disabled-input,
 .frappe-control[data-fieldtype="Currency"] .control-value.like-disabled-input,
 .frappe-control[data-fieldtype="Int"] .control-value.like-disabled-input{
-  text-align: right;
+  text-align: right !important;
 }
 /* End Justificar a la derecha Int, Float, Currency */
 
