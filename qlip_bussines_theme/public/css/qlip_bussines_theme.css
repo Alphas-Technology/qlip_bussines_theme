@@ -673,6 +673,10 @@ body.no-breadcrumbs .navbar .navbar-home:before {
   transition:0.2s ease all; 
   -moz-transition:0.2s ease all; 
   -webkit-transition:0.2s ease all;
+  width: 85%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .floating-label > .floating-input:focus ~ label,
