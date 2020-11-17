@@ -933,6 +933,7 @@ body.no-breadcrumbs .navbar .navbar-home:before {
 /* TABLE */
 .list-subject .level-item {
   margin-right: 35px !important;
+  padding: 1px;
 }
 
 .level-left, .list-header-subject {
