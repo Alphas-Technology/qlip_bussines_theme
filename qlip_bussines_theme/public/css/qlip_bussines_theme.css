@@ -807,6 +807,27 @@ body.no-breadcrumbs .navbar .navbar-home:before {
     margin-top: -3.8em;
   }
 
+.floating-label > .floating-input:focus[data-fieldtype="Float"] ~ label,
+.floating-label > .floating-input:not(:placeholder-shown)[data-fieldtype="Float"] ~ label,
+.floating-label > .floating-input:focus[data-fieldtype="Currency"] ~ label,
+.floating-label > .floating-input:not(:placeholder-shown)[data-fieldtype="Currency"] ~ label,
+.floating-label > .floating-input:focus[data-fieldtype="Date"] ~ label,
+.floating-label > .floating-input:not(:placeholder-shown)[data-fieldtype="Date"] ~ label,
+.floating-label > .floating-input:focus[data-fieldtype="Int"] ~ label,
+.floating-label > .floating-input:not(:placeholder-shown)[data-fieldtype="Int"] ~ label,
+.floating-label > .floating-input:focus[data-fieldtype="Time"] ~ label,
+.floating-label > .floating-input:not(:placeholder-shown)[data-fieldtype="Time"] ~ label,
+.floating-label > .floating-input:focus[data-fieldtype="Percent"] ~ label,
+.floating-label > .floating-input:not(:placeholder-shown)[data-fieldtype="Percent"] ~ label,
+.floating-label > .floating-input:focus[data-fieldtype="Datetime"] ~ label,
+.floating-label > .floating-input:not(:placeholder-shown)[data-fieldtype="Datetime"] ~ label,
+.floating-label > .floating-input:focus[data-fieldtype="Color"] ~ label,
+.floating-label > .floating-input:not(:placeholder-shown)[data-fieldtype="Color"] ~ label,
+.floating-label > .floating-input:focus[data-fieldtype="Password"] ~ label,
+.floating-label > .floating-input:not(:placeholder-shown)[data-fieldtype="Password"] ~ label {
+  margin-top: -6.2em;
+}
+
   .floating-input ~ label, .link-field > .awesomplete > .floating-input ~ label, .floating-select ~ label {
     top: 0.5em;
     max-width: 80%;
