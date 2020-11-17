@@ -673,6 +673,10 @@ body.no-breadcrumbs .navbar .navbar-home:before {
   transition:0.2s ease all; 
   -moz-transition:0.2s ease all; 
   -webkit-transition:0.2s ease all;
+  max-width: 85%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .floating-label > .floating-input:focus ~ label,
@@ -733,13 +737,13 @@ body.no-breadcrumbs .navbar .navbar-home:before {
 .floating-input[data-fieldtype="Float"],
 .floating-input[data-fieldtype="Currency"],
 .floating-input[data-fieldtype="Int"] {
-  text-align: right;
+  text-align: right !important;
 }
 
 .frappe-control[data-fieldtype="Float"] .control-value.like-disabled-input,
 .frappe-control[data-fieldtype="Currency"] .control-value.like-disabled-input,
 .frappe-control[data-fieldtype="Int"] .control-value.like-disabled-input{
-  text-align: right;
+  text-align: right !important;
 }
 /* End Justificar a la derecha Int, Float, Currency */
 
@@ -803,9 +807,30 @@ body.no-breadcrumbs .navbar .navbar-home:before {
     margin-top: -3.8em;
   }
 
+.floating-label > .floating-input:focus[data-fieldtype="Float"] ~ label,
+.floating-label > .floating-input:not(:placeholder-shown)[data-fieldtype="Float"] ~ label,
+.floating-label > .floating-input:focus[data-fieldtype="Currency"] ~ label,
+.floating-label > .floating-input:not(:placeholder-shown)[data-fieldtype="Currency"] ~ label,
+.floating-label > .floating-input:focus[data-fieldtype="Date"] ~ label,
+.floating-label > .floating-input:not(:placeholder-shown)[data-fieldtype="Date"] ~ label,
+.floating-label > .floating-input:focus[data-fieldtype="Int"] ~ label,
+.floating-label > .floating-input:not(:placeholder-shown)[data-fieldtype="Int"] ~ label,
+.floating-label > .floating-input:focus[data-fieldtype="Time"] ~ label,
+.floating-label > .floating-input:not(:placeholder-shown)[data-fieldtype="Time"] ~ label,
+.floating-label > .floating-input:focus[data-fieldtype="Percent"] ~ label,
+.floating-label > .floating-input:not(:placeholder-shown)[data-fieldtype="Percent"] ~ label,
+.floating-label > .floating-input:focus[data-fieldtype="Datetime"] ~ label,
+.floating-label > .floating-input:not(:placeholder-shown)[data-fieldtype="Datetime"] ~ label,
+.floating-label > .floating-input:focus[data-fieldtype="Color"] ~ label,
+.floating-label > .floating-input:not(:placeholder-shown)[data-fieldtype="Color"] ~ label,
+.floating-label > .floating-input:focus[data-fieldtype="Password"] ~ label,
+.floating-label > .floating-input:not(:placeholder-shown)[data-fieldtype="Password"] ~ label {
+  margin-top: -6.2em;
+}
+
   .floating-input ~ label, .link-field > .awesomplete > .floating-input ~ label, .floating-select ~ label {
     top: 0.5em;
-    width: 80%;
+    max-width: 80%;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -933,6 +958,7 @@ body.no-breadcrumbs .navbar .navbar-home:before {
 /* TABLE */
 .list-subject .level-item {
   margin-right: 35px !important;
+  padding: 1px;
 }
 
 .level-left, .list-header-subject {
