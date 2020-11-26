@@ -759,6 +759,11 @@ body.no-breadcrumbs .navbar .navbar-home:before {
   min-height: 36px;
   padding-top: 8px;
   padding-bottom: 2px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 100%;
+  vertical-align: middle;
 }
 
 .control-value.like-disabled-input ~ label {
