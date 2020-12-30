@@ -172,7 +172,7 @@ frappe.ui.form.ControlLink = frappe.ui.form.ControlLink.extend({
 		// y se pueda hacer el efecto de subir el label al hacer click en el campo
 		if (this.disp_status != "None" && !this.can_write() && !this.only_input && this.disp_area) {
 			$(this.label_span).insertAfter(this.disp_area);
-			$(this.label_span).css({'margin-top': (($(this.disp_area).height() + 20) * -1 )})
+			$(this.label_span).css({'margin-top': (($(this.disp_area).height() + 45) * -1 )})
 
 		} else {
 			$(this.label_span).insertAfter(this.$wrapper.find(".control-input").find("input").get(0));
@@ -255,7 +255,8 @@ frappe.ui.form.ControlSelect = frappe.ui.form.ControlSelect.extend({
 		// y se pueda hacer el efecto de subir el label al hacer click en el campo
 		if (this.disp_status != "None" && !this.can_write() && !this.only_input && this.disp_area) {
 			$(this.label_span).insertAfter(this.disp_area);
-			$(this.label_span).css({'margin-top': (($(this.disp_area).height() + 20) * -1 )})
+			console.log("$(this.disp_area).height(): %o", $(this.disp_area).height());
+			$(this.label_span).css({'margin-top': (($(this.disp_area).height() + 57) * -1 )})
 
 		} else {
 			$(this.label_span).insertAfter(this.$wrapper.find(".control-input").find("select").get(0));
