@@ -440,8 +440,10 @@ body.no-breadcrumbs .navbar .navbar-home:before {
     width: 80%;
   }
 
-  .dropdown-mobile.open .dropdown-menu {
-    left: -320px;
+  .dropdown-mobile.open.notification .dropdown-menu {
+    left: auto;
+    min-width: 200px;
+    width: auto;
   }
 
   .dropdown-mobile.open.configuration .dropdown-menu {
@@ -757,6 +759,8 @@ body.no-breadcrumbs .navbar .navbar-home:before {
   min-height: 36px;
   padding-top: 8px;
   padding-bottom: 2px;
+  max-width: 100%;
+  vertical-align: middle;
 }
 
 .control-value.like-disabled-input ~ label {

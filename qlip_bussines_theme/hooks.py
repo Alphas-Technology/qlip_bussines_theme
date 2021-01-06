@@ -3,7 +3,7 @@ from __future__ import unicode_literals
 from . import __version__ as app_version
 
 app_name = "qlip_bussines_theme"
-app_title = "Qlip Bussines Theme"
+app_title = "qlip Business Theme"
 app_publisher = "Alphas Technology"
 app_description = "Template theme for custom qlip bussines interfaz"
 app_icon = "/assets/erpnext/images/favicon.png"
