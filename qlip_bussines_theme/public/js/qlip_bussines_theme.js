@@ -73,7 +73,7 @@ frappe.ui.form.ControlData = frappe.ui.form.ControlData.extend({
 		// y se pueda hacer el efecto de subir el label al hacer click en el campo
 		if (this.disp_status != "None" && !this.can_write() && !this.only_input && this.disp_area) {
 			$(this.label_span).insertAfter(this.disp_area);
-			$(this.label_span).css({'margin-top': (($(this.disp_area).height() + 20) * -1 )})
+			$(this.label_span).css({'margin-top': (($(this.disp_area).height() + 23) * -1 )})
 
 		} else {
 			$(this.label_span).insertAfter(this.$wrapper.find(".control-input").find("input").get(0));
