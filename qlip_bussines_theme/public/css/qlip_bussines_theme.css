@@ -1697,3 +1697,9 @@ body {
   background-color: #10397d;
 }
 /* End Slides */
+
+/* Table user role */
+table.user-perm td, table.user-perm th {
+  font-size: 13px;
+}
+/* End table user role */
