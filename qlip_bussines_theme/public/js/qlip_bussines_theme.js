@@ -72,8 +72,20 @@ frappe.ui.form.ControlData = frappe.ui.form.ControlData.extend({
 		// <label class="control-label" style="padding-right: 0px;"></label>
 		// y se pueda hacer el efecto de subir el label al hacer click en el campo
 		if (this.disp_status != "None" && !this.can_write() && !this.only_input && this.disp_area) {
-			$(this.label_span).insertAfter(this.disp_area);
-			$(this.label_span).css({'margin-top': (($(this.disp_area).height() + 23) * -1 )})
+			if ($(this.disp_area).is(':hidden')) {
+				$(this.label_span).insertAfter(this.disp_area);
+				// Como está oculto entonces se pasa el ancestro que está display: none a display: block
+				// Cuando está oculto el height retorna valores negativos lo que es incorrecto, para que
+				// retorne valores correctos el elemento debe ser visible
+				$(this.disp_area).closest('div.section-body').css({'cssText': 'display: block !important'});
+				$(this.label_span).css({'margin-top': (($(this.disp_area).height() + 23) * -1 )})
+				// Se oculta de nuevo para que continue el flujo normal
+				$(this.disp_area).closest('div.section-body').css({'cssText': ''});
+			} else {
+				$(this.label_span).insertAfter(this.disp_area);
+				$(this.label_span).css({'margin-top': (($(this.disp_area).height() + 23) * -1 )})
+			}
+			
 
 		} else {
 			$(this.label_span).insertAfter(this.$wrapper.find(".control-input").find("input").get(0));
@@ -171,9 +183,19 @@ frappe.ui.form.ControlLink = frappe.ui.form.ControlLink.extend({
 		// <label class="control-label" style="padding-right: 0px;"></label>
 		// y se pueda hacer el efecto de subir el label al hacer click en el campo
 		if (this.disp_status != "None" && !this.can_write() && !this.only_input && this.disp_area) {
-			$(this.label_span).insertAfter(this.disp_area);
-			console.log("Link $(this.disp_area).height(): %o", $(this.disp_area).height());
-			$(this.label_span).css({'margin-top': (($(this.disp_area).height() + 20) * -1 )})
+			if ($(this.disp_area).is(':hidden')) {
+				$(this.label_span).insertAfter(this.disp_area);
+				// Como está oculto entonces se pasa el ancestro que está display: none a display: block
+				// Cuando está oculto el height retorna valores negativos lo que es incorrecto, para que
+				// retorne valores correctos el elemento debe ser visible
+				$(this.disp_area).closest('div.section-body').css({'cssText': 'display: block !important'});
+				$(this.label_span).css({'margin-top': (($(this.disp_area).height() + 23) * -1 )})
+				// Se oculta de nuevo para que continue el flujo normal
+				$(this.disp_area).closest('div.section-body').css({'cssText': ''});
+			} else {
+				$(this.label_span).insertAfter(this.disp_area);
+				$(this.label_span).css({'margin-top': (($(this.disp_area).height() + 20) * -1 )})
+			}
 
 		} else {
 			$(this.label_span).insertAfter(this.$wrapper.find(".control-input").find("input").get(0));
@@ -255,9 +277,19 @@ frappe.ui.form.ControlSelect = frappe.ui.form.ControlSelect.extend({
 		// <label class="control-label" style="padding-right: 0px;"></label>
 		// y se pueda hacer el efecto de subir el label al hacer click en el campo
 		if (this.disp_status != "None" && !this.can_write() && !this.only_input && this.disp_area) {
-			$(this.label_span).insertAfter(this.disp_area);
-			$(this.label_span).css({'margin-top': (($(this.disp_area).height() + 20) * -1 )})
-
+			if ($(this.disp_area).is(':hidden')) {
+				$(this.label_span).insertAfter(this.disp_area);
+				// Como está oculto entonces se pasa el ancestro que está display: none a display: block
+				// Cuando está oculto el height retorna valores negativos lo que es incorrecto, para que
+				// retorne valores correctos el elemento debe ser visible
+				$(this.disp_area).closest('div.section-body').css({'cssText': 'display: block !important'});
+				$(this.label_span).css({'margin-top': (($(this.disp_area).height() + 23) * -1 )})
+				// Se oculta de nuevo para que continue el flujo normal
+				$(this.disp_area).closest('div.section-body').css({'cssText': ''});
+			} else {
+				$(this.label_span).insertAfter(this.disp_area);
+				$(this.label_span).css({'margin-top': (($(this.disp_area).height() + 20) * -1 )})
+			}
 		} else {
 			$(this.label_span).insertAfter(this.$wrapper.find(".control-input").find("select").get(0));
 			$(this.label_span).css({'margin-top': ''})
